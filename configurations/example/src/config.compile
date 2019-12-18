@@ -1,0 +1,26 @@
+
+# This file specifies which non-library sources to compile for which
+# core/context, and using which compiler flags.
+
+#------------------------------------------------------------------------------
+[core0.0] # Configuration for core 0, hardware context 0.
+#------------------------------------------------------------------------------
+
+# Compile the entry point file.
+main-core0-ctxt0          -O3
+
+# Compile the library sources (floating point functions, debugging, etc.) with
+# -O3 to optimize them.
+OTHERS                    -O3
+
+#------------------------------------------------------------------------------
+[core0.1] # Configuration for core 0, hardware context 1.
+#------------------------------------------------------------------------------
+
+# Compile the entry point file.
+main-core0-ctxt1          -O3
+
+# Compile the library sources (floating point functions, debugging, etc.) with
+# -O3 to optimize them.
+OTHERS                    -O3
+
