@@ -6,12 +6,12 @@ RES: MemPft         0
 # ***Clusters***    1
 RES: IssueWidth.0   8
 RES: Alu.0          8
-RES: Mpy.0          8
+RES: Mpy.0          2
 RES: Memory.0       1
 RES: CopySrc.0      1
 RES: CopyDst.0      1
 REG: $r0            63
-REG: $b0            4
+REG: $b0            8
 DEL: AluR.0         0
 DEL: Alu.0          0
 DEL: CmpBr.0        0

@@ -13,9 +13,9 @@
 
 # The r-VEX can be configured to have an issue width of 2, 4, or 8. Each issue
 # slot has an ALU, so the number of ALUs must be set to the issue width.
-RES: IssueWidth     2
-RES: IssueWidth.0   2
-RES: Alu.0          2
+RES: IssueWidth     4
+RES: IssueWidth.0   4
+RES: Alu.0          4
 
 # The number of multipliers. This can be freely configured between 1 and the
 # issue width.
