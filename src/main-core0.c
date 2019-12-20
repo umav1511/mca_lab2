@@ -29,6 +29,9 @@ int main(void) {
     compress_main();
     log_perfcount("compress");
     
+    // Run the convolution_7x7 benchmark and log performance.
+    convolution_7x7_main();
+    log_perfcount("convolution_7x7");
     
     // Run the median benchmark and log performance.
     median_main();

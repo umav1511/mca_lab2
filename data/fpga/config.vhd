@@ -20,7 +20,7 @@ package config is
   constant CFG_SCAN : integer := 0;
   
   -- r-VEX processor core configuration.
-  constant CFG_NRVEX : integer := 2;
+  constant CFG_NRVEX : integer := 1;
   constant CFG_RVEX_CFG : rvex_grlib_generic_config_array(0 to CFG_NRVEX-1) := (
     
     -- Core 0 configuration.
@@ -45,36 +45,8 @@ package config is
       ),
       core_valid => true,
       cache => cache_cfg(
-        instrCacheLinesLog2   => 7,
-        dataCacheLinesLog2    => 10
-      ),
-      cache_valid => true
-    ),
-    
-    -- Core 1 configuration.
-    1 => rvex_grlib_cfg(
-      core => rvex_cfg(
-        numLanesLog2          => 2,
-        numLaneGroupsLog2     => 0,
-        numContextsLog2       => 0,
-        bundleAlignLog2       => 1,
-        multiplierLanes       => 2#0001#,
-        memLaneRevIndex       => 3,
-        numBreakpoints        => 0,
-        forwarding            => 1,
-        limmhFromPreviousPair => 0,
-        resetVectors          => (
-          0 => X"02000000",
-          others => X"00000000"
-        ),
-        traceEnable           => 0,
-        perfCountSize         => 4,
-        cachePerfCountEnable  => 1
-      ),
-      core_valid => true,
-      cache => cache_cfg(
-        instrCacheLinesLog2   => 8,
-        dataCacheLinesLog2    => 10
+        instrCacheLinesLog2   => 9,
+        dataCacheLinesLog2    => 12
       ),
       cache_valid => true
     )

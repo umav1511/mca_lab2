@@ -1,0 +1,5 @@
+max convolution_7x7_max
+min convolution_7x7_min
+NOP convolution_7x7_NOP
+main convolution_7x7_main
+filter7x7 convolution_7x7_filter7x7

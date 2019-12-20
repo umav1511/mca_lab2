@@ -14,20 +14,9 @@ main-core0                -O3
 # to make them unique. For instance, the int main(void) function in the
 # compress.c file can be called using compress_main().
 compress-sub              -O3
+convolution_7x7-sub       -O3
 median-sub                -O3
 bcnt-sub                  -O3
-
-# Compile the library sources (floating point functions, debugging, etc.) with
-# -O3 to optimize them.
-OTHERS                    -O3
-
-#------------------------------------------------------------------------------
-[core1.0] # Configuration for core 1.
-#------------------------------------------------------------------------------
-
-# Compile the entry point file.
-main-core1                -O3
-convolution_7x7-sub       -O3
 
 # Compile the library sources (floating point functions, debugging, etc.) with
 # -O3 to optimize them.

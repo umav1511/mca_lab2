@@ -1,0 +1,4 @@
+NOP bcnt_NOP
+main bcnt_main
+src bcnt_src
+poptab bcnt_poptab

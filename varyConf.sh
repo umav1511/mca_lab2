@@ -8,20 +8,16 @@ do
   rm configuration.rvex
   sed s/'$st'/$a/ CONFIGURATIONBASE > configuration.rvex
   b=$b'k'
-  sed -i -e s/'$ic'/$b/ configuration.mm
+  sed -i -e s/'$ic'/$b/ configuration.rvex
   c=$c'k'
-  sed -i -e s/'$dc'/$c/ configuration.mm
+  sed -i -e s/'$dc'/$c/ configuration.rvex
   rm -rf src
   rm -rf results
   rm -rf data
-  configure
-  make run
+  yes y | configure
+  yes y | make run
   cp -r results script_result
-  mv results results.'11000000'.$a.$b.$c
+  mv script_result/results script_result/results.'11000000'.$a.$b.$c
 done
 done
 done
-done
-done
-done
-
