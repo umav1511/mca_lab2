@@ -24,16 +24,19 @@ def fitness_calculation(individual):
 	#lines=returnValue.split(b'\n')
 	#for line in lines:
 	subprocess.call(['./optimizer.sh',(str)((int)(math.ceil(sb))),(str)((int)(math.ceil(ic))),(str)((int)(math.ceil(dc)))])
-	filename='script_result/result.11000000'+((str)(sb))+((str)(ic))+'k'+((str)(dc))+'k/performance.txt'
+	filename='script_result/results.11000000'+'.'+((str)(sb))+'.'+((str)(ic))+'k.'+((str)(dc))+'k/performance.txt'
+	print ("accessing\t"+ filename)
 	with open(filename) as fp:
-		line=fp.readLine()
+		line=fp.readline()
 		while line:
 			if re.search('Average:',(str)(line)):
 				returnx=[(int)(datalines) for datalines in line.split() if datalines.isdigit()][0]
 				print(returnx)
 				return returnx
+			line=fp.readline()
 
-def selection(generation, method='Fittest Half'):
+
+def selection(generation, method='Random'):
     generation['Normalized Fitness'] = \
         sorted([generation['Fitness'][x]/sum(generation['Fitness']) 
         for x in range(len(generation['Fitness']))], reverse = True)

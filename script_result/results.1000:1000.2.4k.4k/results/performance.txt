@@ -1,0 +1,5 @@
+Total cycle counts:
+Run 1: 2398143 cycles
+Run 2: 2398102 cycles
+Run 3: 2398131 cycles
+Average: 2398125 cycles

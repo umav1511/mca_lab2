@@ -1,12 +1,18 @@
 #!/bin/sh
-for a in 2 4 8
+for cf in '1111:1111'
 do
-for b in 2 4 8 16 32 64
+for scf in '1000' '1100'
 do
-for c in 2 4 8 16 32
+for a in 2
+do
+for b in 4
+do
+for c in 4
 do
   rm configuration.rvex
-  sed s/'$st'/$a/ CONFIGURATIONBASE > configuration.rvex
+  sed s/'$config'/$cf/ CONFIGURATIONBASE > configuration.rvex
+  sed -i -e s/'$sconfig'/$scf/ configuration.rvex
+  sed -i -e s/'$st'/$a/ configuration.rvex
   b=$b'k'
   sed -i -e s/'$ic'/$b/ configuration.rvex
   c=$c'k'
@@ -15,9 +21,16 @@ do
   rm -rf results
   rm -rf data
   yes y | configure
+  rm src/main-core0-ctxt0.c
+  rm src/main-core0-ctxt1.c
+  rm src/main-core1.c
+  rm src/config.compile
+  cp base/2r/* src/
   yes y | make run
   cp -r results script_result
-  mv script_result/results script_result/results.'11000000'.$a.$b.$c
+  mv script_result/results script_result/results.$cf.$scf.$a.$b.$c
+done
+done
 done
 done
 done
