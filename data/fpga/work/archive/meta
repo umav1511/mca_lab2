@@ -1,0 +1,451 @@
+
+Platform:     ml605-grlib-bare
+Core tag:     IgmUIYt (220994218b7be90e5814a8645f63d3f8)
+Platform tag: kuj2mq3 (92e8f69aade79d13a28e410ea0e0b858)
+Time:         2019-12-29 15:59:54
+User:         unknown
+
+--------------------------------------------------------------------------------
+ Current git commit
+--------------------------------------------------------------------------------
+commit baa54aa5ae9dfe6aa08e0c7a4c110092050ea189
+Author: Varun-SJ <42760950+Varun-SJ@users.noreply.github.com>
+Date:   Tue Dec 24 12:15:45 2019 +0100
+
+    Add files via upload
+    
+    Profiling using Assignment 1techniques with rvex.mm. Gives a good idea of the region we should look at.
+
+--------------------------------------------------------------------------------
+ Git status
+--------------------------------------------------------------------------------
+On branch master
+Your branch is up-to-date with 'origin/master'.
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git checkout -- <file>..." to discard changes in working directory)
+
+	deleted:    ../../BCNTParetooutputCSV.csv
+	modified:   ../../CONFIGURATIONBASE
+	deleted:    ../../GA_Results.txt
+	deleted:    ../../MedianParetooutputCSV.csv
+	deleted:    ../../analysis.csv
+	modified:   ../../analyzer.py
+	deleted:    ../../approximation.csv
+	modified:   ../../cacheAnalyzer.py
+	modified:   ../../configuration.rvex
+	deleted:    ../compile/core0.0/bcnt-sub.o
+	deleted:    ../compile/core0.0/bcnt.o
+	deleted:    ../compile/core0.0/bcnt.s
+	deleted:    ../compile/core0.0/bcnt.syms
+	deleted:    ../compile/core0.0/compress-sub.o
+	deleted:    ../compile/core0.0/compress.o
+	deleted:    ../compile/core0.0/compress.s
+	deleted:    ../compile/core0.0/compress.syms
+	modified:   ../compile/core0.0/floatlib.o
+	modified:   ../compile/core0.0/floatlib.s
+	modified:   ../compile/core0.0/main-core0.o
+	modified:   ../compile/core0.0/main-core0.s
+	deleted:    ../compile/core0.0/median-sub.o
+	deleted:    ../compile/core0.0/median.o
+	deleted:    ../compile/core0.0/median.s
+	deleted:    ../compile/core0.0/median.syms
+	modified:   ../compile/core0.0/out.disas
+	modified:   ../compile/core0.0/out.elf
+	modified:   ../compile/core0.0/out.srec
+	modified:   ../compile/ram.srec
+	modified:   config.vhd
+	modified:   phy.do
+	modified:   synth.patch
+	deleted:    ../../genetic.py
+	deleted:    ../../optimizer.py
+	deleted:    ../../optimizer.sh
+	deleted:    ../../script_result/error/results/area.txt
+	deleted:    ../../script_result/error/results/boardserver.log
+	deleted:    ../../script_result/error/results/energy.txt
+	deleted:    ../../script_result/error/results/performance.txt
+	deleted:    ../../script_result/error/results/run1-core0.log
+	deleted:    ../../script_result/error/results/run1-power.csv
+	deleted:    ../../script_result/error/results/run2-core0.log
+	deleted:    ../../script_result/error/results/run2-power.csv
+	deleted:    ../../script_result/error/results/run3-core0.log
+	deleted:    ../../script_result/error/results/run3-power.csv
+	deleted:    ../../script_result/error/results/timing.txt
+	deleted:    ../../script_result/error/temp
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/area.txt
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/boardserver.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/energy.txt
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/performance.txt
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run1-core1.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run2-core1.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run3-core1.log
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1000:1000.1000.2.4k.4k/timing.txt
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/area.txt
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/boardserver.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/energy.txt
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/performance.txt
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run1-core1.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run2-core1.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run3-core1.log
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1000:1000.1100.2.4k.4k/timing.txt
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/area.txt
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/boardserver.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/energy.txt
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/performance.txt
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/area.txt
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/boardserver.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/energy.txt
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/performance.txt
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/run1-power.csv
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/run2-power.csv
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/run3-power.csv
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/results/timing.txt
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1000:1000.2.4k.4k/timing.txt
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/area.txt
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/boardserver.log
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/energy.txt
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/performance.txt
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1000:1000.2.8k.4k/timing.txt
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/area.txt
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/boardserver.log
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/energy.txt
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/performance.txt
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1000:1000.4.4k.4k/timing.txt
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/area.txt
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/boardserver.log
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/energy.txt
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/performance.txt
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1000:1000.4.8k.4k/timing.txt
+	deleted:    ../../script_result/results.11000000.2.2k.2k/area.txt
+	deleted:    ../../script_result/results.11000000.2.2k.2k/boardserver.log
+	deleted:    ../../script_result/results.11000000.2.2k.2k/energy.txt
+	deleted:    ../../script_result/results.11000000.2.2k.2k/performance.txt
+	deleted:    ../../script_result/results.11000000.2.2k.2k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.2.2k.2k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.2.2k.2k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.2.2k.2k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.2.2k.2k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.2.2k.2k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.2.2k.2k/timing.txt
+	deleted:    ../../script_result/results.11000000.2.32k.4k/area.txt
+	deleted:    ../../script_result/results.11000000.2.32k.4k/boardserver.log
+	deleted:    ../../script_result/results.11000000.2.32k.4k/energy.txt
+	deleted:    ../../script_result/results.11000000.2.32k.4k/performance.txt
+	deleted:    ../../script_result/results.11000000.2.32k.4k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.2.32k.4k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.2.32k.4k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.2.32k.4k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.2.32k.4k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.2.32k.4k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.2.32k.4k/timing.txt
+	deleted:    ../../script_result/results.11000000.2.32k.8k/area.txt
+	deleted:    ../../script_result/results.11000000.2.32k.8k/boardserver.log
+	deleted:    ../../script_result/results.11000000.2.32k.8k/energy.txt
+	deleted:    ../../script_result/results.11000000.2.32k.8k/performance.txt
+	deleted:    ../../script_result/results.11000000.2.32k.8k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.2.32k.8k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.2.32k.8k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.2.32k.8k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.2.32k.8k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.2.32k.8k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.2.32k.8k/timing.txt
+	deleted:    ../../script_result/results.11000000.2.4k.16k/area.txt
+	deleted:    ../../script_result/results.11000000.2.4k.16k/boardserver.log
+	deleted:    ../../script_result/results.11000000.2.4k.16k/energy.txt
+	deleted:    ../../script_result/results.11000000.2.4k.16k/performance.txt
+	deleted:    ../../script_result/results.11000000.2.4k.16k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.2.4k.16k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.2.4k.16k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.2.4k.16k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.2.4k.16k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.2.4k.16k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.2.4k.16k/timing.txt
+	deleted:    ../../script_result/results.11000000.2.4k.2k/area.txt
+	deleted:    ../../script_result/results.11000000.2.4k.2k/boardserver.log
+	deleted:    ../../script_result/results.11000000.2.4k.2k/energy.txt
+	deleted:    ../../script_result/results.11000000.2.4k.2k/performance.txt
+	deleted:    ../../script_result/results.11000000.2.4k.2k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.2.4k.2k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.2.4k.2k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.2.4k.2k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.2.4k.2k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.2.4k.2k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.2.4k.2k/timing.txt
+	deleted:    ../../script_result/results.11000000.2.4k.4k/area.txt
+	deleted:    ../../script_result/results.11000000.2.4k.4k/boardserver.log
+	deleted:    ../../script_result/results.11000000.2.4k.4k/energy.txt
+	deleted:    ../../script_result/results.11000000.2.4k.4k/performance.txt
+	deleted:    ../../script_result/results.11000000.2.4k.4k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.2.4k.4k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.2.4k.4k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.2.4k.4k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.2.4k.4k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.2.4k.4k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.2.4k.4k/timing.txt
+	deleted:    ../../script_result/results.11000000.2.8k.16k/area.txt
+	deleted:    ../../script_result/results.11000000.2.8k.16k/boardserver.log
+	deleted:    ../../script_result/results.11000000.2.8k.16k/energy.txt
+	deleted:    ../../script_result/results.11000000.2.8k.16k/performance.txt
+	deleted:    ../../script_result/results.11000000.2.8k.16k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.2.8k.16k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.2.8k.16k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.2.8k.16k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.2.8k.16k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.2.8k.16k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.2.8k.16k/timing.txt
+	deleted:    ../../script_result/results.11000000.4.16k.2k/area.txt
+	deleted:    ../../script_result/results.11000000.4.16k.2k/boardserver.log
+	deleted:    ../../script_result/results.11000000.4.16k.2k/energy.txt
+	deleted:    ../../script_result/results.11000000.4.16k.2k/performance.txt
+	deleted:    ../../script_result/results.11000000.4.16k.2k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.4.16k.2k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.4.16k.2k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.4.16k.2k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.4.16k.2k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.4.16k.2k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.4.16k.2k/timing.txt
+	deleted:    ../../script_result/results.11000000.4.16k.4k/area.txt
+	deleted:    ../../script_result/results.11000000.4.16k.4k/boardserver.log
+	deleted:    ../../script_result/results.11000000.4.16k.4k/energy.txt
+	deleted:    ../../script_result/results.11000000.4.16k.4k/performance.txt
+	deleted:    ../../script_result/results.11000000.4.16k.4k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.4.16k.4k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.4.16k.4k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.4.16k.4k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.4.16k.4k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.4.16k.4k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.4.16k.4k/timing.txt
+	deleted:    ../../script_result/results.11000000.4.32k.16k/area.txt
+	deleted:    ../../script_result/results.11000000.4.32k.16k/boardserver.log
+	deleted:    ../../script_result/results.11000000.4.32k.16k/energy.txt
+	deleted:    ../../script_result/results.11000000.4.32k.16k/performance.txt
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/area.txt
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/boardserver.log
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/energy.txt
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/performance.txt
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/run1-core0.log
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/run1-power.csv
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/run2-core0.log
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/run2-power.csv
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/run3-core0.log
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/run3-power.csv
+	deleted:    ../../script_result/results.11000000.4.32k.16k/results/timing.txt
+	deleted:    ../../script_result/results.11000000.4.32k.16k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.4.32k.16k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.4.32k.16k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.4.32k.16k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.4.32k.16k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.4.32k.16k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.4.32k.16k/timing.txt
+	deleted:    ../../script_result/results.11000000.4.4k.16k/area.txt
+	deleted:    ../../script_result/results.11000000.4.4k.16k/boardserver.log
+	deleted:    ../../script_result/results.11000000.4.4k.16k/energy.txt
+	deleted:    ../../script_result/results.11000000.4.4k.16k/performance.txt
+	deleted:    ../../script_result/results.11000000.4.4k.16k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.4.4k.16k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.4.4k.16k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.4.4k.16k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.4.4k.16k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.4.4k.16k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.4.4k.16k/timing.txt
+	deleted:    ../../script_result/results.11000000.4.8k.16k/area.txt
+	deleted:    ../../script_result/results.11000000.4.8k.16k/boardserver.log
+	deleted:    ../../script_result/results.11000000.4.8k.16k/energy.txt
+	deleted:    ../../script_result/results.11000000.4.8k.16k/performance.txt
+	deleted:    ../../script_result/results.11000000.4.8k.16k/run1-core0.log
+	deleted:    ../../script_result/results.11000000.4.8k.16k/run1-power.csv
+	deleted:    ../../script_result/results.11000000.4.8k.16k/run2-core0.log
+	deleted:    ../../script_result/results.11000000.4.8k.16k/run2-power.csv
+	deleted:    ../../script_result/results.11000000.4.8k.16k/run3-core0.log
+	deleted:    ../../script_result/results.11000000.4.8k.16k/run3-power.csv
+	deleted:    ../../script_result/results.11000000.4.8k.16k/timing.txt
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/area.txt
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/boardserver.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/energy.txt
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/performance.txt
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run1-core1.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run2-core1.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run3-core1.log
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1111:1111.1000.2.4k.4k/timing.txt
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/area.txt
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/boardserver.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/energy.txt
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/performance.txt
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run1-core1.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run2-core1.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run3-core1.log
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1111:1111.1100.2.4k.4k/timing.txt
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/area.txt
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/boardserver.log
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/energy.txt
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/performance.txt
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1111:1111.2.4k.4k/timing.txt
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/area.txt
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/boardserver.log
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/energy.txt
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/performance.txt
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1111:1111.2.8k.4k/timing.txt
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/area.txt
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/boardserver.log
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/energy.txt
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/performance.txt
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1111:1111.4.4k.4k/timing.txt
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/area.txt
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/boardserver.log
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/energy.txt
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/performance.txt
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/run1-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/run1-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/run1-power.csv
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/run2-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/run2-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/run2-power.csv
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/run3-core0-ctxt0.log
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/run3-core0-ctxt1.log
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/run3-power.csv
+	deleted:    ../../script_result/results.1111:1111.4.8k.4k/timing.txt
+	deleted:    ../../script_result/trial/area.1111:1111.4.16.4.txt
+	deleted:    ../../script_result/trial/area.kanya.txt
+	deleted:    ../../script_result/trial/energy.1111:1111.4.16.4.txt
+	deleted:    ../../script_result/trial/energy.kanya.txt
+	deleted:    ../../script_result/trial/performance.1111:1111.4.16.4.txt
+	deleted:    ../../script_result/trial/performance.kanya.txt
+	deleted:    ../../script_result/trial/temp
+	deleted:    ../../script_result/trial/timing.1111:1111.4.16.4.txt
+	deleted:    ../../script_result/trial/timing.kanya.txt
+	modified:   ../../src/config.compile
+	modified:   ../../src/main-core0.c
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+
+	../../AnotherCONFIGURATIONBASE
+	../../base/2rAnother/
+	../../csv/
+	../compile/core1.0/
+	work/archive/
+	work/ptag.vhd
+	../../first.sh
+	../../genetic/
+	../../script_result/another/
+	../../script_result/beforeCache/
+	../../script_result/cache/
+	../../script_result/threeScripts/
+	../../second.sh
+	../../src/main-core1.c
+	../../third.sh
+	../../varyConfCache.sh
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+--------------------------------------------------------------------------------
+ Git remote
+--------------------------------------------------------------------------------
+origin	https://github.com/saxenamudit/mca_lab2.git (fetch)
+origin	https://github.com/saxenamudit/mca_lab2.git (push)
+

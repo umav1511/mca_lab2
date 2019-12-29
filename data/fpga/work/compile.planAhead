@@ -1,0 +1,587 @@
+# planAhead compile script to read reference design
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/stdlib/version.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/stdlib/config_types.vhd
+read_vhdl -library grlib grlib_config.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/stdlib/stdlib.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/stdlib/stdio.vhd
+set_property library grlib [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/stdlib/stdio.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/stdlib/stdio.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/stdlib/testlib.vhd
+set_property library grlib [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/stdlib/testlib.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/stdlib/testlib.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/util/util.vhd
+set_property library grlib [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/util/util.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/util/util.vhd]
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/sparc/sparc.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/sparc/sparc_disas.vhd
+set_property library grlib [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/sparc/sparc_disas.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/sparc/sparc_disas.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/sparc/cpu_disas.vhd
+set_property library grlib [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/sparc/cpu_disas.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/sparc/cpu_disas.vhd]
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/modgen/multlib.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/amba.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/devices.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/defmst.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/apbctrl.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/ahbctrl.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/dma2ahb_pkg.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/dma2ahb.vhd
+read_vhdl -library grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/ahbmst.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/dma2ahb_tp.vhd
+set_property library grlib [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/dma2ahb_tp.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/dma2ahb_tp.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/amba_tp.vhd
+set_property library grlib [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/amba_tp.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/amba_tp.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_001.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_001.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_001.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_002.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_002.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_002.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_003.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_003.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_003.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_004.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_004.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_004.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_005.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_005.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_005.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_006.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_006.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_006.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_007.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_007.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_007.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_008.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_008.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_008.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_009.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_009.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_009.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_010.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_010.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_010.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_011.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_011.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_011.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_012.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_012.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_012.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_013.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_013.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_013.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_014.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_014.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_014.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_015.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_015.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_015.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_016.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_016.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_016.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_017.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_017.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_017.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_018.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_018.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_018.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_019.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_019.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_019.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_020.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_020.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_020.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_021.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_021.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_021.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_022.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_022.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_022.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_023.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_023.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_023.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_024.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_024.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_024.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_025.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_025.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_025.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_026.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_026.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_026.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_027.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_027.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_027.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_028.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_028.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_028.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_029.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_029.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_029.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_030.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_030.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_030.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_031.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_031.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_031.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_032.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_032.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_032.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_033.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_033.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_033.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_034.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_034.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_034.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_035.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_035.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_035.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_036.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_036.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_036.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_037.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_037.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_037.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_038.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_038.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_038.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_039.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_039.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_039.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_040.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_040.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_040.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_041.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_041.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_041.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_042.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_042.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_042.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_043.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_043.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_043.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_044.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_044.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_044.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_045.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_045.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_045.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_046.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_046.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_046.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_047.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_047.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_047.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_2_0_001.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_2_0_001.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_2_0_001.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_2_0_002.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_2_0_002.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_2_0_002.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtxe1_001.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtxe1_001.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtxe1_001.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtxe1_002.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtxe1_002.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtxe1_002.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtpa1_dual_001.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtpa1_dual_001.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtpa1_dual_001.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtpa1_dual_002.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtpa1_dual_002.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtpa1_dual_002.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_a1_001.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_a1_001.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_a1_001.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_a1_002.vp
+set_property library secureip [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_a1_002.vp]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_a1_002.vp]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/synplify/sim/synplify.vhd
+set_property library synplify [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/synplify/sim/synplify.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/synplify/sim/synplify.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/synplify/sim/synattr.vhd
+set_property library synplify [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/synplify/sim/synattr.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/synplify/sim/synattr.vhd]
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/gencomp/gencomp.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/gencomp/netcomp.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/memory_inferred.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/ddr_inferred.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/mul_inferred.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/ddr_phy_inferred.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/ddrphy_datapath.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/sim_pll.vhd
+set_property library techmap [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/sim_pll.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/sim_pll.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/lpddr2_phy_inferred.vhd
+set_property library techmap [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/lpddr2_phy_inferred.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/inferred/lpddr2_phy_inferred.vhd]
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_virtex.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/memory_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/buffer_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/pads_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/clkgen_virtex.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/clkgen_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/tap_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/ddr_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/ddr_phy_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/sysmon_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/mul_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/unisim/spictrl_unisim.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/allclkgen.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/allddr.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/allmem.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/allmul.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/allpads.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/alltap.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/clkgen.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/clkmux.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/clkinv.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/clkand.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/ddr_ireg.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/ddr_oreg.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/ddrphy.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram64.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram_2p.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram_dp.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncfifo_2p.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/regfile_3p.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/tap.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/techbuf.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/nandtree.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/clkpad.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/clkpad_ds.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/inpad.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/inpad_ds.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/iodpad.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/iopad.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/iopad_ds.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/lvds_combo.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/odpad.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/outpad.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/outpad_ds.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/toutpad.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/skew_outpad.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/grlfpw_net.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/grfpw_net.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/leon4_net.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/mul_61x61.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/cpu_disas_net.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/ringosc.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/system_monitor.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/grgates.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/inpad_ddr.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/outpad_ddr.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/iopad_ddr.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram128bw.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram256bw.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram128.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram156bw.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/techmult.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/spictrl_net.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/scanreg.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncrambw.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncram_2pbw.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/sdram_phy.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/syncreg.vhd
+read_vhdl -library techmap /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/techmap/maps/clkinv.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/comp/ethcomp.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_pkg.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/core/eth_rstgen.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/core/eth_edcl_ahb_mst.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/core/eth_ahb_mst.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_tx.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/core/greth_rx.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/core/grethc.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/wrapper/greth_gen.vhd
+read_vhdl -library eth /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/eth/wrapper/greth_gbit_gen.vhd
+read_vhdl -library opencores /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/opencores/i2c/i2c_master_bit_ctrl.vhd
+read_vhdl -library opencores /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/opencores/i2c/i2c_master_byte_ctrl.vhd
+read_vhdl -library opencores /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/opencores/i2c/i2coc.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/arith/arith.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/arith/mul32.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/arith/div32.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/memctrl/memctrl.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/memctrl/sdctrl.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/memctrl/sdctrl64.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/memctrl/sdmctrl.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/memctrl/srctrl.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/srmmu/mmuconfig.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/srmmu/mmuiface.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/srmmu/libmmu.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/srmmu/mmutlbcam.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/srmmu/mmulrue.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/srmmu/mmulru.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/srmmu/mmutlb.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/srmmu/mmutw.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/srmmu/mmu.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/leon3/leon3.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/leon3/grfpushwx.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/irqmp/irqmp.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/l2cache/v2-pkg/l2cache.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/misc.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/rstgen.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/gptimer.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/ahbram.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/ahbdpram.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/ahbtrace_mmb.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/ahbtrace_mb.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/ahbtrace.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/grgpio.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/ahbstat.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/logan.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/apbps2.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/charrom_package.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/charrom.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/apbvga.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/svgactrl.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/grsysmon.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/grgpreg.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/ahb_mst_iface.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/misc/grgprbank.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/net/net.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/pci.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/pcipads.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/pcitrace/pcitrace.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/grpci1/pcilib.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/grpci1/pciahbmst.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/grpci1/pci_target.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/grpci1/pci_mt.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/grpci1/dmactrl.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/grpci1/pci_mtf.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/grpci1/pcidma.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pkg.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pkg.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pkg.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pci_master.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pci_master.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pci_master.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pci_target.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pci_target.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pci_target.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pci_arb.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pci_arb.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/pci/ptf/pt_pci_arb.vhd]
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/uart/uart.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/uart/libdcom.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/uart/apbuart.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/uart/dcom.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/uart/dcom_uart.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/uart/ahbuart.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/sim.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/sim.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/sim.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/sram.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/sram.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/sram.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/sram16.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/sram16.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/sram16.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/phy.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/phy.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/phy.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ahbrep.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ahbrep.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ahbrep.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/delay_wire.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/delay_wire.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/delay_wire.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/pwm_check.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/pwm_check.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/pwm_check.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ddrram.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ddrram.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ddrram.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ddr2ram.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ddr2ram.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ddr2ram.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ddr3ram.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ddr3ram.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/sim/ddr3ram.vhd]
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/jtag.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/libjtagcom.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/jtagcom.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/ahbjtag.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/ahbjtag_bsd.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/bscanregs.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/bscanregsbd.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/jtagcom2.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/jtagtst.vhd
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/jtagtst.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/jtag/jtagtst.vhd]
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/ethernet_mac.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth_mb.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth_gbit.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/greth_gbit_mb.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/grethm.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/greth/rgmii.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddrpkg.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddrintpkg.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddrphy_wrap.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddrspa.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddr2spa.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddr2buf.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddr2spax.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddr2spax_ahb.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddr2spax_ddr.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddr1spax.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ddr1spax_ddr.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ahb2mig_series7_pkg.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ahb2mig_series7.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ahb2avl_async.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/ahb2avl_async_be.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/mig_interface_model.v
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/mig_interface_model.v]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/ddr/mig_interface_model.v]
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2c.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2cmst.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2cmst_gen.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2cslv.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2c2ahbx.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2c2ahb.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2c2ahb_apb.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2c2ahb_gen.vhd
+read_vhdl -library gaisler /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2c2ahb_apb_gen.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2c_slave_model.v
+set_property library gaisler [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2c_slave_model.v]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/gaisler/i2c/i2c_slave_model.v]
+read_vhdl -library esa /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/esa/memoryctrl/memoryctrl.vhd
+read_vhdl -library esa /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/esa/memoryctrl/mctrl.vhd
+read_vhdl -library esa /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/esa/pci/pcicomp.vhd
+read_vhdl -library esa /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/esa/pci/pci_arb_pkg.vhd
+read_vhdl -library esa /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/esa/pci/pci_arb.vhd
+read_vhdl -library esa /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/esa/pci/pciarb.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/utilities/conversions.vhd
+set_property library fmf [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/utilities/conversions.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/utilities/conversions.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/utilities/gen_utils.vhd
+set_property library fmf [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/utilities/gen_utils.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/utilities/gen_utils.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/flash/flash.vhd
+set_property library fmf [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/flash/flash.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/flash/flash.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/flash/s25fl064a.vhd
+set_property library fmf [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/flash/s25fl064a.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/flash/s25fl064a.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/flash/m25p80.vhd
+set_property library fmf [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/flash/m25p80.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/flash/m25p80.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/fifo/idt7202.vhd
+set_property library fmf [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/fifo/idt7202.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/fmf/fifo/idt7202.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/micron/sdram/mobile_sdr.v
+set_property library micron [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/micron/sdram/mobile_sdr.v]
+set_property file_type Verilog [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/micron/sdram/mobile_sdr.v]
+read_vhdl -library rvex rvex-lib/rvex/common/common_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/utils_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/utils_sync.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/utils_fracDiv.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/utils_crc.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/utils_uart_rxBit.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/utils_uart_rxByte.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/utils_uart_tx.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/utils_uart.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/utils_optiprims.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/simUtils_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/simUtils_mem_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/utils/simUtils_scanner_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/bus/bus_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/bus/bus_addrConv_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/bus/bus_ramBlock_singlePort.vhd
+read_vhdl -library rvex rvex-lib/rvex/bus/bus_ramBlock.vhd
+read_vhdl -library rvex rvex-lib/rvex/bus/bus_arbiter.vhd
+read_vhdl -library rvex rvex-lib/rvex/bus/bus_demux.vhd
+read_vhdl -library rvex rvex-lib/rvex/bus/bus_crossClock.vhd
+read_vhdl -library rvex rvex-lib/rvex/bus/bus_stage.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_version_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_pipeline_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_ctrlRegs_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_intIface_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_opcodeDatapath_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_opcodeAlu_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_opcodeBranch_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_opcodeMemory_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_opcodeMultiplier_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_opcode_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_trap_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_asDisas_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_alu.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_brku.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_br.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_cfgCtrl_decode.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_cfgCtrl.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_forward.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_contextPipelaneIFace.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_contextRegLogic.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_ctrlRegs_busSwitch.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_ctrlRegs_contextLaneSwitch.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_ctrlRegs.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_dmemSwitch.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_globalRegLogic.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_gpRegs_mem.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_gpRegs_sim.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_gpRegs_simple.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_gpRegs.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_limmRouting.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_memu.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_mulu.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_pipelane.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_stopBitRouting.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_trapRouting.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_pipelanes.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_instructionBuffer.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core_trace.vhd
+read_vhdl -library rvex rvex-lib/rvex/core/core.vhd
+add_files -fileset sim_1 -norecurse rvex-lib/rvex/core/core_listOpcodes_tb.vhd
+set_property library rvex [get_files rvex-lib/rvex/core/core_listOpcodes_tb.vhd]
+set_property file_type VHDL [get_files rvex-lib/rvex/core/core_listOpcodes_tb.vhd]
+add_files -fileset sim_1 -norecurse rvex-lib/rvex/core/core_cfgCtrl_tb.vhd
+set_property library rvex [get_files rvex-lib/rvex/core/core_cfgCtrl_tb.vhd]
+set_property file_type VHDL [get_files rvex-lib/rvex/core/core_cfgCtrl_tb.vhd]
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_data_blockData.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_data_blockTag.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_data_blockValid.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_data_mainCtrl.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_data_block.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_data.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_instr_blockData.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_instr_blockTag.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_instr_blockValid.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_instr_missCtrl.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_instr_block.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache_instr.vhd
+read_vhdl -library rvex rvex-lib/rvex/cache/cache.vhd
+read_vhdl -library rvex rvex-lib/rvex/gaisler/bus2ahb.vhd
+read_vhdl -library rvex rvex-lib/rvex/gaisler/ahb2bus.vhd
+read_vhdl -library rvex rvex-lib/rvex/gaisler/ahb_snoop.vhd
+read_vhdl -library rvex rvex-lib/rvex/periph/periph_uart_packetHandler.vhd
+read_vhdl -library rvex rvex-lib/rvex/periph/periph_uart_packetBuffer.vhd
+read_vhdl -library rvex rvex-lib/rvex/periph/periph_uart_packetControl.vhd
+read_vhdl -library rvex rvex-lib/rvex/periph/periph_uart_fifo.vhd
+read_vhdl -library rvex rvex-lib/rvex/periph/periph_uart_busIface.vhd
+read_vhdl -library rvex rvex-lib/rvex/periph/periph_uart_switch.vhd
+read_vhdl -library rvex rvex-lib/rvex/periph/periph_uart.vhd
+read_vhdl -library rvex rvex-lib/rvex/periph/periph_irq.vhd
+read_vhdl -library rvex rvex-lib/rvex/periph/periph_trace.vhd
+read_vhdl -library rvex rvex-lib/rvex/system/rvsys_grlib_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/system/rvsys_grlib_rctrl.vhd
+read_vhdl -library rvex rvex-lib/rvex/system/rvsys_grlib.vhd
+read_vhdl -library rvex rvex-lib/rvex/system/rvsys_standalone_pkg.vhd
+read_vhdl -library rvex rvex-lib/rvex/system/rvsys_standalone_core.vhd
+read_vhdl -library rvex rvex-lib/rvex/system/rvsys_standalone_cachedCore.vhd
+read_vhdl -library rvex rvex-lib/rvex/system/rvsys_standalone.vhd
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/work/debug/debug.vhd
+set_property library work [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/work/debug/debug.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/work/debug/debug.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/work/debug/grtestmod.vhd
+set_property library work [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/work/debug/grtestmod.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/work/debug/grtestmod.vhd]
+add_files -fileset sim_1 -norecurse /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/work/debug/cpu_disas.vhd
+set_property library work [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/work/debug/cpu_disas.vhd]
+set_property file_type VHDL [get_files /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/work/debug/cpu_disas.vhd]

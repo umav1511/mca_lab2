@@ -53,7 +53,9 @@ for i in dir:
 					if re.search('DRMISS:',(str)(line)):
 						drmiss+=[(int)(datalines) for datalines in line.split() if datalines.isdigit()][0]
 					line=fp.readline()
-			print (':'.join(headings),end=',')
+			#print (':'.join(headings),end=',') #python 3
+			printval=':'.join(headings)+','
+			print (printval),
 			print ((str)((int)(math.floor(cyc/15.0)))+','+(str)((int)(math.floor(stall/15.0)))+','+(str)((int)(math.floor(bun/15.0)))+','+(str)((int)(math.floor(syl/15.0)))+','+(str)((int)(math.floor(nop/15.0)))+','+(str)((int)(math.floor(iacc/15.0)))+','+(str)((int)(math.floor(imiss/15.0)))+','+(str)((int)(dracc/15.0))+','+(str)((int)(math.floor(drmiss/15.0)))+','+(str)((int)(math.floor(dwacc/15.0)))+','+(str)((int)(math.floor(dwmiss/15.0))))		
 			os.system('rm script_result/'+i+'/temp')
 			cyc=0.0
