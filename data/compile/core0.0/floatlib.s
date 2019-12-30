@@ -11,11 +11,11 @@
 .section .data
 .align 32
 .equ _?1TEMPLATEPACKET.5, 0x0
- ## Begin floatlib_29217.estimateDiv64To32
+ ## Begin floatlib_6073.estimateDiv64To32
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-32, arg($r0.3:u32,$r0.4:u32,$r0.5:u32)
-floatlib_29217.estimateDiv64To32::
+floatlib_6073.estimateDiv64To32::
 .trace 3
 	c0    add $r0.1 = $r0.1, (-0x20)
 	c0    cmpleu $b0.0 = $r0.5, $r0.3   ## bblock 0, line 150,  t218(I1),  t134,  t132
@@ -159,31 +159,31 @@ L0?3:
 ;;								## 40
 	c0    slct $r0.10 = $b0.2, $r0.17, $r0.15   ## bblock 1, line 153,  t179,  t229(I1),  t10,  (~0xffff)(I32)
 ;;								## 41
+	c0    mpyhhu $r0.5 = $r0.5, $r0.10   ## bblock 1, line 166,  t41,  t134,  t179
 	c0    add $r0.9 = $r0.10, $r0.15   ## bblock 1, line 0,  t200,  t179,  (~0xffff)(I32)
 	c0    mpylhu $r0.17 = $r0.5, $r0.10   ## bblock 1, line 164,  t38,  t134,  t179
+	c0    mpyllu $r0.18 = $r0.5, $r0.10   ## bblock 1, line 163,  t51,  t134,  t179
 	c0    mpylhu $r0.16 = $r0.10, $r0.5   ## bblock 1, line 165,  t45,  t179,  t134
 	c0    add $r0.7 = $r0.10, (~0x1ffff)   ## bblock 1, line 0,  t199,  t179,  (~0x1ffff)(I32)
 ;;								## 42
-	c0    mpyhhu $r0.5 = $r0.5, $r0.10   ## bblock 1, line 166,  t41,  t134,  t179
-	c0    mpyllu $r0.15 = $r0.5, $r0.10   ## bblock 1, line 163,  t51,  t134,  t179
 ;;								## 43
 	c0    add $r0.17 = $r0.16, $r0.17   ## bblock 1, line 167,  t49,  t45,  t38
 ;;								## 44
 	c0    shru $r0.17 = $r0.17, 16   ## bblock 1, line 168,  t43(I16),  t49,  16(SI32)
 	c0    cmpltu $r0.16 = $r0.17, $r0.16   ## bblock 1, line 168,  t46,  t49,  t45
-	c0    shl $r0.18 = $r0.17, 16   ## bblock 1, line 169,  t56,  t49,  16(SI32)
+	c0    shl $r0.15 = $r0.17, 16   ## bblock 1, line 169,  t56,  t49,  16(SI32)
 ;;								## 45
 	c0    shl $r0.16 = $r0.16, 16   ## bblock 1, line 168,  t47,  t46,  16(SI32)
-	c0    add $r0.15 = $r0.15, $r0.18   ## bblock 1, line 170,  t74,  t51,  t56
+	c0    add $r0.18 = $r0.18, $r0.15   ## bblock 1, line 170,  t74,  t51,  t56
 	c0    add $r0.17 = $r0.17, $r0.5   ## bblock 1, line 171,  t230,  t43(I16),  t41
 	c0    mov $r0.5 = $r0.1   ## bblock 1, line 176,  t102,  t119
 ;;								## 46
-	c0    cmpltu $r0.18 = $r0.15, $r0.18   ## bblock 1, line 171,  t57,  t74,  t56
-	c0    stw 0x8[$r0.1] = $r0.15   ## bblock 1, line 172, t119, t74
-	c0    sub $r0.4 = $r0.4, $r0.15   ## bblock 1, line 182,  t71,  t133,  t74
-	c0    cmpltu $r0.19 = $r0.4, $r0.15   ## bblock 1, line 183,  t75,  t133,  t74
+	c0    cmpltu $r0.15 = $r0.18, $r0.15   ## bblock 1, line 171,  t57,  t74,  t56
+	c0    stw 0x8[$r0.1] = $r0.18   ## bblock 1, line 172, t119, t74
+	c0    sub $r0.4 = $r0.4, $r0.18   ## bblock 1, line 182,  t71,  t133,  t74
+	c0    cmpltu $r0.19 = $r0.4, $r0.18   ## bblock 1, line 183,  t75,  t133,  t74
 ;;								## 47
-	c0    add $r0.16 = $r0.16, $r0.18   ## bblock 1, line 171,  t231,  t47,  t57
+	c0    add $r0.16 = $r0.16, $r0.15   ## bblock 1, line 171,  t231,  t47,  t57
 	c0    stw 0x4[$r0.1] = $r0.4   ## bblock 1, line 182, t119, t71
 ;;								## 48
 	c0    add $r0.17 = $r0.17, $r0.16   ## bblock 1, line 171,  t76,  t230,  t231
@@ -506,12 +506,12 @@ L8?3:
 .section .data
 .section .text
 .equ ?2.1?2auto_size, 0x20
- ## End floatlib_29217.estimateDiv64To32
- ## Begin floatlib_29217.countLeadingZeros32
+ ## End floatlib_6073.estimateDiv64To32
+ ## Begin floatlib_6073.countLeadingZeros32
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=0, arg($r0.3:u32)
-floatlib_29217.countLeadingZeros32::
+floatlib_6073.countLeadingZeros32::
 .trace 1
 	      ## auto_size == 0
 	c0    cmpgeu $b0.0 = $r0.3, 65536   ## bblock 0, line 228,  t31(I1),  t37,  65536(SI32)
@@ -801,22 +801,22 @@ _?1PACKET.33:
 .section .data
 .section .text
 .equ ?2.2?2auto_size, 0x0
- ## End floatlib_29217.countLeadingZeros32
- ## Begin floatlib_29217.float_raise
+ ## End floatlib_6073.countLeadingZeros32
+ ## Begin floatlib_6073.float_raise
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-32, arg($r0.3:s32)
-floatlib_29217.float_raise::
+floatlib_6073.float_raise::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x20)
-	c0    ldw $r0.2 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## bblock 0, line 244, t0, 0(I32)
+	c0    ldw $r0.2 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## bblock 0, line 244, t0, 0(I32)
 ;;								## 0
 	c0    stw 0x10[$r0.1] = $l0.0  ## spill ## t6
 ;;								## 1
 	c0    or $r0.3 = $r0.3, $r0.2   ## bblock 0, line 244,  t4,  t1,  t0
-	c0    ldw $r0.4 = ((floatlib_29217.float_exception_mask + 0) + 0)[$r0.0]   ## bblock 0, line 246, t3, 0(I32)
+	c0    ldw $r0.4 = ((floatlib_6073.float_exception_mask + 0) + 0)[$r0.0]   ## bblock 0, line 246, t3, 0(I32)
 ;;								## 2
-	c0    stw ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0] = $r0.3   ## bblock 0, line 244, 0(I32), t4
+	c0    stw ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0] = $r0.3   ## bblock 0, line 244, 0(I32), t4
 ;;								## 3
 	c0    and $r0.4 = $r0.4, $r0.3   ## bblock 0, line 246,  t19,  t3,  t4
 ;;								## 4
@@ -843,12 +843,12 @@ L9?3:
 .section .data
 .section .text
 .equ ?2.3?2auto_size, 0x20
- ## End floatlib_29217.float_raise
- ## Begin floatlib_29217.float32ToCommonNaN
+ ## End floatlib_6073.float_raise
+ ## Begin floatlib_6073.float32ToCommonNaN
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-32, arg($r0.3:u32)
-floatlib_29217.float32ToCommonNaN::
+floatlib_6073.float32ToCommonNaN::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x20)
 	c0    shru $r0.2 = $r0.3, 22   ## bblock 0, line 256,  t1(I10),  t25,  22(SI32)
@@ -874,8 +874,8 @@ L11?3:
 ;;								## 5
 .trace 2
 L10?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 2, line 257,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 2, line 257,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    stw 0x14[$r0.1] = $r0.8  ## spill ## t25
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
@@ -897,12 +897,12 @@ L10?3:
 .section .data
 .section .text
 .equ ?2.4?2auto_size, 0x20
- ## End floatlib_29217.float32ToCommonNaN
- ## Begin floatlib_29217.propagateFloat32NaN
+ ## End floatlib_6073.float32ToCommonNaN
+ ## Begin floatlib_6073.propagateFloat32NaN
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.3:u32,$r0.4:u32)
-floatlib_29217.propagateFloat32NaN::
+floatlib_6073.propagateFloat32NaN::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
 	c0    shl $r0.2 = $r0.4, 1   ## bblock 0, line 270,  t11,  t22,  1(SI32)
@@ -952,8 +952,8 @@ L12?3:
 ;;								## 2
 	c0    stw 0x20[$r0.1] = $r0.6  ## spill ## t50
 ;;								## 3
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 2, line 278,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 2, line 278,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    stw 0x24[$r0.1] = $r0.2  ## spill ## t52
 ;;								## 4
 	c0    ldw $r0.2 = 0x24[$r0.1]  ## restore ## t52
@@ -986,12 +986,12 @@ L12?3:
 .section .data
 .section .text
 .equ ?2.5?2auto_size, 0x40
- ## End floatlib_29217.propagateFloat32NaN
- ## Begin floatlib_29217.float64ToCommonNaN
+ ## End floatlib_6073.propagateFloat32NaN
+ ## Begin floatlib_6073.float64ToCommonNaN
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.3:u32,$r0.4:u32)
-floatlib_29217.float64ToCommonNaN::
+floatlib_6073.float64ToCommonNaN::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
 	c0    shru $r0.2 = $r0.3, 19   ## bblock 0, line 294,  t1(I13),  t47,  19(SI32)
@@ -1030,8 +1030,8 @@ L14?3:
 	c0    stw 0x20[$r0.1] = $r0.9  ## spill ## t48
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 2, line 296,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 2, line 296,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    stw 0x24[$r0.1] = $r0.10  ## spill ## t47
 ;;								## 1
 	c0    ldw $r0.2 = 0x24[$r0.1]  ## restore ## t47
@@ -1061,12 +1061,12 @@ L14?3:
 .section .data
 .section .text
 .equ ?2.6?2auto_size, 0x40
- ## End floatlib_29217.float64ToCommonNaN
- ## Begin floatlib_29217.commonNaNToFloat64
+ ## End floatlib_6073.float64ToCommonNaN
+ ## Begin floatlib_6073.commonNaNToFloat64
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-32, arg($r0.3:s32,$r0.4:u32,$r0.5:u32)
-floatlib_29217.commonNaNToFloat64::
+floatlib_6073.commonNaNToFloat64::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x20)
 	c0    shru $r0.5 = $r0.5, 12   ## bblock 0, line 328,  t63(I20),  t60,  12(I32)
@@ -1091,12 +1091,12 @@ floatlib_29217.commonNaNToFloat64::
 .section .data
 .section .text
 .equ ?2.7?2auto_size, 0x20
- ## End floatlib_29217.commonNaNToFloat64
- ## Begin floatlib_29217.propagateFloat64NaN
+ ## End floatlib_6073.commonNaNToFloat64
+ ## Begin floatlib_6073.propagateFloat64NaN
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32)
-floatlib_29217.propagateFloat64NaN::
+floatlib_6073.propagateFloat64NaN::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
 	c0    shl $r0.2 = $r0.5, 1   ## bblock 0, line 350,  t18,  t36,  1(SI32)
@@ -1190,8 +1190,8 @@ L16?3:
 ;;								## 4
 	c0    stw 0x28[$r0.1] = $r0.2  ## spill ## t71
 ;;								## 5
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 8, line 360,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 8, line 360,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    stw 0x2c[$r0.1] = $r0.9  ## spill ## t70
 ;;								## 6
 	c0    ldw $r0.9 = 0x2c[$r0.1]  ## restore ## t70
@@ -1222,15 +1222,15 @@ L16?3:
 .section .data
 .section .text
 .equ ?2.8?2auto_size, 0x40
- ## End floatlib_29217.propagateFloat64NaN
- ## Begin floatlib_29217.roundAndPackFloat32
+ ## End floatlib_6073.propagateFloat64NaN
+ ## Begin floatlib_6073.roundAndPackFloat32
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.1 + 52, 12; $r0.3:s32,$r0.4:s32,$r0.5:u32)
-floatlib_29217.roundAndPackFloat32::
+floatlib_6073.roundAndPackFloat32::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
-	c0    ldw $r0.2 = ((floatlib_29217.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 0, line 371, t104, 0(I32)
+	c0    ldw $r0.2 = ((floatlib_6073.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 0, line 371, t104, 0(I32)
 	c0    cmpne $b0.0 = $r0.3, $r0.0   ## bblock 0, line 385,  t170(I1),  t155,  0(I32)
 	c0    and $r0.6 = $r0.5, 127   ## bblock 0, line 393,  t101,  t8,  127(I32)
 	c0    zxth $r0.7 = $r0.4   ## bblock 0, line 397,  t11(I16),  t10
@@ -1244,7 +1244,7 @@ floatlib_29217.roundAndPackFloat32::
 	c0    cmpeq $b0.5 = $r0.2, 3   ## bblock 0, line 378,  t151(I1),  t104,  3(SI32)
 	c0    cmpeq $b0.3 = $r0.2, 2   ## bblock 0, line 384,  t156(I1),  t104,  2(SI32)
 	c0    cmpeq $b0.4 = $r0.2, 1   ## bblock 0, line 388,  t159(I1),  t104,  1(SI32)
-	c0    ldw.d $r0.9 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 6, line 433, t62, 0(I32)
+	c0    ldw.d $r0.9 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 6, line 433, t62, 0(I32)
 	c0    cmpeq $r0.8 = $r0.8, $r0.0   ## [spec] bblock 3, line 435,  t72,  t71,  0(I32)
 ;;								## 2
 	c0    stw 0x34[$r0.1] = $r0.3   ## bblock 0, line 364, t83, t155
@@ -1270,7 +1270,7 @@ L22?3:
 	c0    ldw.d $r0.4 = 0x3c[$r0.1]   ## [spec] bblock 3, line 434, t65, t83
 	c0    brf $b0.2, L23?3   ## bblock 2, line 432,  t173(I1)
 ;;								## 7
-	c0    stw ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0] = $r0.9   ## bblock 6, line 433, 0(I32), t63
+	c0    stw ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0] = $r0.9   ## bblock 6, line 433, 0(I32), t63
 ;;								## 8
 L24?3:
 	c0    add $r0.4 = $r0.4, $r0.2   ## bblock 3, line 434,  t66,  t65,  t102
@@ -1322,8 +1322,8 @@ L21?3:
 ;;								## 3
 	c0    brf $b0.0, L27?3   ## bblock 7, line 401,  t178(I1)
 ;;								## 4
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 16, line 402,  raddr(floatlib_29217.float_raise)(P32),  5(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 16, line 402,  raddr(floatlib_6073.float_raise)(P32),  5(SI32)
 ;;								## 5
 	c0    ldw $r0.4 = 0x34[$r0.1]   ## bblock 17, line 403, t23, t83
 ;;								## 6
@@ -1352,7 +1352,7 @@ L27?3:
 	c0    ldw $r0.2 = 0x14[$r0.1]  ## restore ## t102
 ;;								## 3
 	c0    cmplt $b0.0 = $r0.5, $r0.0   ## bblock 8, line 406,  t179(I1),  t26,  0(SI32)
-	c0    ldw.d $r0.13 = ((floatlib_29217.float_detect_tininess + 0) + 0)[$r0.0]   ## [spec] bblock 9, line 407, t27, 0(I32)
+	c0    ldw.d $r0.13 = ((floatlib_6073.float_detect_tininess + 0) + 0)[$r0.0]   ## [spec] bblock 9, line 407, t27, 0(I32)
 	c0    sub $r0.12 = $r0.0, $r0.5   ## [spec] bblock 9, line 415,  t120,  0(I32),  t26
 	c0    cmplt $r0.5 = $r0.5, -1   ## [spec] bblock 9, line 408,  t30,  t26,  -1(SI32)
 ;;								## 4
@@ -1388,10 +1388,10 @@ L27?3:
 ;;								## 13
 	c0    brf $b0.0, L29?3   ## bblock 9, line 428,  t183(I1)
 ;;								## 14
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 13, line 429,  raddr(floatlib_29217.float_raise)(P32),  2(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 13, line 429,  raddr(floatlib_6073.float_raise)(P32),  2(SI32)
 ;;								## 15
-	c0    ldw.d $r0.3 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 6, line 433, t62, 0(I32)
+	c0    ldw.d $r0.3 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 6, line 433, t62, 0(I32)
 ;;								## 16
 	c0    ldw $r0.6 = 0x1c[$r0.1]  ## restore ## t101
 ;;								## 17
@@ -1450,12 +1450,12 @@ L28?3:
 .section .data
 .section .text
 .equ ?2.9?2auto_size, 0x40
- ## End floatlib_29217.roundAndPackFloat32
- ## Begin floatlib_29217.normalizeRoundAndPackFloat32
+ ## End floatlib_6073.roundAndPackFloat32
+ ## Begin floatlib_6073.normalizeRoundAndPackFloat32
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-32, arg($r0.3:s32,$r0.4:s32,$r0.5:u32)
-floatlib_29217.normalizeRoundAndPackFloat32::
+floatlib_6073.normalizeRoundAndPackFloat32::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x20)
 ;;								## 0
@@ -1466,8 +1466,8 @@ floatlib_29217.normalizeRoundAndPackFloat32::
 	c0    stw 0x18[$r0.1] = $r0.4  ## spill ## t26
 	c0    mov $r0.3 = $r0.5   ## t27
 ;;								## 3
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 0, line 443,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t27
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 0, line 443,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t27
 	c0    stw 0x1c[$r0.1] = $r0.5  ## spill ## t27
 ;;								## 4
 	c0    add $r0.6 = $r0.3, -1   ## bblock 1, line 443,  t9,  t0,  -1(SI32)
@@ -1481,8 +1481,8 @@ floatlib_29217.normalizeRoundAndPackFloat32::
 	c0    shl $r0.5 = $r0.7, $r0.6   ## bblock 1, line 444,  t10,  t27,  t9
 	c0    ldw $r0.3 = 0x14[$r0.1]  ## restore ## t25
 ;;								## 8
-.call floatlib_29217.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat32   ## bblock 1, line 444,  raddr(floatlib_29217.roundAndPackFloat32)(P32),  t25,  t7,  t10
+.call floatlib_6073.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat32   ## bblock 1, line 444,  raddr(floatlib_6073.roundAndPackFloat32)(P32),  t25,  t7,  t10
 ;;								## 9
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t11
 ;;								## 10
@@ -1499,13 +1499,13 @@ floatlib_29217.normalizeRoundAndPackFloat32::
 .section .data
 .section .text
 .equ ?2.10?2auto_size, 0x20
- ## End floatlib_29217.normalizeRoundAndPackFloat32
+ ## End floatlib_6073.normalizeRoundAndPackFloat32
 .equ _?1TEMPLATEPACKET.9, 0x0
- ## Begin floatlib_29217.normalizeFloat64Subnormal
+ ## Begin floatlib_6073.normalizeFloat64Subnormal
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:u32)
-floatlib_29217.normalizeFloat64Subnormal::
+floatlib_6073.normalizeFloat64Subnormal::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
 	c0    cmpeq $b0.0 = $r0.3, $r0.0   ## bblock 0, line 455,  t93(I1),  t67,  0(SI32)
@@ -1521,8 +1521,8 @@ floatlib_29217.normalizeFloat64Subnormal::
 ;;								## 3
 	c0    stw 0x1c[$r0.1] = $r0.5  ## spill ## t69
 ;;								## 4
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 4, line 456,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t68
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 4, line 456,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t68
 	c0    stw 0x20[$r0.1] = $r0.4  ## spill ## t68
 ;;								## 5
 	c0    add $r0.2 = $r0.3, -11   ## bblock 5, line 456,  t79,  t1,  -11(SI32)
@@ -1564,8 +1564,8 @@ L30?3:
 ;;								## 2
 	c0    stw 0x20[$r0.1] = $r0.4  ## spill ## t68
 ;;								## 3
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 1, line 471,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t67
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 1, line 471,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t67
 	c0    stw 0x24[$r0.1] = $r0.2  ## spill ## t67
 ;;								## 4
 	c0    add $r0.2 = $r0.3, -11   ## bblock 2, line 471,  t48,  t23,  -11(SI32)
@@ -1607,12 +1607,12 @@ L30?3:
 .section .data
 .section .text
 .equ ?2.11?2auto_size, 0x40
- ## End floatlib_29217.normalizeFloat64Subnormal
- ## Begin floatlib_29217.packFloat64
+ ## End floatlib_6073.normalizeFloat64Subnormal
+ ## Begin floatlib_6073.packFloat64
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=0, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32)
-floatlib_29217.packFloat64::
+floatlib_6073.packFloat64::
 .trace 1
 	      ## auto_size == 0
 	c0    shl $r0.4 = $r0.4, 20   ## bblock 0, line 492,  t3,  t2,  20(SI32)
@@ -1631,15 +1631,15 @@ floatlib_29217.packFloat64::
 .section .data
 .section .text
 .equ ?2.12?2auto_size, 0x0
- ## End floatlib_29217.packFloat64
- ## Begin floatlib_29217.roundAndPackFloat64
+ ## End floatlib_6073.packFloat64
+ ## Begin floatlib_6073.roundAndPackFloat64
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.1 + 48, 20; $r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32,$r0.7:u32)
-floatlib_29217.roundAndPackFloat64::
+floatlib_6073.roundAndPackFloat64::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
-	c0    ldw $r0.8 = ((floatlib_29217.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 0, line 503, t204, 0(I32)
+	c0    ldw $r0.8 = ((floatlib_6073.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 0, line 503, t204, 0(I32)
 	c0    cmplt $r0.2 = $r0.7, $r0.0   ## bblock 0, line 505,  t202,  t3,  0(SI32)
 ;;								## 0
 	c0    stw 0x10[$r0.1] = $l0.0  ## spill ## t167
@@ -1669,7 +1669,7 @@ L31?3:
 	c0    ldw.d $r0.10 = 0x40[$r0.1]   ## [spec] bblock 2, line 604, t130, t168
 ;;								## 1
 	c0    zxth $r0.11 = $r0.7   ## bblock 1, line 522,  t17(I16),  t16
-	c0    ldw.d $r0.12 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 9, line 605, t131, 0(I32)
+	c0    ldw.d $r0.12 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 9, line 605, t131, 0(I32)
 ;;								## 2
 	c0    cmpge $b0.1 = $r0.11, 2045   ## bblock 1, line 522,  t265(I1),  t17(I16),  2045(SI32)
 	c0    cmpne $b0.2 = $r0.10, $r0.0   ## [spec] bblock 2, line 604,  t266(I1),  t130,  0(SI32)
@@ -1692,7 +1692,7 @@ L34?3:
 	c0    and $r0.9 = $r0.9, $r0.7   ## [spec] bblock 8, line 618,  t269,  t203,  t155
 	c0    ldw.d $r0.4 = 0x34[$r0.1]   ## [spec] bblock 5, line 624, t164, t168
 ;;								## 7
-	c0    stw ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0] = $r0.12   ## bblock 9, line 605, 0(I32), t132
+	c0    stw ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0] = $r0.12   ## bblock 9, line 605, 0(I32), t132
 	c0    add $r0.11 = $r0.11, $r0.10   ## [spec] bblock 8, line 616,  t148,  t147,  t145
 	c0    orc $r0.9 = $r0.9, $r0.0   ## [spec] bblock 8, line 618,  t156,  t269,  0(I32)
 	c0    brf $b0.0, L36?3   ## bblock 3, line 606,  t267(I1)
@@ -1708,8 +1708,8 @@ L37?3:
 L38?3:
 	c0    ldw $r0.6 = 0x3c[$r0.1]   ## bblock 5, line 624, t166, t168
 ;;								## 12
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 5, line 624,  raddr(floatlib_29217.packFloat64)(P32),  t163,  t164,  t165,  t166
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 5, line 624,  raddr(floatlib_6073.packFloat64)(P32),  t163,  t164,  t165,  t166
 ;;								## 13
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t167
 ;;								## 14
@@ -1791,8 +1791,8 @@ L33?3:
 ;;								## 7
 	c0    brf $b0.1, L41?3   ## bblock 10, line 527,  t273(I1)
 ;;								## 8
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 30, line 528,  raddr(floatlib_29217.float_raise)(P32),  5(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 30, line 528,  raddr(floatlib_6073.float_raise)(P32),  5(SI32)
 ;;								## 9
 	c0    ldw $r0.3 = 0x30[$r0.1]   ## bblock 31, line 530, t34, t168
 	c0    mov $r0.6 = (~0x0)   ## (~0x0)(I32)
@@ -1816,8 +1816,8 @@ L33?3:
 ;;								## 16
 	c0    brf $b0.0, L42?3   ## bblock 31, line 532,  t293(I1)
 ;;								## 17
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 34, line 533,  raddr(floatlib_29217.packFloat64)(P32),  t34,  2046(SI32),  1048575(I32),  (~0x0)(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 34, line 533,  raddr(floatlib_6073.packFloat64)(P32),  t34,  2046(SI32),  1048575(I32),  (~0x0)(I32)
 ;;								## 18
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t167
 ;;								## 19
@@ -1832,8 +1832,8 @@ L42?3:
 	c0    mov $r0.6 = $r0.0   ## 0(I32)
 	c0    mov $r0.4 = 2047   ## 2047(SI32)
 ;;								## 0
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 32, line 535,  raddr(floatlib_29217.packFloat64)(P32),  t43,  2047(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 32, line 535,  raddr(floatlib_6073.packFloat64)(P32),  t43,  2047(SI32),  0(I32),  0(I32)
 ;;								## 1
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t167
 ;;								## 2
@@ -1849,7 +1849,7 @@ L41?3:
 	c0    add $r0.7 = $r0.1, 0x40   ## [spec] bblock 12, line 552,  t190,  t168,  offset(zSig2?1.486)(P32)
 	c0    stw 0x18[$r0.1] = $r0.9  ## spill ## t203
 ;;								## 0
-	c0    ldw.d $r0.10 = ((floatlib_29217.float_detect_tininess + 0) + 0)[$r0.0]   ## [spec] bblock 12, line 538, t45, 0(I32)
+	c0    ldw.d $r0.10 = ((floatlib_6073.float_detect_tininess + 0) + 0)[$r0.0]   ## [spec] bblock 12, line 538, t45, 0(I32)
 	c0    mov $r0.3 = 2   ## 2(SI32)
 ;;								## 1
 	c0    ldw.d $r0.11 = 0x38[$r0.1]   ## [spec] bblock 12, line 541, t200, t168
@@ -1896,8 +1896,8 @@ L45?3:
 	c0    stw 0x34[$r0.1] = $r0.0   ## bblock 19, line 588, t168, 0(SI32)
 	c0    brf $b0.1, L46?3   ## bblock 19, line 589,  t284(I1)
 ;;								## 13
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 25, line 590,  raddr(floatlib_29217.float_raise)(P32),  2(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 25, line 590,  raddr(floatlib_6073.float_raise)(P32),  2(SI32)
 ;;								## 14
 L46?3:
 	c0    ldw.d $r0.3 = 0x30[$r0.1]   ## [spec] bblock 20, line 595, t248, t168
@@ -1917,7 +1917,7 @@ L46?3:
 	c0    andl $r0.5 = $r0.4, $r0.5   ## bblock 20, line 596,  t251,  t253,  t249
 	c0    andl $r0.6 = $r0.4, $r0.6   ## bblock 20, line 599,  t254,  t253,  t252
 	c0    cmpne $b0.3 = $r0.9, $r0.0   ## bblock 20, line 592,  t288(I1),  t203,  0(I32)
-	c0    ldw.d $r0.7 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 9, line 605, t131, 0(I32)
+	c0    ldw.d $r0.7 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 9, line 605, t131, 0(I32)
 ;;								## 20
 	c0    slct $r0.5 = $b0.1, $r0.5, $r0.6   ## bblock 20, line 596,  t255,  t287(I1),  t251,  t254
 	c0    cmpne $b0.2 = $r0.10, $r0.0   ## bblock 2, line 604,  t266(I1),  t130,  0(SI32)
@@ -2006,12 +2006,12 @@ L32?3:
 .section .data
 .section .text
 .equ ?2.13?2auto_size, 0x40
- ## End floatlib_29217.roundAndPackFloat64
- ## Begin floatlib_29217.normalizeRoundAndPackFloat64
+ ## End floatlib_6073.roundAndPackFloat64
+ ## Begin floatlib_6073.normalizeRoundAndPackFloat64
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.1 + 48, 16; $r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32)
-floatlib_29217.normalizeRoundAndPackFloat64::
+floatlib_6073.normalizeRoundAndPackFloat64::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
 	c0    cmpeq $b0.0 = $r0.5, $r0.0   ## bblock 0, line 633,  t209(I1),  t0,  0(SI32)
@@ -2034,9 +2034,9 @@ floatlib_29217.normalizeRoundAndPackFloat64::
 ;;								## 7
 	c0    stw 0x3c[$r0.1] = $r0.0   ## bblock 18, line 635, t98, 0(SI32)
 ;;								## 8
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
 	c0    stw 0x34[$r0.1] = $r0.2   ## bblock 18, line 636, t98, t3
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 1, line 638,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t5
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 1, line 638,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t5
 ;;								## 9
 L49?3:
 	c0    add $r0.3 = $r0.3, -11   ## bblock 2, line 638,  t128,  t4,  -11(SI32)
@@ -2073,9 +2073,9 @@ L51?3:
 ;;								## 18
 	c0    ldw $r0.7 = 0x10[$r0.1]   ## bblock 11, line 701, t96, t98
 ;;								## 19
-.call floatlib_29217.roundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret($r0.3:u32,$r0.4:u32)
+.call floatlib_6073.roundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret($r0.3:u32,$r0.4:u32)
 	c0    stw 0x34[$r0.1] = $r0.4   ## bblock 11, line 700, t98, t93
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat64   ## bblock 11, line 701,  raddr(floatlib_29217.roundAndPackFloat64)(P32),  t92,  t93,  t94,  t95,  t96
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat64   ## bblock 11, line 701,  raddr(floatlib_6073.roundAndPackFloat64)(P32),  t92,  t93,  t94,  t95,  t96
 ;;								## 20
 	c0    ldw $l0.0 = 0x14[$r0.1]  ## restore ## t97
 ;;								## 21
@@ -2144,8 +2144,8 @@ L50?3:
 L48?3:
 	c0    ldw $r0.3 = 0x38[$r0.1]   ## bblock 1, line 638, t5, t98
 ;;								## 0
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 1, line 638,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t5
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 1, line 638,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t5
 ;;								## 1
 	c0    goto L49?3 ## goto
 ;;								## 2
@@ -2159,7 +2159,7 @@ L48?3:
 .section .data
 .section .text
 .equ ?2.14?2auto_size, 0x40
- ## End floatlib_29217.normalizeRoundAndPackFloat64
+ ## End floatlib_6073.normalizeRoundAndPackFloat64
  ## Begin _r_ilfloat
 .section .text
 .proc
@@ -2188,9 +2188,9 @@ L52?3:
 	c0    cmplt $b0.0 = $r0.2, $r0.0   ## bblock 1, line 708,  t29(I1),  t26,  0(SI32)
 	c0    mov $r0.4 = 156   ## 156(SI32)
 ;;								## 0
-.call floatlib_29217.normalizeRoundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+.call floatlib_6073.normalizeRoundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
 	c0    slct $r0.5 = $b0.0, $r0.6, $r0.2   ## bblock 1, line 708,  t13,  t29(I1),  t11,  t26
-	c0    call $l0.0 = floatlib_29217.normalizeRoundAndPackFloat32   ## bblock 1, line 708,  raddr(floatlib_29217.normalizeRoundAndPackFloat32)(P32),  t8,  156(SI32),  t13
+	c0    call $l0.0 = floatlib_6073.normalizeRoundAndPackFloat32   ## bblock 1, line 708,  raddr(floatlib_6073.normalizeRoundAndPackFloat32)(P32),  t8,  156(SI32),  t13
 ;;								## 1
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t14
 ;;								## 2
@@ -2226,8 +2226,8 @@ _r_ufloat::
 ;;								## 2
 .trace 2
 L53?3:
-.call floatlib_29217.normalizeRoundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.normalizeRoundAndPackFloat32   ## bblock 1, line 715,  raddr(floatlib_29217.normalizeRoundAndPackFloat32)(P32),  0(SI32),  156(SI32),  t15
+.call floatlib_6073.normalizeRoundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.normalizeRoundAndPackFloat32   ## bblock 1, line 715,  raddr(floatlib_6073.normalizeRoundAndPackFloat32)(P32),  0(SI32),  156(SI32),  t15
 	c0    mov $r0.5 = $r0.2   ## t15
 	c0    mov $r0.4 = 156   ## 156(SI32)
 	c0    mov $r0.3 = $r0.0   ## 0(SI32)
@@ -2264,8 +2264,8 @@ _d_ilfloat::
 	c0    stw 0x18[$r0.1] = $l0.0  ## spill ## t57
 	c0    brf $b0.0, L54?3   ## bblock 0, line 725,  t107(I1)
 ;;								## 1
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 12, line 726,  raddr(floatlib_29217.packFloat64)(P32),  0(SI32),  0(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 12, line 726,  raddr(floatlib_6073.packFloat64)(P32),  0(SI32),  0(SI32),  0(I32),  0(I32)
 ;;								## 2
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t57
 ;;								## 3
@@ -2283,8 +2283,8 @@ L54?3:
 ;;								## 1
 	c0    slct $r0.3 = $b0.0, $r0.6, $r0.2   ## bblock 1, line 728,  t79,  t80,  t7,  t69
 ;;								## 2
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 1, line 729,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t79
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 1, line 729,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t79
 	c0    stw 0x20[$r0.1] = $r0.3  ## spill ## t79
 ;;								## 3
 	c0    add $r0.2 = $r0.3, -11   ## bblock 2, line 729,  t78,  t10,  -11(SI32)
@@ -2307,8 +2307,8 @@ L54?3:
 L56?3:
 	c0    ldw $r0.6 = 0x10[$r0.1]   ## bblock 7, line 759, t56, t58
 ;;								## 10
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 7, line 759,  raddr(floatlib_29217.packFloat64)(P32),  t80,  t54,  t55,  t56
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 7, line 759,  raddr(floatlib_6073.packFloat64)(P32),  t80,  t54,  t55,  t56
 ;;								## 11
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t57
 ;;								## 12
@@ -2379,8 +2379,8 @@ _d_ufloat::
 	c0    stw 0x18[$r0.1] = $l0.0  ## spill ## t49
 	c0    brf $b0.0, L57?3   ## bblock 0, line 767,  t97(I1)
 ;;								## 1
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 12, line 768,  raddr(floatlib_29217.packFloat64)(P32),  0(SI32),  0(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 12, line 768,  raddr(floatlib_6073.packFloat64)(P32),  0(SI32),  0(SI32),  0(I32),  0(I32)
 ;;								## 2
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t49
 ;;								## 3
@@ -2390,8 +2390,8 @@ _d_ufloat::
 ;;								## 5
 .trace 2
 L57?3:
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 1, line 770,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t61
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 1, line 770,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t61
 	c0    mov $r0.3 = $r0.2   ## t61
 	c0    stw 0x1c[$r0.1] = $r0.2  ## spill ## t61
 ;;								## 0
@@ -2415,8 +2415,8 @@ L57?3:
 L59?3:
 	c0    ldw $r0.6 = 0x10[$r0.1]   ## bblock 7, line 800, t48, t50
 ;;								## 7
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 7, line 800,  raddr(floatlib_29217.packFloat64)(P32),  0(SI32),  t46,  t47,  t48
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 7, line 800,  raddr(floatlib_6073.packFloat64)(P32),  0(SI32),  t46,  t47,  t48
 ;;								## 8
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t49
 ;;								## 9
@@ -2471,17 +2471,17 @@ L58?3:
 .section .text
 .equ ?2.18?2auto_size, 0x20
  ## End _d_ufloat
- ## Begin floatlib_29217.float32_to_int32_round_to_zero
+ ## Begin floatlib_6073.float32_to_int32_round_to_zero
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.3:u32,$r0.4:s32)
-floatlib_29217.float32_to_int32_round_to_zero::
+floatlib_6073.float32_to_int32_round_to_zero::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
 	c0    and $r0.2 = $r0.3, 8388607   ## bblock 0, line 810,  t61,  t58,  8388607(I32)
 	c0    shru $r0.6 = $r0.3, 23   ## bblock 0, line 811,  t3(I9),  t58,  23(SI32)
 	c0    shru $r0.5 = $r0.3, 31   ## bblock 0, line 812,  t64(I1),  t58,  31(SI32)
-	c0    ldw.d $r0.7 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 7, line 827, t25, 0(I32)
+	c0    ldw.d $r0.7 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 7, line 827, t25, 0(I32)
 ;;								## 0
 	c0    and $r0.6 = $r0.6, 255   ## bblock 0, line 811,  t63,  t3(I9),  255(I32)
 	c0    stw 0x10[$r0.1] = $l0.0  ## spill ## t45
@@ -2503,7 +2503,7 @@ floatlib_29217.float32_to_int32_round_to_zero::
 	c0    brf $b0.2, L62?3   ## bblock 5, line 826,  t69
 ;;								## 6
 .return ret($r0.3:s32)
-	c0    stw ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0] = $r0.7   ## bblock 7, line 827, 0(I32), t26
+	c0    stw ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0] = $r0.7   ## bblock 7, line 827, 0(I32), t26
 	c0    return $r0.1 = $r0.1, (0x40), $l0.0   ## bblock 6, line 828,  t46,  ?2.19?2auto_size(I32),  t45
 ;;								## 7
 .trace 3
@@ -2517,7 +2517,7 @@ L61?3:
 	c0    or $r0.2 = $r0.2, 8388608   ## bblock 2, line 830,  t28,  t61,  8388608(I32)
 	c0    sub $r0.4 = $r0.0, $r0.9   ## bblock 2, line 831,  t32,  0(I32),  t62
 	c0    and $r0.6 = $r0.9, 31   ## bblock 2, line 832,  t36,  t62,  31(I32)
-	c0    ldw.d $r0.7 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 4, line 833, t38, 0(I32)
+	c0    ldw.d $r0.7 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 4, line 833, t38, 0(I32)
 	c0    mtb $b0.0 = $r0.5   ## t64(I1)
 ;;								## 0
 	c0    shl $r0.2 = $r0.2, 8   ## bblock 2, line 830,  t34,  t28,  8(SI32)
@@ -2533,7 +2533,7 @@ L61?3:
 	c0    brf $b0.1, L63?3   ## bblock 2, line 832,  t67(I1)
 ;;								## 4
 .return ret($r0.3:s32)
-	c0    stw ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0] = $r0.7   ## bblock 4, line 833, 0(I32), t39
+	c0    stw ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0] = $r0.7   ## bblock 4, line 833, 0(I32), t39
 	c0    return $r0.1 = $r0.1, (0x40), $l0.0   ## bblock 3, line 835,  t46,  ?2.19?2auto_size(I32),  t45
 ;;								## 5
 .trace 4
@@ -2561,8 +2561,8 @@ L64?3:
 ;;								## 1
 	c0    stw 0x1c[$r0.1] = $r0.2  ## spill ## t61
 ;;								## 2
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 9, line 820,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 9, line 820,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    stw 0x20[$r0.1] = $r0.6  ## spill ## t63
 ;;								## 3
 	c0    mov $r0.2 = 2147483647   ## 2147483647(SI32)
@@ -2608,7 +2608,7 @@ L65?3:
 .section .data
 .section .text
 .equ ?2.19?2auto_size, 0x40
- ## End floatlib_29217.float32_to_int32_round_to_zero
+ ## End floatlib_6073.float32_to_int32_round_to_zero
  ## Begin _d_r
 .section .text
 .proc
@@ -2638,9 +2638,9 @@ _d_r::
 L68?3:
 	c0    stw 0x14[$r0.1] = $r0.5   ## bblock 2, line 889, t71, t68
 ;;								## 5
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
 	c0    stw 0x10[$r0.1] = $r0.6   ## bblock 2, line 888, t71, t69
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 2, line 891,  raddr(floatlib_29217.packFloat64)(P32),  t94(I1),  t67,  t68,  t69
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 2, line 891,  raddr(floatlib_6073.packFloat64)(P32),  t94(I1),  t67,  t68,  t69
 ;;								## 6
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t70
 ;;								## 7
@@ -2658,8 +2658,8 @@ L67?3:
 ;;								## 0
 	c0    brf $b0.0, L69?3   ## bblock 9, line 859,  t109(I1)
 ;;								## 1
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 12, line 860,  raddr(floatlib_29217.packFloat64)(P32),  t94(I1),  0(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 12, line 860,  raddr(floatlib_6073.packFloat64)(P32),  t94(I1),  0(SI32),  0(I32),  0(I32)
 ;;								## 2
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t70
 ;;								## 3
@@ -2672,8 +2672,8 @@ L69?3:
 	c0    stw 0x1c[$r0.1] = $r0.7  ## spill ## t94(I1)
 	c0    mov $r0.3 = $r0.2   ## t92
 ;;								## 0
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 10, line 862,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t92
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 10, line 862,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t92
 	c0    stw 0x20[$r0.1] = $r0.2  ## spill ## t92
 ;;								## 1
 	c0    add $r0.2 = $r0.3, -8   ## bblock 11, line 862,  t29,  t23,  -8(SI32)
@@ -2696,11 +2696,11 @@ L66?3:
 ;;								## 0
 	c0    brf $b0.0, L70?3   ## bblock 14, line 851,  t110(I1)
 ;;								## 1
-.call floatlib_29217.float32ToCommonNaN, caller, arg($r0.3:u32), ret($r0.3:s32,$r0.4:u32,$r0.5:u32)
-	c0    call $l0.0 = floatlib_29217.float32ToCommonNaN   ## bblock 17, line 852,  raddr(floatlib_29217.float32ToCommonNaN)(P32),  t82
+.call floatlib_6073.float32ToCommonNaN, caller, arg($r0.3:u32), ret($r0.3:s32,$r0.4:u32,$r0.5:u32)
+	c0    call $l0.0 = floatlib_6073.float32ToCommonNaN   ## bblock 17, line 852,  raddr(floatlib_6073.float32ToCommonNaN)(P32),  t82
 ;;								## 2
-.call floatlib_29217.commonNaNToFloat64, caller, arg($r0.3:s32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.commonNaNToFloat64   ## bblock 18, line 852,  raddr(floatlib_29217.commonNaNToFloat64)(P32),  t11,  t12,  t13
+.call floatlib_6073.commonNaNToFloat64, caller, arg($r0.3:s32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.commonNaNToFloat64   ## bblock 18, line 852,  raddr(floatlib_6073.commonNaNToFloat64)(P32),  t11,  t12,  t13
 ;;								## 3
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t70
 ;;								## 4
@@ -2710,8 +2710,8 @@ L66?3:
 ;;								## 6
 .trace 4
 L70?3:
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 15, line 853,  raddr(floatlib_29217.packFloat64)(P32),  t94(I1),  2047(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 15, line 853,  raddr(floatlib_6073.packFloat64)(P32),  t94(I1),  2047(SI32),  0(I32),  0(I32)
 	c0    mov $r0.5 = $r0.0   ## 0(I32)
 	c0    mov $r0.6 = $r0.0   ## 0(I32)
 	c0    mov $r0.3 = $r0.7   ## t94(I1)
@@ -2735,11 +2735,11 @@ L70?3:
 .section .text
 .equ ?2.20?2auto_size, 0x40
  ## End _d_r
- ## Begin floatlib_29217.addFloat32Sigs
+ ## Begin floatlib_6073.addFloat32Sigs
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-32, arg($r0.3:u32,$r0.4:u32,$r0.5:s32)
-floatlib_29217.addFloat32Sigs::
+floatlib_6073.addFloat32Sigs::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x20)
 	c0    and $r0.2 = $r0.3, 8388607   ## bblock 0, line 900,  t13,  t137,  8388607(I32)
@@ -2808,10 +2808,10 @@ L75?3:
 ;;								## 19
 	c0    cmpge $b0.0 = $r0.6, $r0.0   ## bblock 19, line 993,  t163(I1),  t197,  0(SI32)
 ;;								## 20
-.call floatlib_29217.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+.call floatlib_6073.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
 	c0    slct $r0.5 = $b0.0, $r0.6, $r0.2   ## bblock 19, line 991,  t149,  t163(I1),  t197,  t164
 	c0    slct $r0.4 = $b0.0, $r0.12, $r0.11   ## bblock 19, line 995,  t154,  t163(I1),  t198,  t150
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat32   ## bblock 5, line 998,  raddr(floatlib_29217.roundAndPackFloat32)(P32),  t139,  t154,  t149
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat32   ## bblock 5, line 998,  raddr(floatlib_6073.roundAndPackFloat32)(P32),  t139,  t154,  t149
 ;;								## 21
 L76?3:
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t123
@@ -2847,8 +2847,8 @@ L72?3:
 ;;								## 2
 	c0    brf $b0.0, L77?3   ## bblock 38, line 912,  t214(I1)
 ;;								## 3
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 40, line 913,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t137,  t138
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 40, line 913,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t137,  t138
 ;;								## 4
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t123
 ;;								## 5
@@ -2940,8 +2940,8 @@ L79?3:
 ;;								## 2
 	c0    brf $b0.0, L82?3   ## bblock 24, line 945,  t210(I1)
 ;;								## 3
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 26, line 946,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t137,  t138
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 26, line 946,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t137,  t138
 ;;								## 4
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t123
 ;;								## 5
@@ -2989,9 +2989,9 @@ L84?3:
 ;;								## 1
 	c0    add $r0.2 = $r0.2, 1073741824   ## bblock 4, line 986,  t204,  t101,  1073741824(SI32)
 ;;								## 2
-.call floatlib_29217.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+.call floatlib_6073.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
 	c0    add $r0.5 = $r0.2, $r0.6   ## bblock 4, line 986,  t149,  t204,  t102
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat32   ## bblock 5, line 998,  raddr(floatlib_29217.roundAndPackFloat32)(P32),  t139,  t154,  t149
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat32   ## bblock 5, line 998,  raddr(floatlib_6073.roundAndPackFloat32)(P32),  t139,  t154,  t149
 ;;								## 3
 	c0    goto L76?3 ## goto
 ;;								## 4
@@ -3009,8 +3009,8 @@ L83?3:
 ;;								## 4
 	c0    brf $b0.0, L85?3   ## bblock 8, line 979,  t206
 ;;								## 5
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 10, line 980,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t137,  t138
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 10, line 980,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t137,  t138
 ;;								## 6
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t123
 ;;								## 7
@@ -3037,12 +3037,12 @@ L85?3:
 .section .data
 .section .text
 .equ ?2.21?2auto_size, 0x20
- ## End floatlib_29217.addFloat32Sigs
- ## Begin floatlib_29217.subFloat32Sigs
+ ## End floatlib_6073.addFloat32Sigs
+ ## Begin floatlib_6073.subFloat32Sigs
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-32, arg($r0.3:u32,$r0.4:u32,$r0.5:s32)
-floatlib_29217.subFloat32Sigs::
+floatlib_6073.subFloat32Sigs::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x20)
 	c0    and $r0.2 = $r0.3, 8388607   ## bblock 0, line 1007,  t13,  t134,  8388607(I32)
@@ -3107,9 +3107,9 @@ L90?3:
 	c0    ldw $r0.2 = 0x10[$r0.1]   ## bblock 10, line 1108, t110, t121
 ;;								## 16
 ;;								## 17
-.call floatlib_29217.normalizeRoundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+.call floatlib_6073.normalizeRoundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
 	c0    sub $r0.5 = $r0.9, $r0.2   ## bblock 10, line 1108,  t146,  t111,  t110
-	c0    call $l0.0 = floatlib_29217.normalizeRoundAndPackFloat32   ## bblock 8, line 1112,  raddr(floatlib_29217.normalizeRoundAndPackFloat32)(P32),  t136,  t118,  t146
+	c0    call $l0.0 = floatlib_6073.normalizeRoundAndPackFloat32   ## bblock 8, line 1112,  raddr(floatlib_6073.normalizeRoundAndPackFloat32)(P32),  t136,  t118,  t146
 ;;								## 18
 L91?3:
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t120
@@ -3146,8 +3146,8 @@ L87?3:
 ;;								## 2
 	c0    brf $b0.0, L92?3   ## bblock 41, line 1080,  t216(I1)
 ;;								## 3
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 43, line 1081,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t134,  t135
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 43, line 1081,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t134,  t135
 ;;								## 4
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t120
 ;;								## 5
@@ -3213,9 +3213,9 @@ L97?3:
 	c0    ldw $r0.2 = 0x14[$r0.1]   ## bblock 7, line 1071, t71, t121
 ;;								## 14
 ;;								## 15
-.call floatlib_29217.normalizeRoundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+.call floatlib_6073.normalizeRoundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
 	c0    sub $r0.5 = $r0.6, $r0.2   ## bblock 7, line 1071,  t146,  t72,  t71
-	c0    call $l0.0 = floatlib_29217.normalizeRoundAndPackFloat32   ## bblock 8, line 1112,  raddr(floatlib_29217.normalizeRoundAndPackFloat32)(P32),  t136,  t118,  t146
+	c0    call $l0.0 = floatlib_6073.normalizeRoundAndPackFloat32   ## bblock 8, line 1112,  raddr(floatlib_6073.normalizeRoundAndPackFloat32)(P32),  t136,  t118,  t146
 ;;								## 16
 	c0    goto L91?3 ## goto
 ;;								## 17
@@ -3247,8 +3247,8 @@ L94?3:
 ;;								## 2
 	c0    brf $b0.0, L98?3   ## bblock 27, line 1042,  t212(I1)
 ;;								## 3
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 29, line 1043,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t134,  t135
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 29, line 1043,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t134,  t135
 ;;								## 4
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t120
 ;;								## 5
@@ -3306,7 +3306,7 @@ L100?3:
 ;;								## 1
 .trace 7
 L101?3:
-	c0    ldw $r0.2 = ((floatlib_29217.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 6, line 1035, t30, 0(I32)
+	c0    ldw $r0.2 = ((floatlib_6073.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 6, line 1035, t30, 0(I32)
 ;;								## 0
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t120
 ;;								## 1
@@ -3331,8 +3331,8 @@ L99?3:
 ;;								## 4
 	c0    brf $b0.0, L102?3   ## bblock 12, line 1022,  t208
 ;;								## 5
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 15, line 1023,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t134,  t135
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 15, line 1023,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t134,  t135
 ;;								## 6
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t120
 ;;								## 7
@@ -3342,8 +3342,8 @@ L99?3:
 ;;								## 9
 .trace 13
 L102?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 13, line 1024,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 13, line 1024,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t120
@@ -3363,7 +3363,7 @@ L102?3:
 .section .data
 .section .text
 .equ ?2.22?2auto_size, 0x20
- ## End floatlib_29217.subFloat32Sigs
+ ## End floatlib_6073.subFloat32Sigs
  ## Begin _r_add
 .section .text
 .proc
@@ -3379,8 +3379,8 @@ _r_add::
 ;;								## 1
 	c0    brf $b0.0, L103?3   ## bblock 0, line 1121,  t31(I1)
 ;;								## 2
-.call floatlib_29217.addFloat32Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.addFloat32Sigs   ## bblock 3, line 1122,  raddr(floatlib_29217.addFloat32Sigs)(P32),  t27,  t28,  t30(I1)
+.call floatlib_6073.addFloat32Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.addFloat32Sigs   ## bblock 3, line 1122,  raddr(floatlib_6073.addFloat32Sigs)(P32),  t27,  t28,  t30(I1)
 ;;								## 3
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t14
 ;;								## 4
@@ -3390,8 +3390,8 @@ _r_add::
 ;;								## 6
 .trace 2
 L103?3:
-.call floatlib_29217.subFloat32Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.subFloat32Sigs   ## bblock 1, line 1125,  raddr(floatlib_29217.subFloat32Sigs)(P32),  t27,  t28,  t30(I1)
+.call floatlib_6073.subFloat32Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.subFloat32Sigs   ## bblock 1, line 1125,  raddr(floatlib_6073.subFloat32Sigs)(P32),  t27,  t28,  t30(I1)
 ;;								## 0
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t14
 ;;								## 1
@@ -3423,8 +3423,8 @@ _r_sub::
 ;;								## 1
 	c0    brf $b0.0, L104?3   ## bblock 0, line 1135,  t31(I1)
 ;;								## 2
-.call floatlib_29217.subFloat32Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.subFloat32Sigs   ## bblock 3, line 1136,  raddr(floatlib_29217.subFloat32Sigs)(P32),  t27,  t28,  t30(I1)
+.call floatlib_6073.subFloat32Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.subFloat32Sigs   ## bblock 3, line 1136,  raddr(floatlib_6073.subFloat32Sigs)(P32),  t27,  t28,  t30(I1)
 ;;								## 3
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t14
 ;;								## 4
@@ -3434,8 +3434,8 @@ _r_sub::
 ;;								## 6
 .trace 2
 L104?3:
-.call floatlib_29217.addFloat32Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.addFloat32Sigs   ## bblock 1, line 1139,  raddr(floatlib_29217.addFloat32Sigs)(P32),  t27,  t28,  t30(I1)
+.call floatlib_6073.addFloat32Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.addFloat32Sigs   ## bblock 1, line 1139,  raddr(floatlib_6073.addFloat32Sigs)(P32),  t27,  t28,  t30(I1)
 ;;								## 0
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t14
 ;;								## 1
@@ -3486,12 +3486,12 @@ _r_mul::
 	c0    add $r0.7 = $r0.14, -128   ## [spec] bblock 4, line 1236,  t188,  t196,  -128(SI32)
 	c0    br $b0.0, L105?3   ## bblock 0, line 1159,  t197(I1)
 ;;								## 3
+	c0    mpyllu $r0.16 = $r0.11, $r0.13   ## [spec] bblock 4, line 1218,  t117,  t84,  t89
 	c0    mpylhu $r0.14 = $r0.13, $r0.11   ## [spec] bblock 4, line 1220,  t111,  t89,  t84
 	c0    mpylhu $r0.15 = $r0.11, $r0.13   ## [spec] bblock 4, line 1219,  t104,  t84,  t89
+	c0    mpyhhu $r0.17 = $r0.11, $r0.13   ## [spec] bblock 4, line 1221,  t107,  t84,  t89
 	c0    br $b0.1, L106?3   ## bblock 1, line 1172,  t198(I1)
 ;;								## 4
-	c0    mpyllu $r0.12 = $r0.11, $r0.13   ## [spec] bblock 4, line 1218,  t117,  t84,  t89
-	c0    mpyhhu $r0.16 = $r0.11, $r0.13   ## [spec] bblock 4, line 1221,  t107,  t84,  t89
 	c0    br $b0.2, L107?3   ## bblock 2, line 1184,  t199(I1)
 ;;								## 5
 L108?3:
@@ -3504,12 +3504,12 @@ L110?3:
 	c0    shl $r0.2 = $r0.15, 16   ## bblock 4, line 1224,  t122,  t115,  16(SI32)
 ;;								## 7
 	c0    shl $r0.14 = $r0.14, 16   ## bblock 4, line 1223,  t113,  t112,  16(SI32)
-	c0    add $r0.12 = $r0.12, $r0.2   ## bblock 4, line 1225,  t132,  t117,  t122
-	c0    add $r0.8 = $r0.8, $r0.16   ## bblock 4, line 1226,  t201,  t109(I16),  t107
+	c0    add $r0.16 = $r0.16, $r0.2   ## bblock 4, line 1225,  t132,  t117,  t122
+	c0    add $r0.8 = $r0.8, $r0.17   ## bblock 4, line 1226,  t201,  t109(I16),  t107
 ;;								## 8
-	c0    cmpltu $r0.2 = $r0.12, $r0.2   ## bblock 4, line 1226,  t123,  t132,  t122
-	c0    stw 0x14[$r0.1] = $r0.12   ## bblock 4, line 1227, t146, t132
-	c0    cmpne $r0.9 = $r0.12, $r0.0   ## bblock 4, line 1232,  t133,  t132,  0(I32)
+	c0    cmpltu $r0.2 = $r0.16, $r0.2   ## bblock 4, line 1226,  t123,  t132,  t122
+	c0    stw 0x14[$r0.1] = $r0.16   ## bblock 4, line 1227, t146, t132
+	c0    cmpne $r0.9 = $r0.16, $r0.0   ## bblock 4, line 1232,  t133,  t132,  0(I32)
 ;;								## 9
 	c0    add $r0.14 = $r0.14, $r0.2   ## bblock 4, line 1226,  t202,  t113,  t123
 ;;								## 10
@@ -3522,10 +3522,10 @@ L110?3:
 ;;								## 13
 	c0    cmplt $b0.0 = $r0.2, $r0.0   ## bblock 4, line 1234,  t186(I1),  t187,  0(SI32)
 ;;								## 14
-.call floatlib_29217.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+.call floatlib_6073.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
 	c0    slct $r0.5 = $b0.0, $r0.9, $r0.2   ## bblock 4, line 1234,  t175,  t186(I1),  t191,  t187
 	c0    slct $r0.4 = $b0.0, $r0.6, $r0.7   ## bblock 4, line 1236,  t178,  t186(I1),  t192,  t188
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat32   ## bblock 4, line 1238,  raddr(floatlib_29217.roundAndPackFloat32)(P32),  t181,  t178,  t175
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat32   ## bblock 4, line 1238,  raddr(floatlib_6073.roundAndPackFloat32)(P32),  t181,  t178,  t175
 ;;								## 15
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t145
 ;;								## 16
@@ -3554,8 +3554,8 @@ L111?3:
 ;;								## 1
 	c0    stw 0x2c[$r0.1] = $r0.9  ## spill ## t180
 ;;								## 2
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 9, line 1200,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t176
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 9, line 1200,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t176
 	c0    stw 0x20[$r0.1] = $r0.10  ## spill ## t176
 ;;								## 3
 	c0    add $r0.2 = $r0.3, -8   ## bblock 10, line 1200,  t67,  t61,  -8(SI32)
@@ -3575,13 +3575,13 @@ L111?3:
 	c0    shl $r0.13 = $r0.13, 8   ## bblock 4, line 1207,  t89,  t76,  8(SI32)
 ;;								## 8
 	c0    add $r0.6 = $r0.3, -127   ## bblock 4, line 1205,  t192,  t196,  -127(SI32)
+	c0    mpyllu $r0.16 = $r0.11, $r0.13   ## bblock 4, line 1218,  t117,  t84,  t89
 	c0    mpylhu $r0.14 = $r0.13, $r0.11   ## bblock 4, line 1220,  t111,  t89,  t84
 	c0    mpylhu $r0.2 = $r0.11, $r0.13   ## bblock 4, line 1219,  t104,  t84,  t89
+	c0    mpyhhu $r0.17 = $r0.11, $r0.13   ## bblock 4, line 1221,  t107,  t84,  t89
 	c0    add $r0.7 = $r0.3, -128   ## bblock 4, line 1236,  t188,  t196,  -128(SI32)
 	c0    ldw $r0.3 = 0x1c[$r0.1]  ## restore ## t181
 ;;								## 9
-	c0    mpyllu $r0.12 = $r0.11, $r0.13   ## bblock 4, line 1218,  t117,  t84,  t89
-	c0    mpyhhu $r0.16 = $r0.11, $r0.13   ## bblock 4, line 1221,  t107,  t84,  t89
 ;;								## 10
 	c0    add $r0.15 = $r0.14, $r0.2   ## bblock 4, line 1222,  t115,  t111,  t104
 	c0    goto L110?3 ## goto
@@ -3607,8 +3607,8 @@ L112?3:
 ;;								## 1
 	c0    stw 0x24[$r0.1] = $r0.2  ## spill ## t179
 ;;								## 2
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 13, line 1188,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t177
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 13, line 1188,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t177
 	c0    stw 0x28[$r0.1] = $r0.8  ## spill ## t177
 ;;								## 3
 	c0    add $r0.2 = $r0.3, -8   ## bblock 14, line 1188,  t54,  t48,  -8(SI32)
@@ -3620,22 +3620,22 @@ L112?3:
 	c0    shl $r0.8 = $r0.8, $r0.2   ## bblock 14, line 1189,  t177,  t177,  t54
 	c0    ldw $r0.2 = 0x24[$r0.1]  ## restore ## t179
 ;;								## 6
-	c0    or $r0.4 = $r0.8, 8388608   ## [spec] bblock 4, line 1206,  t73,  t177,  8388608(I32)
-	c0    or $r0.5 = $r0.10, 8388608   ## [spec] bblock 4, line 1207,  t76,  t176,  8388608(I32)
+	c0    or $r0.11 = $r0.8, 8388608   ## [spec] bblock 4, line 1206,  t73,  t177,  8388608(I32)
+	c0    or $r0.13 = $r0.10, 8388608   ## [spec] bblock 4, line 1207,  t76,  t176,  8388608(I32)
 	c0    ldw $r0.3 = 0x1c[$r0.1]  ## restore ## t181
 ;;								## 7
 	c0    cmpeq $b0.0 = $r0.2, $r0.0   ## bblock 3, line 1196,  t200(I1),  t179,  0(SI32)
 	c0    add $r0.4 = $r0.2, $r0.9   ## [spec] bblock 4, line 1205,  t196,  t179,  t180
-	c0    shl $r0.11 = $r0.4, 7   ## [spec] bblock 4, line 1206,  t84,  t73,  7(SI32)
-	c0    shl $r0.13 = $r0.5, 8   ## [spec] bblock 4, line 1207,  t89,  t76,  8(SI32)
+	c0    shl $r0.11 = $r0.11, 7   ## [spec] bblock 4, line 1206,  t84,  t73,  7(SI32)
+	c0    shl $r0.13 = $r0.13, 8   ## [spec] bblock 4, line 1207,  t89,  t76,  8(SI32)
 ;;								## 8
 	c0    add $r0.6 = $r0.4, -127   ## [spec] bblock 4, line 1205,  t192,  t196,  -127(SI32)
+	c0    mpyllu $r0.16 = $r0.11, $r0.13   ## [spec] bblock 4, line 1218,  t117,  t84,  t89
 	c0    mpylhu $r0.14 = $r0.13, $r0.11   ## [spec] bblock 4, line 1220,  t111,  t89,  t84
 	c0    mpylhu $r0.15 = $r0.11, $r0.13   ## [spec] bblock 4, line 1219,  t104,  t84,  t89
+	c0    mpyhhu $r0.17 = $r0.11, $r0.13   ## [spec] bblock 4, line 1221,  t107,  t84,  t89
 	c0    add $r0.7 = $r0.4, -128   ## [spec] bblock 4, line 1236,  t188,  t196,  -128(SI32)
 ;;								## 9
-	c0    mpyllu $r0.12 = $r0.11, $r0.13   ## [spec] bblock 4, line 1218,  t117,  t84,  t89
-	c0    mpyhhu $r0.16 = $r0.11, $r0.13   ## [spec] bblock 4, line 1221,  t107,  t84,  t89
 	c0    goto L108?3 ## goto
 ;;								## 10
 .trace 3
@@ -3646,8 +3646,8 @@ L106?3:
 ;;								## 0
 	c0    brf $b0.0, L113?3   ## bblock 16, line 1173,  t205(I1)
 ;;								## 1
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 21, line 1174,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t158,  t159
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 21, line 1174,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t158,  t159
 ;;								## 2
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t145
 ;;								## 3
@@ -3664,8 +3664,8 @@ L113?3:
 ;;								## 1
 	c0    brf $b0.0, L114?3   ## bblock 17, line 1175,  t206(I1)
 ;;								## 2
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 19, line 1176,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 19, line 1176,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 ;;								## 3
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t145
 	c0    mov $r0.3 = 2147483647   ## 2147483647(I32)
@@ -3696,8 +3696,8 @@ L105?3:
 ;;								## 2
 	c0    brf $b0.0, L115?3   ## bblock 23, line 1160,  t208(I1)
 ;;								## 3
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 28, line 1161,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t158,  t159
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 28, line 1161,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t158,  t159
 ;;								## 4
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t145
 ;;								## 5
@@ -3714,8 +3714,8 @@ L115?3:
 ;;								## 1
 	c0    brf $b0.0, L116?3   ## bblock 24, line 1163,  t209(I1)
 ;;								## 2
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 26, line 1164,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 26, line 1164,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 ;;								## 3
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t145
 	c0    mov $r0.3 = 2147483647   ## 2147483647(I32)
@@ -3803,8 +3803,8 @@ L120?3:
 	c0    br $b0.3, L121?3   ## bblock 3, line 1300,  t330(I1)
 ;;								## 7
 L122?3:
-.call floatlib_29217.estimateDiv64To32, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.estimateDiv64To32   ## bblock 4, line 1316,  raddr(floatlib_29217.estimateDiv64To32)(P32),  t241,  0(I32),  t240
+.call floatlib_6073.estimateDiv64To32, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.estimateDiv64To32   ## bblock 4, line 1316,  raddr(floatlib_6073.estimateDiv64To32)(P32),  t241,  0(I32),  t240
 ;;								## 8
 	c0    and $r0.14 = $r0.3, 63   ## bblock 6, line 1317,  t88,  t84,  63(I32)
 	c0    mov $r0.9 = $r0.3   ## bblock 6, line 1316,  t253,  t84
@@ -3822,41 +3822,41 @@ L122?3:
 	c0    add $r0.7 = $r0.3, (~0x0)   ## [spec] bblock 9, line 0,  t302,  t84,  (~0x0)(I32)
 	c0    ldw $r0.15 = 0x2c[$r0.1]  ## restore ## [spec] t241
 ;;								## 10
+	c0    mpyllu $r0.19 = $r0.2, $r0.3   ## [spec] bblock 9, line 1327,  t128,  t240,  t84
 	c0    mpylhu $r0.14 = $r0.3, $r0.2   ## [spec] bblock 9, line 1329,  t122,  t84,  t240
 	c0    mpylhu $r0.16 = $r0.2, $r0.3   ## [spec] bblock 9, line 1328,  t115,  t240,  t84
+	c0    mpyhhu $r0.20 = $r0.2, $r0.3   ## [spec] bblock 9, line 1330,  t118,  t240,  t84
 	c0    ldw $r0.17 = 0x24[$r0.1]  ## restore ## t232
 	c0    brf $b0.0, L123?3   ## bblock 6, line 1317,  t331(I1)
 ;;								## 11
-	c0    mpyllu $r0.19 = $r0.2, $r0.3   ## bblock 9, line 1327,  t128,  t240,  t84
-	c0    mpyhhu $r0.20 = $r0.2, $r0.3   ## bblock 9, line 1330,  t118,  t240,  t84
 	c0    ldw $r0.18 = 0x30[$r0.1]  ## restore ## [spec] t229
 ;;								## 12
 	c0    add $r0.16 = $r0.14, $r0.16   ## bblock 9, line 1331,  t126,  t122,  t115
-;;								## 13
-	c0    shru $r0.22 = $r0.16, 16   ## bblock 9, line 1333,  t120(I16),  t126,  16(SI32)
-	c0    cmpltu $r0.14 = $r0.16, $r0.14   ## bblock 9, line 1333,  t123,  t126,  t122
-	c0    shl $r0.21 = $r0.16, 16   ## bblock 9, line 1334,  t133,  t126,  16(SI32)
 	c0    mov $r0.3 = $r0.2   ## [spec] t240
+;;								## 13
+	c0    shru $r0.21 = $r0.16, 16   ## bblock 9, line 1333,  t120(I16),  t126,  16(SI32)
+	c0    cmpltu $r0.14 = $r0.16, $r0.14   ## bblock 9, line 1333,  t123,  t126,  t122
+	c0    shl $r0.2 = $r0.16, 16   ## bblock 9, line 1334,  t133,  t126,  16(SI32)
 ;;								## 14
 	c0    shl $r0.14 = $r0.14, 16   ## bblock 9, line 1333,  t124,  t123,  16(SI32)
-	c0    add $r0.19 = $r0.19, $r0.21   ## bblock 9, line 1335,  t150,  t128,  t133
-	c0    add $r0.22 = $r0.22, $r0.20   ## bblock 9, line 1336,  t332,  t120(I16),  t118
+	c0    add $r0.19 = $r0.19, $r0.2   ## bblock 9, line 1335,  t150,  t128,  t133
+	c0    add $r0.21 = $r0.21, $r0.20   ## bblock 9, line 1336,  t332,  t120(I16),  t118
 	c0    ldw $r0.16 = 0x20[$r0.1]  ## restore ## t184
 ;;								## 15
-	c0    cmpltu $r0.21 = $r0.19, $r0.21   ## bblock 9, line 1336,  t134,  t150,  t133
+	c0    cmpltu $r0.2 = $r0.19, $r0.2   ## bblock 9, line 1336,  t134,  t150,  t133
 	c0    stw 0x1c[$r0.1] = $r0.19   ## bblock 9, line 1337, t185, t150
-	c0    sub $r0.20 = $r0.0, $r0.19   ## bblock 9, line 1347,  t147,  0(I32),  t150
-	c0    cmpgtu $r0.2 = $r0.19, $r0.0   ## bblock 9, line 1348,  t151,  t150,  0(SI32)
+	c0    sub $r0.22 = $r0.0, $r0.19   ## bblock 9, line 1347,  t147,  0(I32),  t150
+	c0    cmpgtu $r0.20 = $r0.19, $r0.0   ## bblock 9, line 1348,  t151,  t150,  0(SI32)
 ;;								## 16
-	c0    add $r0.14 = $r0.14, $r0.21   ## bblock 9, line 1336,  t333,  t124,  t134
-	c0    stw 0x14[$r0.1] = $r0.20   ## bblock 9, line 1347, t185, t147
+	c0    add $r0.14 = $r0.14, $r0.2   ## bblock 9, line 1336,  t333,  t124,  t134
+	c0    stw 0x14[$r0.1] = $r0.22   ## bblock 9, line 1347, t185, t147
 ;;								## 17
-	c0    add $r0.22 = $r0.22, $r0.14   ## bblock 9, line 1336,  t152,  t332,  t333
+	c0    add $r0.21 = $r0.21, $r0.14   ## bblock 9, line 1336,  t152,  t332,  t333
 ;;								## 18
-	c0    stw 0x18[$r0.1] = $r0.22   ## bblock 9, line 1338, t185, t152
-	c0    sub $r0.15 = $r0.15, $r0.22   ## bblock 9, line 1348,  t334,  t241,  t152
+	c0    stw 0x18[$r0.1] = $r0.21   ## bblock 9, line 1338, t185, t152
+	c0    sub $r0.15 = $r0.15, $r0.21   ## bblock 9, line 1348,  t334,  t241,  t152
 ;;								## 19
-	c0    sub $r0.15 = $r0.15, $r0.2   ## bblock 9, line 1348,  t154,  t334,  t151
+	c0    sub $r0.15 = $r0.15, $r0.20   ## bblock 9, line 1348,  t154,  t334,  t151
 ;;								## 20
 	c0    stw 0x10[$r0.1] = $r0.15   ## bblock 9, line 1348, t185, t154
 ;;								## 21
@@ -4072,8 +4072,8 @@ L123?3:
 	c0    ldw $r0.4 = 0x30[$r0.1]  ## restore ## t229
 ;;								## 0
 L134?3:
-.call floatlib_29217.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat32   ## bblock 7, line 1366,  raddr(floatlib_29217.roundAndPackFloat32)(P32),  t232,  t229,  t253
+.call floatlib_6073.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat32   ## bblock 7, line 1366,  raddr(floatlib_6073.roundAndPackFloat32)(P32),  t232,  t229,  t253
 	c0    mov $r0.3 = $r0.17   ## t232
 ;;								## 1
 	c0    ldw $l0.0 = 0x20[$r0.1]  ## restore ## t184
@@ -4102,8 +4102,8 @@ L135?3:
 ;;								## 0
 	c0    stw 0x40[$r0.1] = $r0.2  ## spill ## t230
 ;;								## 1
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 15, line 1304,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t228
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 15, line 1304,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t228
 	c0    stw 0x34[$r0.1] = $r0.16  ## spill ## t228
 ;;								## 2
 	c0    add $r0.2 = $r0.3, -8   ## bblock 16, line 1304,  t65,  t59,  -8(SI32)
@@ -4150,8 +4150,8 @@ L119?3:
 ;;								## 1
 	c0    brf $b0.0, L137?3   ## bblock 21, line 1283,  t339(I1)
 ;;								## 2
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 24, line 1284,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 24, line 1284,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 ;;								## 3
 	c0    ldw $l0.0 = 0x20[$r0.1]  ## restore ## t184
 	c0    mov $r0.3 = 2147483647   ## 2147483647(I32)
@@ -4162,8 +4162,8 @@ L119?3:
 ;;								## 6
 .trace 22
 L137?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 22, line 1287,  raddr(floatlib_29217.float_raise)(P32),  128(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 22, line 1287,  raddr(floatlib_6073.float_raise)(P32),  128(SI32)
 	c0    mov $r0.3 = 128   ## 128(SI32)
 ;;								## 0
 	c0    ldw $r0.17 = 0x24[$r0.1]  ## restore ## t232
@@ -4183,8 +4183,8 @@ L136?3:
 ;;								## 0
 	c0    stw 0x38[$r0.1] = $r0.19  ## spill ## t231
 ;;								## 1
-.call floatlib_29217.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.countLeadingZeros32   ## bblock 19, line 1292,  raddr(floatlib_29217.countLeadingZeros32)(P32),  t227
+.call floatlib_6073.countLeadingZeros32, caller, arg($r0.3:u32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.countLeadingZeros32   ## bblock 19, line 1292,  raddr(floatlib_6073.countLeadingZeros32)(P32),  t227
 	c0    stw 0x3c[$r0.1] = $r0.15  ## spill ## t227
 ;;								## 2
 	c0    add $r0.6 = $r0.3, -8   ## bblock 20, line 1292,  t52,  t46,  -8(SI32)
@@ -4226,8 +4226,8 @@ L118?3:
 ;;								## 0
 	c0    brf $b0.0, L138?3   ## bblock 26, line 1274,  t340(I1)
 ;;								## 1
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 28, line 1275,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t197,  t198
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 28, line 1275,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t197,  t198
 ;;								## 2
 	c0    ldw $l0.0 = 0x20[$r0.1]  ## restore ## t184
 ;;								## 3
@@ -4253,8 +4253,8 @@ L117?3:
 ;;								## 0
 	c0    brf $b0.0, L139?3   ## bblock 30, line 1260,  t341(I1)
 ;;								## 1
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 38, line 1261,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t197,  t198
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 38, line 1261,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t197,  t198
 ;;								## 2
 	c0    ldw $l0.0 = 0x20[$r0.1]  ## restore ## t184
 ;;								## 3
@@ -4272,8 +4272,8 @@ L139?3:
 ;;								## 1
 	c0    brf $b0.1, L141?3   ## bblock 33, line 1263,  t343(I1)
 ;;								## 2
-.call floatlib_29217.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat32NaN   ## bblock 36, line 1264,  raddr(floatlib_29217.propagateFloat32NaN)(P32),  t197,  t198
+.call floatlib_6073.propagateFloat32NaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat32NaN   ## bblock 36, line 1264,  raddr(floatlib_6073.propagateFloat32NaN)(P32),  t197,  t198
 ;;								## 3
 	c0    ldw $l0.0 = 0x20[$r0.1]  ## restore ## t184
 ;;								## 4
@@ -4283,8 +4283,8 @@ L139?3:
 ;;								## 6
 .trace 23
 L141?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 34, line 1265,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 34, line 1265,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
 	c0    ldw $l0.0 = 0x20[$r0.1]  ## restore ## t184
@@ -4376,8 +4376,8 @@ L142?3:
 ;;								## 4
 	c0    brf $b0.0, L143?3   ## bblock 2, line 1378,  t59(I1)
 ;;								## 5
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 4, line 1379,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 4, line 1379,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 ;;								## 6
 L143?3:
 	c0    mov $r0.3 = $r0.0   ## 0(SI32)
@@ -4448,8 +4448,8 @@ L145?3:
 ;;								## 2
 .trace 3
 L144?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 4, line 1395,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 4, line 1395,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
 	c0    mov $r0.3 = $r0.0   ## 0(SI32)
@@ -4519,8 +4519,8 @@ L147?3:
 ;;								## 2
 .trace 3
 L146?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 4, line 1414,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 4, line 1414,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
 	c0    mov $r0.3 = $r0.0   ## 0(SI32)
@@ -4539,11 +4539,11 @@ L146?3:
 .section .text
 .equ ?2.29?2auto_size, 0x20
  ## End _r_lt
- ## Begin floatlib_29217.float64_to_int32_round_to_zero
+ ## Begin floatlib_6073.float64_to_int32_round_to_zero
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.3:u32,$r0.4:u32,$r0.5:s32)
-floatlib_29217.float64_to_int32_round_to_zero::
+floatlib_6073.float64_to_int32_round_to_zero::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
 	c0    and $r0.2 = $r0.3, 1048575   ## bblock 0, line 1433,  t104,  t6,  1048575(I32)
@@ -4564,7 +4564,7 @@ floatlib_29217.float64_to_int32_round_to_zero::
 	c0    cmpge $b0.0 = $r0.10, $r0.0   ## bblock 0, line 1437,  t112(I1),  t105,  0(SI32)
 	c0    cmpgt $b0.1 = $r0.10, 11   ## [spec] bblock 13, line 1438,  t120(I1),  t105,  11(SI32)
 	c0    andl $b0.2 = $r0.11, $r0.9   ## [spec] bblock 15, line 1439,  t110(I1),  t13,  t16
-	c0    ldw.d $r0.13 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 6, line 1482, t77, 0(I32)
+	c0    ldw.d $r0.13 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 6, line 1482, t77, 0(I32)
 ;;								## 3
 	c0    cmpne $b0.0 = $r0.12, $r0.0   ## [spec] bblock 4, line 1481,  t117(I1),  t76,  0(SI32)
 	c0    brf $b0.0, L148?3   ## bblock 0, line 1437,  t112(I1)
@@ -4597,7 +4597,7 @@ L150?3:
 	c0    brf $b0.0, L152?3   ## bblock 4, line 1481,  t117(I1)
 ;;								## 15
 .return ret($r0.3:s32)
-	c0    stw ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0] = $r0.13   ## bblock 6, line 1482, 0(I32), t78
+	c0    stw ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0] = $r0.13   ## bblock 6, line 1482, 0(I32), t78
 	c0    return $r0.1 = $r0.1, (0x40), $l0.0   ## bblock 5, line 1483,  t81,  ?2.30?2auto_size(I32),  t80
 ;;								## 16
 .trace 3
@@ -4610,8 +4610,8 @@ L151?3:
 	c0    stw 0x1c[$r0.1] = $r0.6  ## spill ## t107(I1)
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 8, line 1474,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 8, line 1474,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    stw 0x20[$r0.1] = $r0.5  ## spill ## t96
 ;;								## 1
 	c0    mov $r0.2 = (~0x7fffffff)   ## (~0x7fffffff)(I32)
@@ -4656,7 +4656,7 @@ L149?3:
 ;;								## 4
 	c0    stw 0x10[$r0.1] = $r0.2   ## bblock 14, line 1451, t81, t40
 ;;								## 5
-	c0    ldw.d $r0.2 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 6, line 1482, t77, 0(I32)
+	c0    ldw.d $r0.2 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## [spec] bblock 6, line 1482, t77, 0(I32)
 ;;								## 6
 ;;								## 7
 	c0    or $r0.13 = $r0.2, 1   ## [spec] bblock 6, line 1482,  t78,  t77,  1(I32)
@@ -4713,7 +4713,7 @@ L154?3:
 .section .data
 .section .text
 .equ ?2.30?2auto_size, 0x40
- ## End floatlib_29217.float64_to_int32_round_to_zero
+ ## End floatlib_6073.float64_to_int32_round_to_zero
  ## Begin _r_d
 .section .text
 .proc
@@ -4738,8 +4738,8 @@ _r_d::
 ;;								## 3
 	c0    brf $b0.1, L156?3   ## bblock 15, line 1498,  t151
 ;;								## 4
-.call floatlib_29217.float64ToCommonNaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:s32,$r0.4:u32,$r0.5:u32)
-	c0    call $l0.0 = floatlib_29217.float64ToCommonNaN   ## bblock 17, line 1500,  raddr(floatlib_29217.float64ToCommonNaN)(P32),  t100,  t101
+.call floatlib_6073.float64ToCommonNaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:s32,$r0.4:u32,$r0.5:u32)
+	c0    call $l0.0 = floatlib_6073.float64ToCommonNaN   ## bblock 17, line 1500,  raddr(floatlib_6073.float64ToCommonNaN)(P32),  t100,  t101
 ;;								## 5
 	c0    shru $r0.2 = $r0.4, 9   ## bblock 18, line 1501,  t17(I23),  t12,  9(SI32)
 	c0    ldw $r0.4 = 0x1c[$r0.1]  ## restore ## t101
@@ -4748,8 +4748,8 @@ _r_d::
 ;;								## 7
 	c0    ldw $r0.3 = 0x20[$r0.1]  ## restore ## t100
 ;;								## 8
-.call floatlib_29217.float64ToCommonNaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:s32,$r0.4:u32,$r0.5:u32)
-	c0    call $l0.0 = floatlib_29217.float64ToCommonNaN   ## bblock 18, line 1499,  raddr(floatlib_29217.float64ToCommonNaN)(P32),  t100,  t101
+.call floatlib_6073.float64ToCommonNaN, caller, arg($r0.3:u32,$r0.4:u32), ret($r0.3:s32,$r0.4:u32,$r0.5:u32)
+	c0    call $l0.0 = floatlib_6073.float64ToCommonNaN   ## bblock 18, line 1499,  raddr(floatlib_6073.float64ToCommonNaN)(P32),  t100,  t101
 ;;								## 9
 	c0    shl $r0.3 = $r0.3, 31   ## bblock 19, line 1500,  t24,  t18,  31(SI32)
 	c0    ldw $r0.2 = 0x24[$r0.1]  ## restore ## t17(I23)
@@ -4798,8 +4798,8 @@ L155?3:
 L158?3:
 	c0    ldw $r0.5 = 0x14[$r0.1]   ## bblock 8, line 1539, t86, t88
 ;;								## 6
-.call floatlib_29217.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat32   ## bblock 8, line 1539,  raddr(floatlib_29217.roundAndPackFloat32)(P32),  t119(I1),  t85,  t86
+.call floatlib_6073.roundAndPackFloat32, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat32   ## bblock 8, line 1539,  raddr(floatlib_6073.roundAndPackFloat32)(P32),  t119(I1),  t85,  t86
 ;;								## 7
 	c0    ldw $l0.0 = 0x18[$r0.1]  ## restore ## t87
 ;;								## 8
@@ -4824,11 +4824,11 @@ L157?3:
 .section .text
 .equ ?2.31?2auto_size, 0x40
  ## End _r_d
- ## Begin floatlib_29217.addFloat64Sigs
+ ## Begin floatlib_6073.addFloat64Sigs
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32)
-floatlib_29217.addFloat64Sigs::
+floatlib_6073.addFloat64Sigs::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
 	c0    and $r0.2 = $r0.3, 1048575   ## bblock 0, line 1549,  t2,  t309,  1048575(I32)
@@ -4858,8 +4858,8 @@ floatlib_29217.addFloat64Sigs::
 ;;								## 6
 	c0    brf $b0.1, L161?3   ## bblock 64, line 1557,  t482
 ;;								## 7
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 66, line 1558,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t309,  t310,  t311,  t312
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 66, line 1558,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t309,  t310,  t311,  t312
 ;;								## 8
 	c0    ldw $l0.0 = 0x2c[$r0.1]  ## restore ## t293
 ;;								## 9
@@ -4957,8 +4957,8 @@ L168?3:
 L169?3:
 	c0    ldw $r0.6 = 0x24[$r0.1]   ## bblock 13, line 1761, t291, t294
 ;;								## 21
-.call floatlib_29217.roundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat64   ## bblock 13, line 1761,  raddr(floatlib_29217.roundAndPackFloat64)(P32),  t313,  t368,  t290,  t291,  t292
+.call floatlib_6073.roundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat64   ## bblock 13, line 1761,  raddr(floatlib_6073.roundAndPackFloat64)(P32),  t313,  t368,  t290,  t291,  t292
 ;;								## 22
 	c0    ldw $l0.0 = 0x2c[$r0.1]  ## restore ## t293
 ;;								## 23
@@ -5052,8 +5052,8 @@ L159?3:
 ;;								## 4
 	c0    brf $b0.0, L173?3   ## bblock 43, line 1616,  t475
 ;;								## 5
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 46, line 1617,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t309,  t310,  t311,  t312
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 46, line 1617,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t309,  t310,  t311,  t312
 ;;								## 6
 	c0    ldw $l0.0 = 0x2c[$r0.1]  ## restore ## t293
 ;;								## 7
@@ -5063,8 +5063,8 @@ L159?3:
 ;;								## 9
 .trace 16
 L173?3:
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 44, line 1618,  raddr(floatlib_29217.packFloat64)(P32),  t313,  2047(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 44, line 1618,  raddr(floatlib_6073.packFloat64)(P32),  t313,  2047(SI32),  0(I32),  0(I32)
 	c0    mov $r0.5 = $r0.0   ## 0(I32)
 	c0    mov $r0.6 = $r0.0   ## 0(I32)
 	c0    mov $r0.3 = $r0.7   ## t313
@@ -5202,8 +5202,8 @@ L171?3:
 ;;								## 7
 	c0    brf $b0.0, L179?3   ## bblock 21, line 1675,  t467
 ;;								## 8
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 23, line 1676,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t309,  t310,  t311,  t312
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 23, line 1676,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t309,  t310,  t311,  t312
 ;;								## 9
 	c0    ldw $l0.0 = 0x2c[$r0.1]  ## restore ## t293
 ;;								## 10
@@ -5243,8 +5243,8 @@ L178?3:
 	c0    stw 0x28[$r0.1] = $r0.5   ## bblock 3, line 1689, t294, t194
 	c0    brf $b0.0, L180?3   ## bblock 3, line 1691,  t463(I1)
 ;;								## 7
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 19, line 1692,  raddr(floatlib_29217.packFloat64)(P32),  t313,  0(SI32),  t194,  t189
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 19, line 1692,  raddr(floatlib_6073.packFloat64)(P32),  t313,  0(SI32),  t194,  t189
 ;;								## 8
 	c0    ldw $l0.0 = 0x2c[$r0.1]  ## restore ## t293
 ;;								## 9
@@ -5294,12 +5294,12 @@ L180?3:
 .section .data
 .section .text
 .equ ?2.32?2auto_size, 0x40
- ## End floatlib_29217.addFloat64Sigs
- ## Begin floatlib_29217.subFloat64Sigs
+ ## End floatlib_6073.addFloat64Sigs
+ ## Begin floatlib_6073.subFloat64Sigs
 .section .text
 .proc
 .entry caller, sp=$r0.1, rl=$l0.0, asize=-64, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32)
-floatlib_29217.subFloat64Sigs::
+floatlib_6073.subFloat64Sigs::
 .trace 1
 	c0    add $r0.1 = $r0.1, (-0x40)
 	c0    and $r0.2 = $r0.3, 1048575   ## bblock 0, line 1772,  t30,  t289,  1048575(I32)
@@ -5337,8 +5337,8 @@ floatlib_29217.subFloat64Sigs::
 ;;								## 6
 	c0    brf $b0.2, L183?3   ## bblock 55, line 1888,  t476
 ;;								## 7
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 57, line 1889,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t289,  t290,  t291,  t292
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 57, line 1889,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t289,  t290,  t291,  t292
 ;;								## 8
 	c0    ldw $l0.0 = 0x28[$r0.1]  ## restore ## t273
 ;;								## 9
@@ -5410,8 +5410,8 @@ L188?3:
 L189?3:
 	c0    ldw $r0.5 = 0x20[$r0.1]   ## bblock 11, line 1945, t271, t274
 ;;								## 16
-.call floatlib_29217.normalizeRoundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.normalizeRoundAndPackFloat64   ## bblock 11, line 1945,  raddr(floatlib_29217.normalizeRoundAndPackFloat64)(P32),  t293,  t270,  t271,  t272
+.call floatlib_6073.normalizeRoundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.normalizeRoundAndPackFloat64   ## bblock 11, line 1945,  raddr(floatlib_6073.normalizeRoundAndPackFloat64)(P32),  t293,  t270,  t271,  t272
 ;;								## 17
 	c0    ldw $l0.0 = 0x28[$r0.1]  ## restore ## t273
 ;;								## 18
@@ -5487,8 +5487,8 @@ L181?3:
 ;;								## 4
 	c0    brf $b0.0, L192?3   ## bblock 35, line 1829,  t470
 ;;								## 5
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 38, line 1830,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t289,  t290,  t291,  t292
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 38, line 1830,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t289,  t290,  t291,  t292
 ;;								## 6
 	c0    ldw $l0.0 = 0x28[$r0.1]  ## restore ## t273
 ;;								## 7
@@ -5498,9 +5498,9 @@ L181?3:
 ;;								## 9
 .trace 11
 L192?3:
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
 	c0    xor $r0.3 = $r0.7, 1   ## bblock 36, line 1831,  t97,  t293,  1(SI32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 36, line 1831,  raddr(floatlib_29217.packFloat64)(P32),  t97,  2047(SI32),  0(I32),  0(I32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 36, line 1831,  raddr(floatlib_6073.packFloat64)(P32),  t97,  2047(SI32),  0(I32),  0(I32)
 	c0    mov $r0.5 = $r0.0   ## 0(I32)
 	c0    mov $r0.6 = $r0.0   ## 0(I32)
 	c0    mov $r0.4 = 2047   ## 2047(SI32)
@@ -5692,15 +5692,15 @@ L201?3:
 ;;								## 3
 .trace 15
 L202?3:
-	c0    ldw $r0.2 = ((floatlib_29217.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 8, line 1826, t83, 0(I32)
+	c0    ldw $r0.2 = ((floatlib_6073.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 8, line 1826, t83, 0(I32)
 	c0    mov $r0.4 = $r0.0   ## 0(SI32)
 	c0    mov $r0.5 = $r0.0   ## 0(I32)
 	c0    mov $r0.6 = $r0.0   ## 0(I32)
 ;;								## 0
 ;;								## 1
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
 	c0    cmpeq $r0.3 = $r0.2, 1   ## bblock 8, line 1826,  t84,  t83,  1(SI32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 8, line 1826,  raddr(floatlib_29217.packFloat64)(P32),  t84,  0(SI32),  0(I32),  0(I32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 8, line 1826,  raddr(floatlib_6073.packFloat64)(P32),  t84,  0(SI32),  0(I32),  0(I32)
 ;;								## 2
 	c0    ldw $l0.0 = 0x28[$r0.1]  ## restore ## t273
 ;;								## 3
@@ -5729,8 +5729,8 @@ L198?3:
 ;;								## 7
 	c0    brf $b0.0, L203?3   ## bblock 15, line 1806,  t464
 ;;								## 8
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 18, line 1807,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t289,  t290,  t291,  t292
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 18, line 1807,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t289,  t290,  t291,  t292
 ;;								## 9
 	c0    ldw $l0.0 = 0x28[$r0.1]  ## restore ## t273
 ;;								## 10
@@ -5740,8 +5740,8 @@ L198?3:
 ;;								## 12
 .trace 17
 L203?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 16, line 1809,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 16, line 1809,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
 	c0    mov $r0.4 = (~0x0)   ## (~0x0)(I32)
@@ -5766,7 +5766,7 @@ L203?3:
 .section .data
 .section .text
 .equ ?2.33?2auto_size, 0x40
- ## End floatlib_29217.subFloat64Sigs
+ ## End floatlib_6073.subFloat64Sigs
  ## Begin _d_add
 .section .text
 .proc
@@ -5782,8 +5782,8 @@ _d_add::
 ;;								## 1
 	c0    brf $b0.0, L204?3   ## bblock 0, line 1954,  t41(I1)
 ;;								## 2
-.call floatlib_29217.addFloat64Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.addFloat64Sigs   ## bblock 3, line 1954,  raddr(floatlib_29217.addFloat64Sigs)(P32),  t35,  t36,  t37,  t38,  t40(I1)
+.call floatlib_6073.addFloat64Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.addFloat64Sigs   ## bblock 3, line 1954,  raddr(floatlib_6073.addFloat64Sigs)(P32),  t35,  t36,  t37,  t38,  t40(I1)
 ;;								## 3
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t20
 ;;								## 4
@@ -5793,8 +5793,8 @@ _d_add::
 ;;								## 6
 .trace 2
 L204?3:
-.call floatlib_29217.subFloat64Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.subFloat64Sigs   ## bblock 1, line 1954,  raddr(floatlib_29217.subFloat64Sigs)(P32),  t35,  t36,  t37,  t38,  t40(I1)
+.call floatlib_6073.subFloat64Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.subFloat64Sigs   ## bblock 1, line 1954,  raddr(floatlib_6073.subFloat64Sigs)(P32),  t35,  t36,  t37,  t38,  t40(I1)
 ;;								## 0
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t20
 ;;								## 1
@@ -5826,8 +5826,8 @@ _d_sub::
 ;;								## 1
 	c0    brf $b0.0, L205?3   ## bblock 0, line 1963,  t41(I1)
 ;;								## 2
-.call floatlib_29217.subFloat64Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.subFloat64Sigs   ## bblock 3, line 1963,  raddr(floatlib_29217.subFloat64Sigs)(P32),  t35,  t36,  t37,  t38,  t40(I1)
+.call floatlib_6073.subFloat64Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.subFloat64Sigs   ## bblock 3, line 1963,  raddr(floatlib_6073.subFloat64Sigs)(P32),  t35,  t36,  t37,  t38,  t40(I1)
 ;;								## 3
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t20
 ;;								## 4
@@ -5837,8 +5837,8 @@ _d_sub::
 ;;								## 6
 .trace 2
 L205?3:
-.call floatlib_29217.addFloat64Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.addFloat64Sigs   ## bblock 1, line 1963,  raddr(floatlib_29217.addFloat64Sigs)(P32),  t35,  t36,  t37,  t38,  t40(I1)
+.call floatlib_6073.addFloat64Sigs, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:s32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.addFloat64Sigs   ## bblock 1, line 1963,  raddr(floatlib_6073.addFloat64Sigs)(P32),  t35,  t36,  t37,  t38,  t40(I1)
 ;;								## 0
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t20
 ;;								## 1
@@ -5912,126 +5912,126 @@ _d_mul::
 	c0    shru $r0.15 = $r0.11, 20   ## [spec] bblock 4, line 2035,  t103(I12),  t99,  20(I32)
 	c0    br $b0.1, L207?3   ## bblock 1, line 1997,  t644(I1)
 ;;								## 14
+	c0    mpyllu $r0.16 = $r0.8, $r0.12   ## [spec] bblock 4, line 2056,  t157,  t404,  t316
+	c0    mpyllu $r0.20 = $r0.12, $r0.2   ## [spec] bblock 4, line 2139,  t344,  t316,  t412
 	c0    mpylhu $r0.11 = $r0.12, $r0.8   ## [spec] bblock 4, line 2058,  t151,  t316,  t404
 	c0    mpylhu $r0.13 = $r0.8, $r0.12   ## [spec] bblock 4, line 2057,  t144,  t404,  t316
+	c0    mpyhhu $r0.17 = $r0.8, $r0.12   ## [spec] bblock 4, line 2059,  t147,  t404,  t316
+	c0    mpylhu $r0.18 = $r0.2, $r0.12   ## [spec] bblock 4, line 2140,  t331,  t412,  t316
+	c0    mpylhu $r0.19 = $r0.12, $r0.2   ## [spec] bblock 4, line 2141,  t338,  t316,  t412
 	c0    br $b0.2, L208?3   ## bblock 2, line 2012,  t645(I1)
 ;;								## 15
 L209?3:
 	c0    shl $r0.14 = $r0.14, 12   ## [spec] bblock 4, line 2035,  t106,  t104,  12(SI32)
-	c0    mpyllu $r0.9 = $r0.8, $r0.12   ## [spec] bblock 4, line 2056,  t157,  t404,  t316
-	c0    mpyhhu $r0.16 = $r0.8, $r0.12   ## [spec] bblock 4, line 2059,  t147,  t404,  t316
+	c0    mpyhhu $r0.9 = $r0.12, $r0.2   ## [spec] bblock 4, line 2142,  t334,  t316,  t412
 	c0    br $b0.3, L210?3   ## bblock 3, line 2020,  t646(I1)
 ;;								## 16
 L211?3:
 	c0    stw 0x20[$r0.1] = $r0.2   ## bblock 4, line 2026, t487, t412
 	c0    or $r0.14 = $r0.14, $r0.15   ## bblock 4, line 2035,  t248,  t106,  t103(I12)
 	c0    add $r0.13 = $r0.11, $r0.13   ## bblock 4, line 2060,  t155,  t151,  t144
-	c0    mpylhu $r0.17 = $r0.2, $r0.12   ## bblock 4, line 2140,  t331,  t412,  t316
-	c0    mpylhu $r0.18 = $r0.12, $r0.2   ## bblock 4, line 2141,  t338,  t316,  t412
+	c0    add $r0.18 = $r0.18, $r0.19   ## bblock 4, line 2143,  t342,  t331,  t338
 ;;								## 17
-	c0    stw 0x18[$r0.1] = $r0.12   ## bblock 4, line 2033, t487, t316
-	c0    mpylhu $r0.20 = $r0.14, $r0.8   ## bblock 4, line 2079,  t202,  t248,  t404
-	c0    shru $r0.19 = $r0.13, 16   ## bblock 4, line 2062,  t149(I16),  t155,  16(SI32)
+	c0    mpyllu $r0.24 = $r0.8, $r0.14   ## bblock 4, line 2077,  t208,  t404,  t248
+	c0    mpylhu $r0.22 = $r0.14, $r0.8   ## bblock 4, line 2079,  t202,  t248,  t404
+	c0    shru $r0.21 = $r0.13, 16   ## bblock 4, line 2062,  t149(I16),  t155,  16(SI32)
 	c0    cmpltu $r0.11 = $r0.13, $r0.11   ## bblock 4, line 2062,  t152,  t155,  t151
 	c0    shl $r0.15 = $r0.13, 16   ## bblock 4, line 2063,  t162,  t155,  16(SI32)
-	c0    mpylhu $r0.21 = $r0.8, $r0.14   ## bblock 4, line 2078,  t195,  t404,  t248
+	c0    mpylhu $r0.23 = $r0.8, $r0.14   ## bblock 4, line 2078,  t195,  t404,  t248
+	c0    mpyhhu $r0.25 = $r0.8, $r0.14   ## bblock 4, line 2080,  t198,  t404,  t248
+	c0    mpylhu $r0.26 = $r0.2, $r0.14   ## bblock 4, line 2109,  t263,  t412,  t248
 ;;								## 18
-	c0    stw 0x14[$r0.1] = $r0.14   ## bblock 4, line 2034, t487, t248
-	c0    mpyllu $r0.13 = $r0.8, $r0.14   ## bblock 4, line 2077,  t208,  t404,  t248
+	c0    mpyllu $r0.27 = $r0.14, $r0.2   ## bblock 4, line 2108,  t276,  t248,  t412
 	c0    shl $r0.11 = $r0.11, 16   ## bblock 4, line 2062,  t153,  t152,  16(SI32)
-	c0    add $r0.9 = $r0.9, $r0.15   ## bblock 4, line 2064,  t417,  t157,  t162
-	c0    add $r0.19 = $r0.19, $r0.16   ## bblock 4, line 2065,  t648,  t149(I16),  t147
-	c0    mpyhhu $r0.22 = $r0.8, $r0.14   ## bblock 4, line 2080,  t198,  t404,  t248
-	c0    add $r0.17 = $r0.17, $r0.18   ## bblock 4, line 2143,  t342,  t331,  t338
+	c0    add $r0.16 = $r0.16, $r0.15   ## bblock 4, line 2064,  t417,  t157,  t162
+	c0    add $r0.21 = $r0.21, $r0.17   ## bblock 4, line 2065,  t648,  t149(I16),  t147
+	c0    mpylhu $r0.13 = $r0.14, $r0.2   ## bblock 4, line 2110,  t270,  t248,  t412
+	c0    shru $r0.29 = $r0.18, 16   ## bblock 4, line 2145,  t336(I16),  t342,  16(SI32)
+	c0    cmpltu $r0.19 = $r0.18, $r0.19   ## bblock 4, line 2145,  t339,  t342,  t338
+	c0    shl $r0.28 = $r0.18, 16   ## bblock 4, line 2146,  t349,  t342,  16(SI32)
 ;;								## 19
-	c0    cmpltu $r0.15 = $r0.9, $r0.15   ## bblock 4, line 2065,  t163,  t417,  t162
-	c0    cmpne $r0.26 = $r0.9, $r0.0   ## bblock 4, line 2188,  t418,  t417,  0(I32)
-	c0    add $r0.21 = $r0.20, $r0.21   ## bblock 4, line 2081,  t206,  t202,  t195
-	c0    mpylhu $r0.16 = $r0.2, $r0.14   ## bblock 4, line 2109,  t263,  t412,  t248
-	c0    mpylhu $r0.23 = $r0.14, $r0.2   ## bblock 4, line 2110,  t270,  t248,  t412
-	c0    shru $r0.25 = $r0.17, 16   ## bblock 4, line 2145,  t336(I16),  t342,  16(SI32)
-	c0    cmpltu $r0.18 = $r0.17, $r0.18   ## bblock 4, line 2145,  t339,  t342,  t338
-	c0    shl $r0.24 = $r0.17, 16   ## bblock 4, line 2146,  t349,  t342,  16(SI32)
+	c0    cmpltu $r0.15 = $r0.16, $r0.15   ## bblock 4, line 2065,  t163,  t417,  t162
+	c0    stw 0x4c[$r0.1] = $r0.16   ## bblock 4, line 2066, t487, t417
+	c0    cmpne $r0.18 = $r0.16, $r0.0   ## bblock 4, line 2188,  t418,  t417,  0(I32)
+	c0    add $r0.23 = $r0.22, $r0.23   ## bblock 4, line 2081,  t206,  t202,  t195
+	c0    mpyhhu $r0.17 = $r0.14, $r0.2   ## bblock 4, line 2111,  t266,  t248,  t412
+	c0    shl $r0.19 = $r0.19, 16   ## bblock 4, line 2145,  t340,  t339,  16(SI32)
+	c0    add $r0.20 = $r0.20, $r0.28   ## bblock 4, line 2147,  t367,  t344,  t349
+	c0    add $r0.29 = $r0.29, $r0.9   ## bblock 4, line 2148,  t654,  t336(I16),  t334
 ;;								## 20
-	c0    mpyllu $r0.28 = $r0.14, $r0.2   ## bblock 4, line 2108,  t276,  t248,  t412
-	c0    mpyllu $r0.29 = $r0.12, $r0.2   ## bblock 4, line 2139,  t344,  t316,  t412
-	c0    stw 0x4c[$r0.1] = $r0.9   ## bblock 4, line 2066, t487, t417
+	c0    stw 0x48[$r0.1] = $r0.16   ## bblock 4, line 2172, t487, t417
 	c0    add $r0.11 = $r0.11, $r0.15   ## bblock 4, line 2065,  t649,  t153,  t163
-	c0    shru $r0.27 = $r0.21, 16   ## bblock 4, line 2083,  t200(I16),  t206,  16(SI32)
-	c0    cmpltu $r0.20 = $r0.21, $r0.20   ## bblock 4, line 2083,  t203,  t206,  t202
-	c0    shl $r0.17 = $r0.21, 16   ## bblock 4, line 2084,  t213,  t206,  16(SI32)
-	c0    shl $r0.18 = $r0.18, 16   ## bblock 4, line 2145,  t340,  t339,  16(SI32)
+	c0    shru $r0.30 = $r0.23, 16   ## bblock 4, line 2083,  t200(I16),  t206,  16(SI32)
+	c0    cmpltu $r0.22 = $r0.23, $r0.22   ## bblock 4, line 2083,  t203,  t206,  t202
+	c0    shl $r0.9 = $r0.23, 16   ## bblock 4, line 2084,  t213,  t206,  16(SI32)
+	c0    add $r0.26 = $r0.26, $r0.13   ## bblock 4, line 2112,  t274,  t263,  t270
+	c0    cmpltu $r0.28 = $r0.20, $r0.28   ## bblock 4, line 2148,  t350,  t367,  t349
 ;;								## 21
-	c0    stw 0x48[$r0.1] = $r0.9   ## bblock 4, line 2172, t487, t417
-	c0    add $r0.19 = $r0.19, $r0.11   ## bblock 4, line 2065,  t225,  t648,  t649
-	c0    shl $r0.20 = $r0.20, 16   ## bblock 4, line 2083,  t204,  t203,  16(SI32)
-	c0    add $r0.13 = $r0.13, $r0.17   ## bblock 4, line 2085,  t231,  t208,  t213
-	c0    add $r0.27 = $r0.27, $r0.22   ## bblock 4, line 2086,  t650,  t200(I16),  t198
-	c0    add $r0.16 = $r0.16, $r0.23   ## bblock 4, line 2112,  t274,  t263,  t270
-	c0    mpyhhu $r0.21 = $r0.14, $r0.2   ## bblock 4, line 2111,  t266,  t248,  t412
-	c0    mpyhhu $r0.15 = $r0.12, $r0.2   ## bblock 4, line 2142,  t334,  t316,  t412
+	c0    add $r0.21 = $r0.21, $r0.11   ## bblock 4, line 2065,  t225,  t648,  t649
+	c0    shl $r0.22 = $r0.22, 16   ## bblock 4, line 2083,  t204,  t203,  16(SI32)
+	c0    add $r0.24 = $r0.24, $r0.9   ## bblock 4, line 2085,  t231,  t208,  t213
+	c0    add $r0.30 = $r0.30, $r0.25   ## bblock 4, line 2086,  t650,  t200(I16),  t198
+	c0    shru $r0.16 = $r0.26, 16   ## bblock 4, line 2114,  t268(I16),  t274,  16(SI32)
+	c0    cmpltu $r0.13 = $r0.26, $r0.13   ## bblock 4, line 2114,  t271,  t274,  t270
+	c0    shl $r0.15 = $r0.26, 16   ## bblock 4, line 2115,  t281,  t274,  16(SI32)
+	c0    add $r0.19 = $r0.19, $r0.28   ## bblock 4, line 2148,  t655,  t340,  t350
 ;;								## 22
-	c0    cmpltu $r0.17 = $r0.13, $r0.17   ## bblock 4, line 2086,  t214,  t231,  t213
-	c0    add $r0.19 = $r0.19, $r0.13   ## bblock 4, line 2096,  t361,  t225,  t231
-	c0    shru $r0.11 = $r0.16, 16   ## bblock 4, line 2114,  t268(I16),  t274,  16(SI32)
-	c0    cmpltu $r0.23 = $r0.16, $r0.23   ## bblock 4, line 2114,  t271,  t274,  t270
-	c0    shl $r0.9 = $r0.16, 16   ## bblock 4, line 2115,  t281,  t274,  16(SI32)
-	c0    add $r0.29 = $r0.29, $r0.24   ## bblock 4, line 2147,  t367,  t344,  t349
+	c0    cmpltu $r0.9 = $r0.24, $r0.9   ## bblock 4, line 2086,  t214,  t231,  t213
+	c0    add $r0.21 = $r0.21, $r0.24   ## bblock 4, line 2096,  t361,  t225,  t231
+	c0    shl $r0.13 = $r0.13, 16   ## bblock 4, line 2114,  t272,  t271,  16(SI32)
+	c0    add $r0.27 = $r0.27, $r0.15   ## bblock 4, line 2116,  t299,  t276,  t281
+	c0    add $r0.16 = $r0.16, $r0.17   ## bblock 4, line 2117,  t652,  t268(I16),  t266
+	c0    add $r0.29 = $r0.29, $r0.19   ## bblock 4, line 2148,  t370,  t654,  t655
+	c0    stw 0x34[$r0.1] = $r0.20   ## bblock 4, line 2149, t487, t367
 ;;								## 23
-	c0    cmpltu $r0.13 = $r0.19, $r0.13   ## bblock 4, line 2098,  t232,  t361,  t231
-	c0    add $r0.20 = $r0.20, $r0.17   ## bblock 4, line 2086,  t651,  t204,  t214
-	c0    shl $r0.23 = $r0.23, 16   ## bblock 4, line 2114,  t272,  t271,  16(SI32)
-	c0    add $r0.28 = $r0.28, $r0.9   ## bblock 4, line 2116,  t299,  t276,  t281
-	c0    add $r0.11 = $r0.11, $r0.21   ## bblock 4, line 2117,  t652,  t268(I16),  t266
-	c0    cmpltu $r0.24 = $r0.29, $r0.24   ## bblock 4, line 2148,  t350,  t367,  t349
-	c0    add $r0.12 = $r0.29, $r0.19   ## bblock 4, line 2158,  t416,  t367,  t361
-	c0    add $r0.25 = $r0.25, $r0.15   ## bblock 4, line 2148,  t654,  t336(I16),  t334
+	c0    stw 0x18[$r0.1] = $r0.12   ## bblock 4, line 2033, t487, t316
+	c0    cmpltu $r0.24 = $r0.21, $r0.24   ## bblock 4, line 2098,  t232,  t361,  t231
+	c0    add $r0.22 = $r0.22, $r0.9   ## bblock 4, line 2086,  t651,  t204,  t214
+	c0    cmpltu $r0.15 = $r0.27, $r0.15   ## bblock 4, line 2117,  t282,  t299,  t281
+	c0    add $r0.11 = $r0.20, $r0.21   ## bblock 4, line 2158,  t416,  t367,  t361
 ;;								## 24
-	c0    add $r0.27 = $r0.27, $r0.20   ## bblock 4, line 2086,  t234,  t650,  t651
-	c0    cmpltu $r0.9 = $r0.28, $r0.9   ## bblock 4, line 2117,  t282,  t299,  t281
-	c0    stw 0x44[$r0.1] = $r0.12   ## bblock 4, line 2159, t487, t416
-	c0    cmpltu $r0.14 = $r0.12, $r0.29   ## bblock 4, line 2160,  t368,  t416,  t367
-	c0    or $r0.26 = $r0.12, $r0.26   ## bblock 4, line 2188,  t419,  t416,  t418
-	c0    add $r0.18 = $r0.18, $r0.24   ## bblock 4, line 2148,  t655,  t340,  t350
+	c0    add $r0.30 = $r0.30, $r0.22   ## bblock 4, line 2086,  t234,  t650,  t651
+	c0    add $r0.13 = $r0.13, $r0.15   ## bblock 4, line 2117,  t653,  t272,  t282
+	c0    stw 0x44[$r0.1] = $r0.11   ## bblock 4, line 2159, t487, t416
+	c0    cmpltu $r0.20 = $r0.11, $r0.20   ## bblock 4, line 2160,  t368,  t416,  t367
+	c0    or $r0.18 = $r0.11, $r0.18   ## bblock 4, line 2188,  t419,  t416,  t418
 ;;								## 25
-	c0    add $r0.27 = $r0.27, $r0.13   ## bblock 4, line 2098,  t293,  t234,  t232
-	c0    add $r0.23 = $r0.23, $r0.9   ## bblock 4, line 2117,  t653,  t272,  t282
-	c0    stw 0x40[$r0.1] = $r0.26   ## bblock 4, line 2188, t487, t419
-	c0    add $r0.25 = $r0.25, $r0.18   ## bblock 4, line 2148,  t370,  t654,  t655
-	c0    cmpne $r0.12 = $r0.26, $r0.0   ## [spec] bblock 7, line 2229,  t469,  t419,  0(I32)
+	c0    add $r0.30 = $r0.30, $r0.24   ## bblock 4, line 2098,  t293,  t234,  t232
+	c0    add $r0.16 = $r0.16, $r0.13   ## bblock 4, line 2117,  t302,  t652,  t653
+	c0    stw 0x40[$r0.1] = $r0.18   ## bblock 4, line 2188, t487, t419
+	c0    add $r0.29 = $r0.29, $r0.20   ## bblock 4, line 2160,  t378,  t370,  t368
+	c0    cmpne $r0.9 = $r0.18, $r0.0   ## [spec] bblock 7, line 2229,  t469,  t419,  0(I32)
 ;;								## 26
-	c0    add $r0.27 = $r0.28, $r0.27   ## bblock 4, line 2127,  t384,  t299,  t293
-	c0    add $r0.11 = $r0.11, $r0.23   ## bblock 4, line 2117,  t302,  t652,  t653
-	c0    add $r0.25 = $r0.25, $r0.14   ## bblock 4, line 2160,  t378,  t370,  t368
-	c0    stw 0x34[$r0.1] = $r0.29   ## bblock 4, line 2149, t487, t367
+	c0    add $r0.30 = $r0.27, $r0.30   ## bblock 4, line 2127,  t384,  t299,  t293
+	c0    stw 0x2c[$r0.1] = $r0.29   ## bblock 4, line 2160, t487, t378
 ;;								## 27
-	c0    cmpltu $r0.28 = $r0.27, $r0.28   ## bblock 4, line 2129,  t300,  t384,  t299
-	c0    add $r0.9 = $r0.27, $r0.25   ## bblock 4, line 2168,  t410,  t384,  t378
-	c0    stw 0x2c[$r0.1] = $r0.25   ## bblock 4, line 2160, t487, t378
+	c0    stw 0x14[$r0.1] = $r0.14   ## bblock 4, line 2034, t487, t248
+	c0    cmpltu $r0.27 = $r0.30, $r0.27   ## bblock 4, line 2129,  t300,  t384,  t299
+	c0    add $r0.29 = $r0.30, $r0.29   ## bblock 4, line 2168,  t410,  t384,  t378
 ;;								## 28
-	c0    add $r0.11 = $r0.11, $r0.28   ## bblock 4, line 2129,  t387,  t302,  t300
-	c0    cmpltu $r0.27 = $r0.9, $r0.27   ## bblock 4, line 2170,  t385,  t410,  t384
-	c0    add $r0.8 = $r0.8, $r0.9   ## bblock 4, line 2184,  t409,  t404,  t410
-	c0    stw 0x38[$r0.1] = $r0.9   ## bblock 4, line 2169, t487, t410
+	c0    add $r0.16 = $r0.16, $r0.27   ## bblock 4, line 2129,  t387,  t302,  t300
+	c0    cmpltu $r0.30 = $r0.29, $r0.30   ## bblock 4, line 2170,  t385,  t410,  t384
+	c0    add $r0.8 = $r0.8, $r0.29   ## bblock 4, line 2184,  t409,  t404,  t410
+	c0    stw 0x38[$r0.1] = $r0.29   ## bblock 4, line 2169, t487, t410
 ;;								## 29
-	c0    add $r0.11 = $r0.11, $r0.27   ## bblock 4, line 2170,  t413,  t387,  t385
+	c0    add $r0.16 = $r0.16, $r0.30   ## bblock 4, line 2170,  t413,  t387,  t385
 	c0    stw 0x3c[$r0.1] = $r0.8   ## bblock 4, line 2185, t487, t409
-	c0    cmpltu $r0.9 = $r0.8, $r0.9   ## bblock 4, line 2186,  t411,  t409,  t410
-	c0    shl $r0.14 = $r0.8, 31   ## [spec] bblock 7, line 2207,  t508,  t409,  31(I32)
-	c0    shru $r0.13 = $r0.8, 1   ## [spec] bblock 7, line 2208,  t628(I31),  t409,  1(SI32)
+	c0    cmpltu $r0.29 = $r0.8, $r0.29   ## bblock 4, line 2186,  t411,  t409,  t410
+	c0    shl $r0.12 = $r0.8, 31   ## [spec] bblock 7, line 2207,  t508,  t409,  31(I32)
+	c0    shru $r0.11 = $r0.8, 1   ## [spec] bblock 7, line 2208,  t628(I31),  t409,  1(SI32)
 ;;								## 30
-	c0    add $r0.2 = $r0.2, $r0.9   ## bblock 4, line 2186,  t656,  t412,  t411
-	c0    stw 0x30[$r0.1] = $r0.11   ## bblock 4, line 2170, t487, t413
-	c0    or $r0.14 = $r0.14, $r0.12   ## [spec] bblock 7, line 2229,  t618,  t508,  t469
+	c0    add $r0.2 = $r0.2, $r0.29   ## bblock 4, line 2186,  t656,  t412,  t411
+	c0    stw 0x30[$r0.1] = $r0.16   ## bblock 4, line 2170, t487, t413
+	c0    or $r0.12 = $r0.12, $r0.9   ## [spec] bblock 7, line 2229,  t618,  t508,  t469
 ;;								## 31
-	c0    add $r0.2 = $r0.2, $r0.11   ## bblock 4, line 2186,  t420,  t656,  t413
+	c0    add $r0.2 = $r0.2, $r0.16   ## bblock 4, line 2186,  t420,  t656,  t413
 ;;								## 32
 	c0    stw 0x28[$r0.1] = $r0.2   ## bblock 4, line 2186, t487, t420
 	c0    cmpgeu $b0.0 = $r0.2, 2097152   ## bblock 4, line 2189,  t657(I1),  t420,  2097152(SI32)
 	c0    shl $r0.9 = $r0.2, 31   ## [spec] bblock 7, line 2208,  t640,  t420,  31(I32)
 	c0    shru $r0.8 = $r0.2, 1   ## [spec] bblock 7, line 2209,  t510(I31),  t420,  1(SI32)
 ;;								## 33
-	c0    or $r0.13 = $r0.13, $r0.9   ## [spec] bblock 7, line 2208,  t509,  t628(I31),  t640
+	c0    or $r0.11 = $r0.11, $r0.9   ## [spec] bblock 7, line 2208,  t509,  t628(I31),  t640
 	c0    brf $b0.0, L212?3   ## bblock 4, line 2189,  t657(I1)
 ;;								## 34
 	c0    stw 0x28[$r0.1] = $r0.8   ## bblock 7, line 2233, t487, t510(I31)
@@ -6039,17 +6039,17 @@ L211?3:
 ;;								## 35
 	c0    ldw $r0.5 = 0x28[$r0.1]   ## bblock 5, line 2237, t483, t487
 ;;								## 36
-	c0    stw 0x3c[$r0.1] = $r0.13   ## bblock 7, line 2232, t487, t509
+	c0    stw 0x3c[$r0.1] = $r0.11   ## bblock 7, line 2232, t487, t509
 ;;								## 37
 	c0    ldw $r0.6 = 0x3c[$r0.1]   ## bblock 5, line 2237, t484, t487
 ;;								## 38
-	c0    stw 0x40[$r0.1] = $r0.14   ## bblock 7, line 2231, t487, t618
+	c0    stw 0x40[$r0.1] = $r0.12   ## bblock 7, line 2231, t487, t618
 ;;								## 39
 L213?3:
 	c0    ldw $r0.7 = 0x40[$r0.1]   ## bblock 5, line 2237, t485, t487
 ;;								## 40
-.call floatlib_29217.roundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat64   ## bblock 5, line 2237,  raddr(floatlib_29217.roundAndPackFloat64)(P32),  t615,  t614,  t483,  t484,  t485
+.call floatlib_6073.roundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat64   ## bblock 5, line 2237,  raddr(floatlib_6073.roundAndPackFloat64)(P32),  t615,  t614,  t483,  t484,  t485
 ;;								## 41
 	c0    ldw $l0.0 = 0x50[$r0.1]  ## restore ## t486
 ;;								## 42
@@ -6082,8 +6082,8 @@ L210?3:
 ;;								## 4
 	c0    brf $b0.0, L214?3   ## bblock 19, line 2021,  t658(I1)
 ;;								## 5
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 21, line 2022,  raddr(floatlib_29217.packFloat64)(P32),  t615,  0(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 21, line 2022,  raddr(floatlib_6073.packFloat64)(P32),  t615,  0(SI32),  0(I32),  0(I32)
 ;;								## 6
 	c0    ldw $l0.0 = 0x50[$r0.1]  ## restore ## t486
 ;;								## 7
@@ -6102,33 +6102,37 @@ L214?3:
 ;;								## 1
 	c0    ldw $r0.4 = 0x18[$r0.1]   ## bblock 20, line 2023, t80, t487
 ;;								## 2
-.call floatlib_29217.normalizeFloat64Subnormal, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret()
-	c0    call $l0.0 = floatlib_29217.normalizeFloat64Subnormal   ## bblock 20, line 2023,  raddr(floatlib_29217.normalizeFloat64Subnormal)(P32),  t79,  t80,  t81,  t82,  t83
+.call floatlib_6073.normalizeFloat64Subnormal, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret()
+	c0    call $l0.0 = floatlib_6073.normalizeFloat64Subnormal   ## bblock 20, line 2023,  raddr(floatlib_6073.normalizeFloat64Subnormal)(P32),  t79,  t80,  t81,  t82,  t83
 ;;								## 3
 	c0    ldw $r0.4 = 0x18[$r0.1]   ## bblock 4, line 2031, t99, t487
 ;;								## 4
 	c0    ldw $r0.8 = 0x24[$r0.1]   ## bblock 4, line 2043, t404, t487
 ;;								## 5
-	c0    ldw $r0.5 = 0x10[$r0.1]   ## bblock 4, line 2025, t84, t487
+	c0    ldw $r0.5 = 0x20[$r0.1]   ## bblock 4, line 2026, t87, t487
 	c0    shl $r0.12 = $r0.4, 12   ## bblock 4, line 2033,  t316,  t99,  12(SI32)
 	c0    shru $r0.15 = $r0.4, 20   ## bblock 4, line 2035,  t103(I12),  t99,  20(I32)
 ;;								## 6
-	c0    ldw $r0.4 = 0x1c[$r0.1]   ## bblock 4, line 2025, t85, t487
+	c0    ldw $r0.4 = 0x10[$r0.1]   ## bblock 4, line 2025, t84, t487
+	c0    mpyllu $r0.16 = $r0.8, $r0.12   ## bblock 4, line 2056,  t157,  t404,  t316
 	c0    mpylhu $r0.11 = $r0.12, $r0.8   ## bblock 4, line 2058,  t151,  t316,  t404
 	c0    mpylhu $r0.13 = $r0.8, $r0.12   ## bblock 4, line 2057,  t144,  t404,  t316
+	c0    mpyhhu $r0.17 = $r0.8, $r0.12   ## bblock 4, line 2059,  t147,  t404,  t316
 ;;								## 7
-	c0    add $r0.5 = $r0.5, -1024   ## bblock 4, line 2025,  t647,  t84,  -1024(SI32)
-	c0    ldw $r0.6 = 0x20[$r0.1]   ## bblock 4, line 2026, t87, t487
+	c0    ldw $r0.5 = 0x1c[$r0.1]   ## bblock 4, line 2025, t85, t487
+	c0    or $r0.2 = $r0.5, 1048576   ## bblock 4, line 2026,  t412,  t87,  1048576(I32)
 ;;								## 8
-	c0    add $r0.10 = $r0.5, $r0.4   ## bblock 4, line 2025,  t614,  t647,  t85
-	c0    ldw $r0.4 = 0x14[$r0.1]   ## bblock 4, line 2030, t104, t487
+	c0    add $r0.4 = $r0.4, -1024   ## bblock 4, line 2025,  t647,  t84,  -1024(SI32)
+	c0    ldw $r0.6 = 0x14[$r0.1]   ## bblock 4, line 2030, t104, t487
+	c0    mpyllu $r0.20 = $r0.12, $r0.2   ## bblock 4, line 2139,  t344,  t316,  t412
+	c0    mpylhu $r0.18 = $r0.2, $r0.12   ## bblock 4, line 2140,  t331,  t412,  t316
+	c0    mpylhu $r0.19 = $r0.12, $r0.2   ## bblock 4, line 2141,  t338,  t316,  t412
 ;;								## 9
-	c0    or $r0.2 = $r0.6, 1048576   ## bblock 4, line 2026,  t412,  t87,  1048576(I32)
+	c0    add $r0.10 = $r0.4, $r0.5   ## bblock 4, line 2025,  t614,  t647,  t85
 	c0    ldw $r0.3 = 0x54[$r0.1]  ## restore ## t615
 ;;								## 10
-	c0    shl $r0.14 = $r0.4, 12   ## bblock 4, line 2035,  t106,  t104,  12(SI32)
-	c0    mpyllu $r0.9 = $r0.8, $r0.12   ## [spec] bblock 4, line 2056,  t157,  t404,  t316
-	c0    mpyhhu $r0.16 = $r0.8, $r0.12   ## [spec] bblock 4, line 2059,  t147,  t404,  t316
+	c0    shl $r0.14 = $r0.6, 12   ## bblock 4, line 2035,  t106,  t104,  12(SI32)
+	c0    mpyhhu $r0.9 = $r0.12, $r0.2   ## [spec] bblock 4, line 2142,  t334,  t316,  t412
 	c0    goto L211?3 ## goto
 ;;								## 11
 .trace 5
@@ -6142,8 +6146,8 @@ L208?3:
 ;;								## 1
 	c0    brf $b0.0, L215?3   ## bblock 23, line 2013,  t659(I1)
 ;;								## 2
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 25, line 2014,  raddr(floatlib_29217.packFloat64)(P32),  t615,  0(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 25, line 2014,  raddr(floatlib_6073.packFloat64)(P32),  t615,  0(SI32),  0(I32),  0(I32)
 ;;								## 3
 	c0    ldw $l0.0 = 0x50[$r0.1]  ## restore ## t486
 ;;								## 4
@@ -6162,8 +6166,8 @@ L215?3:
 ;;								## 1
 	c0    ldw $r0.4 = 0x24[$r0.1]   ## bblock 24, line 2015, t68, t487
 ;;								## 2
-.call floatlib_29217.normalizeFloat64Subnormal, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret()
-	c0    call $l0.0 = floatlib_29217.normalizeFloat64Subnormal   ## bblock 24, line 2015,  raddr(floatlib_29217.normalizeFloat64Subnormal)(P32),  t67,  t68,  t69,  t70,  t71
+.call floatlib_6073.normalizeFloat64Subnormal, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret()
+	c0    call $l0.0 = floatlib_6073.normalizeFloat64Subnormal   ## bblock 24, line 2015,  raddr(floatlib_6073.normalizeFloat64Subnormal)(P32),  t67,  t68,  t69,  t70,  t71
 ;;								## 3
 	c0    ldw.d $r0.4 = 0x10[$r0.1]   ## [spec] bblock 4, line 2025, t84, t487
 ;;								## 4
@@ -6187,8 +6191,13 @@ L215?3:
 ;;								## 10
 	c0    ldw $r0.3 = 0x54[$r0.1]  ## restore ## t615
 ;;								## 11
+	c0    mpyllu $r0.16 = $r0.8, $r0.12   ## [spec] bblock 4, line 2056,  t157,  t404,  t316
+	c0    mpyllu $r0.20 = $r0.12, $r0.2   ## [spec] bblock 4, line 2139,  t344,  t316,  t412
 	c0    mpylhu $r0.11 = $r0.12, $r0.8   ## [spec] bblock 4, line 2058,  t151,  t316,  t404
 	c0    mpylhu $r0.13 = $r0.8, $r0.12   ## [spec] bblock 4, line 2057,  t144,  t404,  t316
+	c0    mpyhhu $r0.17 = $r0.8, $r0.12   ## [spec] bblock 4, line 2059,  t147,  t404,  t316
+	c0    mpylhu $r0.18 = $r0.2, $r0.12   ## [spec] bblock 4, line 2140,  t331,  t412,  t316
+	c0    mpylhu $r0.19 = $r0.12, $r0.2   ## [spec] bblock 4, line 2141,  t338,  t316,  t412
 	c0    goto L209?3 ## goto
 ;;								## 12
 .trace 4
@@ -6206,8 +6215,8 @@ L207?3:
 ;;								## 4
 	c0    brf $b0.0, L216?3   ## bblock 27, line 1998,  t661
 ;;								## 5
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 33, line 1999,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t501,  t502,  t503,  t504
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 33, line 1999,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t501,  t502,  t503,  t504
 ;;								## 6
 	c0    ldw $l0.0 = 0x50[$r0.1]  ## restore ## t486
 ;;								## 7
@@ -6237,8 +6246,8 @@ L216?3:
 ;;								## 6
 .trace 12
 L218?3:
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 29, line 2007,  raddr(floatlib_29217.packFloat64)(P32),  t615,  2047(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 29, line 2007,  raddr(floatlib_6073.packFloat64)(P32),  t615,  2047(SI32),  0(I32),  0(I32)
 	c0    mov $r0.5 = $r0.0   ## 0(I32)
 	c0    mov $r0.6 = $r0.0   ## 0(I32)
 	c0    mov $r0.3 = $r0.7   ## t615
@@ -6274,8 +6283,8 @@ L206?3:
 ;;								## 7
 	c0    brf $b0.0, L219?3   ## bblock 35, line 1987,  t665(I1)
 ;;								## 8
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 39, line 1988,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t501,  t502,  t503,  t504
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 39, line 1988,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t501,  t502,  t503,  t504
 ;;								## 9
 	c0    ldw $l0.0 = 0x50[$r0.1]  ## restore ## t486
 ;;								## 10
@@ -6301,8 +6310,8 @@ L219?3:
 	c0    brf $b0.0, L220?3   ## bblock 36, line 1990,  t667(I1)
 ;;								## 6
 L217?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 31, line 2002,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 31, line 2002,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 ;;								## 7
 	c0    mov $r0.4 = (~0x0)   ## (~0x0)(I32)
 	c0    ldw $l0.0 = 0x50[$r0.1]  ## restore ## t486
@@ -6314,8 +6323,8 @@ L217?3:
 ;;								## 10
 .trace 11
 L220?3:
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 37, line 1992,  raddr(floatlib_29217.packFloat64)(P32),  t615,  2047(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 37, line 1992,  raddr(floatlib_6073.packFloat64)(P32),  t615,  2047(SI32),  0(I32),  0(I32)
 	c0    mov $r0.5 = $r0.0   ## 0(I32)
 	c0    mov $r0.6 = $r0.0   ## 0(I32)
 	c0    mov $r0.3 = $r0.7   ## t615
@@ -6457,8 +6466,8 @@ L226?3:
 L228?3:
 	c0    ldw $r0.4 = 0x10[$r0.1]   ## bblock 5, line 2350, t174, t680
 ;;								## 28
-.call floatlib_29217.estimateDiv64To32, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.estimateDiv64To32   ## bblock 5, line 2350,  raddr(floatlib_29217.estimateDiv64To32)(P32),  t173,  t174,  t175
+.call floatlib_6073.estimateDiv64To32, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.estimateDiv64To32   ## bblock 5, line 2350,  raddr(floatlib_6073.estimateDiv64To32)(P32),  t173,  t174,  t175
 ;;								## 29
 	c0    mov $r0.9 = $r0.3   ## bblock 6, line 2350,  t936,  t172
 	c0    ldw $r0.2 = 0x20[$r0.1]   ## bblock 6, line 2356, t358, t680
@@ -6472,80 +6481,80 @@ L228?3:
 	c0    ldw $r0.4 = 0x1c[$r0.1]   ## bblock 6, line 2355, t364, t680
 	c0    mov $r0.20 = $r0.3   ## t172
 ;;								## 31
+	c0    mpyllu $r0.14 = $r0.2, $r0.3   ## bblock 6, line 2367,  t221,  t358,  t172
 	c0    mpylhu $r0.12 = $r0.3, $r0.2   ## bblock 6, line 2369,  t215,  t172,  t358
 	c0    mpylhu $r0.13 = $r0.2, $r0.3   ## bblock 6, line 2368,  t208,  t358,  t172
-	c0    ldw $r0.14 = 0x10[$r0.1]   ## bblock 6, line 2417, t321, t680
+	c0    mpyhhu $r0.15 = $r0.2, $r0.3   ## bblock 6, line 2370,  t211,  t358,  t172
+	c0    ldw $r0.16 = 0x10[$r0.1]   ## bblock 6, line 2417, t321, t680
 ;;								## 32
-	c0    mpyllu $r0.15 = $r0.2, $r0.3   ## bblock 6, line 2367,  t221,  t358,  t172
-	c0    mpyhhu $r0.16 = $r0.2, $r0.3   ## bblock 6, line 2370,  t211,  t358,  t172
-	c0    ldw $r0.17 = 0x14[$r0.1]   ## bblock 6, line 2416, t325, t680
+	c0    mpyllu $r0.19 = $r0.3, $r0.4   ## bblock 6, line 2388,  t272,  t172,  t364
+	c0    mpylhu $r0.17 = $r0.4, $r0.3   ## bblock 6, line 2389,  t259,  t364,  t172
+	c0    mpylhu $r0.18 = $r0.3, $r0.4   ## bblock 6, line 2390,  t266,  t172,  t364
+	c0    mpyhhu $r0.21 = $r0.3, $r0.4   ## bblock 6, line 2391,  t262,  t172,  t364
+	c0    ldw $r0.22 = 0x14[$r0.1]   ## bblock 6, line 2416, t325, t680
 ;;								## 33
 	c0    stw 0x34[$r0.1] = $r0.3   ## bblock 6, line 2350, t680, t172
 	c0    add $r0.13 = $r0.12, $r0.13   ## bblock 6, line 2371,  t219,  t215,  t208
-	c0    mpylhu $r0.18 = $r0.4, $r0.3   ## bblock 6, line 2389,  t259,  t364,  t172
-	c0    mpylhu $r0.19 = $r0.3, $r0.4   ## bblock 6, line 2390,  t266,  t172,  t364
 ;;								## 34
-	c0    mpyllu $r0.23 = $r0.3, $r0.4   ## bblock 6, line 2388,  t272,  t172,  t364
-	c0    shru $r0.22 = $r0.13, 16   ## bblock 6, line 2373,  t213(I16),  t219,  16(SI32)
+	c0    shru $r0.24 = $r0.13, 16   ## bblock 6, line 2373,  t213(I16),  t219,  16(SI32)
 	c0    cmpltu $r0.12 = $r0.13, $r0.12   ## bblock 6, line 2373,  t216,  t219,  t215
-	c0    shl $r0.21 = $r0.13, 16   ## bblock 6, line 2374,  t226,  t219,  16(SI32)
-	c0    mpyhhu $r0.24 = $r0.3, $r0.4   ## bblock 6, line 2391,  t262,  t172,  t364
+	c0    shl $r0.23 = $r0.13, 16   ## bblock 6, line 2374,  t226,  t219,  16(SI32)
+	c0    add $r0.17 = $r0.17, $r0.18   ## bblock 6, line 2392,  t270,  t259,  t266
+	c0    mov $r0.3 = $r0.2   ## t358
 ;;								## 35
 	c0    shl $r0.12 = $r0.12, 16   ## bblock 6, line 2373,  t217,  t216,  16(SI32)
-	c0    add $r0.15 = $r0.15, $r0.21   ## bblock 6, line 2375,  t316,  t221,  t226
-	c0    add $r0.22 = $r0.22, $r0.16   ## bblock 6, line 2376,  t1046,  t213(I16),  t211
-	c0    add $r0.18 = $r0.18, $r0.19   ## bblock 6, line 2392,  t270,  t259,  t266
+	c0    add $r0.14 = $r0.14, $r0.23   ## bblock 6, line 2375,  t316,  t221,  t226
+	c0    add $r0.24 = $r0.24, $r0.15   ## bblock 6, line 2376,  t1046,  t213(I16),  t211
+	c0    shru $r0.13 = $r0.17, 16   ## bblock 6, line 2394,  t264(I16),  t270,  16(SI32)
+	c0    cmpltu $r0.18 = $r0.17, $r0.18   ## bblock 6, line 2394,  t267,  t270,  t266
+	c0    shl $r0.2 = $r0.17, 16   ## bblock 6, line 2395,  t277,  t270,  16(SI32)
 ;;								## 36
-	c0    cmpltu $r0.21 = $r0.15, $r0.21   ## bblock 6, line 2376,  t227,  t316,  t226
-	c0    stw 0x38[$r0.1] = $r0.15   ## bblock 6, line 2377, t680, t316
-	c0    sub $r0.26 = $r0.0, $r0.15   ## bblock 6, line 2422,  t341,  0(I32),  t316
-	c0    shru $r0.16 = $r0.18, 16   ## bblock 6, line 2394,  t264(I16),  t270,  16(SI32)
-	c0    cmpltu $r0.19 = $r0.18, $r0.19   ## bblock 6, line 2394,  t267,  t270,  t266
-	c0    shl $r0.13 = $r0.18, 16   ## bblock 6, line 2395,  t277,  t270,  16(SI32)
-	c0    cmpgtu $r0.25 = $r0.15, $r0.0   ## bblock 6, line 2423,  t336,  t316,  0(SI32)
-	c0    mov $r0.3 = $r0.2   ## t358
+	c0    cmpltu $r0.23 = $r0.14, $r0.23   ## bblock 6, line 2376,  t227,  t316,  t226
+	c0    stw 0x38[$r0.1] = $r0.14   ## bblock 6, line 2377, t680, t316
+	c0    sub $r0.17 = $r0.0, $r0.14   ## bblock 6, line 2422,  t341,  0(I32),  t316
+	c0    shl $r0.18 = $r0.18, 16   ## bblock 6, line 2394,  t268,  t267,  16(SI32)
+	c0    add $r0.19 = $r0.19, $r0.2   ## bblock 6, line 2396,  t295,  t272,  t277
+	c0    add $r0.13 = $r0.13, $r0.21   ## bblock 6, line 2397,  t1048,  t264(I16),  t262
+	c0    cmpgtu $r0.15 = $r0.14, $r0.0   ## bblock 6, line 2423,  t336,  t316,  0(SI32)
 ;;								## 37
-	c0    add $r0.12 = $r0.12, $r0.21   ## bblock 6, line 2376,  t1047,  t217,  t227
-	c0    shl $r0.19 = $r0.19, 16   ## bblock 6, line 2394,  t268,  t267,  16(SI32)
-	c0    add $r0.23 = $r0.23, $r0.13   ## bblock 6, line 2396,  t295,  t272,  t277
-	c0    add $r0.16 = $r0.16, $r0.24   ## bblock 6, line 2397,  t1048,  t264(I16),  t262
-	c0    ldw $r0.18 = 0x78[$r0.1]  ## restore ## t860
+	c0    add $r0.12 = $r0.12, $r0.23   ## bblock 6, line 2376,  t1047,  t217,  t227
+	c0    cmpltu $r0.2 = $r0.19, $r0.2   ## bblock 6, line 2397,  t278,  t295,  t277
+	c0    stw 0x30[$r0.1] = $r0.17   ## bblock 6, line 2433, t680, t341
 ;;								## 38
-	c0    add $r0.22 = $r0.22, $r0.12   ## bblock 6, line 2376,  t289,  t1046,  t1047
-	c0    cmpltu $r0.13 = $r0.23, $r0.13   ## bblock 6, line 2397,  t278,  t295,  t277
-	c0    stw 0x30[$r0.1] = $r0.26   ## bblock 6, line 2433, t680, t341
-;;								## 39
-	c0    stw 0x3c[$r0.1] = $r0.15   ## bblock 6, line 2411, t680, t316
-	c0    add $r0.22 = $r0.22, $r0.23   ## bblock 6, line 2407,  t322,  t289,  t295
-	c0    add $r0.19 = $r0.19, $r0.13   ## bblock 6, line 2397,  t1049,  t268,  t278
-;;								## 40
-	c0    stw 0x40[$r0.1] = $r0.22   ## bblock 6, line 2408, t680, t322
-	c0    cmpltu $r0.2 = $r0.22, $r0.23   ## bblock 6, line 2409,  t296,  t322,  t295
-	c0    add $r0.16 = $r0.16, $r0.19   ## bblock 6, line 2397,  t298,  t1048,  t1049
-	c0    sub $r0.12 = $r0.14, $r0.22   ## bblock 6, line 2424,  t335,  t321,  t322
-	c0    cmpltu $r0.13 = $r0.14, $r0.22   ## bblock 6, line 2425,  t339,  t321,  t322
-;;								## 41
-	c0    add $r0.16 = $r0.16, $r0.2   ## bblock 6, line 2409,  t324,  t298,  t296
-	c0    cmpltu $r0.14 = $r0.12, $r0.25   ## bblock 6, line 2430,  t333,  t335,  t336
-	c0    sub $r0.15 = $r0.12, $r0.25   ## bblock 6, line 2431,  t343,  t335,  t336
-	c0    sub $r0.17 = $r0.17, $r0.13   ## bblock 6, line 2432,  t1050,  t325,  t339
-	c0    ldw $r0.19 = 0x7c[$r0.1]  ## restore ## t859
-;;								## 42
-	c0    stw 0x4c[$r0.1] = $r0.16   ## bblock 6, line 2413, t680, t324
-	c0    add $r0.14 = $r0.16, $r0.14   ## bblock 6, line 2432,  t1051,  t324,  t333
-;;								## 43
-	c0    stw 0x50[$r0.1] = $r0.16   ## bblock 6, line 2409, t680, t324
-	c0    sub $r0.17 = $r0.17, $r0.14   ## bblock 6, line 2432,  t345,  t1050,  t1051
-;;								## 44
-	c0    stw 0x28[$r0.1] = $r0.17   ## bblock 6, line 2435, t680, t345
-;;								## 45
+	c0    add $r0.24 = $r0.24, $r0.12   ## bblock 6, line 2376,  t289,  t1046,  t1047
+	c0    add $r0.18 = $r0.18, $r0.2   ## bblock 6, line 2397,  t1049,  t268,  t278
 	c0    ldw $r0.17 = 0x74[$r0.1]  ## restore ## t679
+;;								## 39
+	c0    stw 0x3c[$r0.1] = $r0.14   ## bblock 6, line 2411, t680, t316
+	c0    add $r0.24 = $r0.24, $r0.19   ## bblock 6, line 2407,  t322,  t289,  t295
+	c0    add $r0.13 = $r0.13, $r0.18   ## bblock 6, line 2397,  t298,  t1048,  t1049
+;;								## 40
+	c0    cmpltu $r0.2 = $r0.24, $r0.19   ## bblock 6, line 2409,  t296,  t322,  t295
+	c0    sub $r0.12 = $r0.16, $r0.24   ## bblock 6, line 2424,  t335,  t321,  t322
+	c0    cmpltu $r0.14 = $r0.16, $r0.24   ## bblock 6, line 2425,  t339,  t321,  t322
+	c0    ldw $r0.18 = 0x78[$r0.1]  ## restore ## t860
+;;								## 41
+	c0    add $r0.13 = $r0.13, $r0.2   ## bblock 6, line 2409,  t324,  t298,  t296
+	c0    stw 0x48[$r0.1] = $r0.19   ## bblock 6, line 2398, t680, t295
+	c0    cmpltu $r0.16 = $r0.12, $r0.15   ## bblock 6, line 2430,  t333,  t335,  t336
+	c0    sub $r0.21 = $r0.12, $r0.15   ## bblock 6, line 2431,  t343,  t335,  t336
+	c0    sub $r0.22 = $r0.22, $r0.14   ## bblock 6, line 2432,  t1050,  t325,  t339
+;;								## 42
+	c0    add $r0.16 = $r0.13, $r0.16   ## bblock 6, line 2432,  t1051,  t324,  t333
+	c0    ldw $r0.19 = 0x7c[$r0.1]  ## restore ## t859
+;;								## 43
+	c0    stw 0x4c[$r0.1] = $r0.13   ## bblock 6, line 2413, t680, t324
+	c0    sub $r0.22 = $r0.22, $r0.16   ## bblock 6, line 2432,  t345,  t1050,  t1051
+;;								## 44
+	c0    stw 0x28[$r0.1] = $r0.22   ## bblock 6, line 2435, t680, t345
+;;								## 45
+	c0    stw 0x50[$r0.1] = $r0.13   ## bblock 6, line 2409, t680, t324
 ;;								## 46
-	c0    stw 0x2c[$r0.1] = $r0.15   ## bblock 6, line 2434, t680, t343
+	c0    stw 0x2c[$r0.1] = $r0.21   ## bblock 6, line 2434, t680, t343
 ;;								## 47
-	c0    stw 0x44[$r0.1] = $r0.22   ## bblock 6, line 2412, t680, t322
+	c0    stw 0x40[$r0.1] = $r0.24   ## bblock 6, line 2408, t680, t322
 ;;								## 48
-	c0    stw 0x48[$r0.1] = $r0.23   ## bblock 6, line 2398, t680, t295
+	c0    stw 0x44[$r0.1] = $r0.24   ## bblock 6, line 2412, t680, t322
 ;;								## 49
 .trace 1
 L229?3:
@@ -6772,74 +6781,13 @@ L235?3:
 L239?3:
 	c0    mov $r0.11 = $r0.10   ## bblock 60, line 0,  t963,  t1012
 	   ## bblock 60, line 0,  t965,  t962## $r0.9(skipped)
-	c0    stw 0x7c[$r0.1] = $r0.19  ## spill ## t859
-	c0    mov $r0.3 = $r0.18   ## t860
+	c0    stw 0x78[$r0.1] = $r0.18  ## spill ## t860
 	c0    goto L240?3 ## goto
 ;;								## 0
-.trace 17
-L242?3:
-	c0    ldw $r0.5 = 0x30[$r0.1]   ## bblock 25, line 2577, t612, t680
-;;								## 0
-	c0    or $r0.2 = $r0.2, $r0.4   ## bblock 25, line 2577,  t1066,  t611,  t613
-	c0    goto L241?3 ## goto
-;;								## 1
-.trace 14
-L238?3:
-	c0    mov $r0.11 = $r0.10   ## bblock 63, line 0,  t963,  t1012
-	c0    mov $r0.9 = $r0.8   ## bblock 63, line 0,  t965,  t1013
-	c0    stw 0x7c[$r0.1] = $r0.19  ## spill ## t859
-	c0    mov $r0.3 = $r0.18   ## t860
-	c0    goto L240?3 ## goto
-;;								## 0
-.trace 13
-L237?3:
-	   ## bblock 66, line 0,  t963,  t935## $r0.11(skipped)
-	c0    mov $r0.9 = $r0.8   ## bblock 66, line 0,  t965,  t1013
-	c0    stw 0x7c[$r0.1] = $r0.19  ## spill ## t859
-	c0    mov $r0.3 = $r0.18   ## t860
-	c0    goto L240?3 ## goto
-;;								## 0
-.trace 9
-L236?3:
-	   ## bblock 67, line 0,  t963,  t935## $r0.11(skipped)
-	   ## bblock 67, line 0,  t965,  t962## $r0.9(skipped)
-	c0    mov $r0.3 = $r0.18   ## t860
-	c0    stw 0x7c[$r0.1] = $r0.19  ## spill ## t859
-;;								## 0
-L240?3:
-	c0    add $r0.9 = $r0.9, $r0.11   ## bblock 21, line 0,  t921,  t965,  t963
-	c0    stw 0x74[$r0.1] = $r0.17  ## spill ## t679
-;;								## 1
-	c0    cmpne $b0.0 = $r0.9, $r0.20   ## bblock 21, line 0,  t1058(I1),  t921,  t390
-	c0    ldw.d $r0.2 = 0x6c[$r0.1]   ## [spec] bblock 25, line 2577, t611, t680
-;;								## 2
-	c0    ldw.d $r0.4 = 0x2c[$r0.1]   ## [spec] bblock 25, line 2577, t613, t680
-	c0    brf $b0.0, L242?3   ## bblock 21, line 0,  t1058(I1)
-;;								## 3
-	c0    ldw $r0.5 = 0x30[$r0.1]   ## bblock 25, line 2577, t612, t680
-;;								## 4
-	c0    stw 0x54[$r0.1] = $r0.9   ## bblock 31, line 0, t680, t921
-	c0    or $r0.2 = $r0.2, $r0.4   ## bblock 25, line 2577,  t1066,  t611,  t613
-;;								## 5
-L241?3:
-	c0    ldw $r0.4 = 0x54[$r0.1]   ## bblock 25, line 2577, t610, t680
-	c0    or $r0.2 = $r0.2, $r0.5   ## bblock 25, line 2577,  t614,  t1066,  t612
-;;								## 6
-	c0    cmpne $r0.2 = $r0.2, $r0.0   ## bblock 25, line 2577,  t615,  t614,  0(I32)
-;;								## 7
-	c0    or $r0.4 = $r0.4, $r0.2   ## bblock 25, line 2577,  t616,  t610,  t615
-;;								## 8
-	c0    stw 0x54[$r0.1] = $r0.4   ## bblock 25, line 2577, t680, t616
-;;								## 9
-	c0    ldw $r0.2 = 0x34[$r0.1]   ## bblock 10, line 2580, t708, t680
-	c0    goto L243?3 ## goto
-;;								## 10
 .trace 7
-L244?3:
+L241?3:
 	c0    ldw $r0.2 = 0x34[$r0.1]   ## bblock 10, line 2580, t708, t680
-	c0    mov $r0.3 = $r0.18   ## t860
 ;;								## 0
-L243?3:
 	c0    ldw $r0.8 = 0x54[$r0.1]   ## bblock 10, line 2581, t897, t680
 ;;								## 1
 	c0    shl $r0.9 = $r0.2, 21   ## bblock 10, line 2597,  t905,  t708,  21(I32)
@@ -6848,31 +6796,90 @@ L243?3:
 ;;								## 2
 	c0    shl $r0.7 = $r0.8, 21   ## bblock 10, line 2596,  t678,  t897,  21(I32)
 	c0    shru $r0.2 = $r0.8, 11   ## bblock 10, line 2597,  t893(I21),  t897,  11(SI32)
-	c0    stw 0x34[$r0.1] = $r0.5   ## bblock 10, line 2622, t680, t676
+	c0    ldw $r0.3 = 0x78[$r0.1]  ## restore ## t860
 ;;								## 3
 	c0    stw 0x70[$r0.1] = $r0.7   ## bblock 10, line 2620, t680, t678
 	c0    or $r0.6 = $r0.9, $r0.2   ## bblock 10, line 2597,  t677,  t905,  t893(I21)
 ;;								## 4
-.call floatlib_29217.roundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret($r0.3:u32,$r0.4:u32)
 	c0    stw 0x54[$r0.1] = $r0.6   ## bblock 10, line 2621, t680, t677
-	c0    call $l0.0 = floatlib_29217.roundAndPackFloat64   ## bblock 10, line 2624,  raddr(floatlib_29217.roundAndPackFloat64)(P32),  t860,  t859,  t676,  t677,  t678
 ;;								## 5
-	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
+.call floatlib_6073.roundAndPackFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    stw 0x34[$r0.1] = $r0.5   ## bblock 10, line 2622, t680, t676
+	c0    call $l0.0 = floatlib_6073.roundAndPackFloat64   ## bblock 10, line 2624,  raddr(floatlib_6073.roundAndPackFloat64)(P32),  t860,  t859,  t676,  t677,  t678
 ;;								## 6
+	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
 ;;								## 7
+;;								## 8
 .return ret($r0.3:u32,$r0.4:u32)
 	c0    return $r0.1 = $r0.1, (0x80), $l0.0   ## bblock 18, line 2624,  t680,  ?2.37?2auto_size(I32),  t679
+;;								## 9
+.trace 17
+L243?3:
+	c0    ldw $r0.3 = 0x2c[$r0.1]   ## bblock 25, line 2577, t613, t680
+;;								## 0
+	c0    ldw $r0.4 = 0x30[$r0.1]   ## bblock 25, line 2577, t612, t680
+;;								## 1
+	c0    or $r0.2 = $r0.2, $r0.3   ## bblock 25, line 2577,  t1066,  t611,  t613
+	c0    goto L242?3 ## goto
+;;								## 2
+.trace 14
+L238?3:
+	c0    mov $r0.11 = $r0.10   ## bblock 63, line 0,  t963,  t1012
+	c0    mov $r0.9 = $r0.8   ## bblock 63, line 0,  t965,  t1013
+	c0    stw 0x78[$r0.1] = $r0.18  ## spill ## t860
+	c0    goto L240?3 ## goto
+;;								## 0
+.trace 13
+L237?3:
+	   ## bblock 66, line 0,  t963,  t935## $r0.11(skipped)
+	c0    mov $r0.9 = $r0.8   ## bblock 66, line 0,  t965,  t1013
+	c0    stw 0x78[$r0.1] = $r0.18  ## spill ## t860
+	c0    goto L240?3 ## goto
+;;								## 0
+.trace 9
+L236?3:
+	   ## bblock 67, line 0,  t963,  t935## $r0.11(skipped)
+	   ## bblock 67, line 0,  t965,  t962## $r0.9(skipped)
+	c0    stw 0x78[$r0.1] = $r0.18  ## spill ## t860
+;;								## 0
+L240?3:
+	c0    add $r0.9 = $r0.9, $r0.11   ## bblock 21, line 0,  t921,  t965,  t963
+	c0    stw 0x7c[$r0.1] = $r0.19  ## spill ## t859
+;;								## 1
+	c0    cmpne $b0.0 = $r0.9, $r0.20   ## bblock 21, line 0,  t1058(I1),  t921,  t390
+	c0    stw 0x74[$r0.1] = $r0.17  ## spill ## t679
+;;								## 2
+	c0    ldw.d $r0.2 = 0x6c[$r0.1]   ## [spec] bblock 25, line 2577, t611, t680
+	c0    brf $b0.0, L243?3   ## bblock 21, line 0,  t1058(I1)
+;;								## 3
+	c0    ldw $r0.3 = 0x2c[$r0.1]   ## bblock 25, line 2577, t613, t680
+;;								## 4
+	c0    ldw $r0.4 = 0x30[$r0.1]   ## bblock 25, line 2577, t612, t680
+;;								## 5
+	c0    stw 0x54[$r0.1] = $r0.9   ## bblock 31, line 0, t680, t921
+	c0    or $r0.2 = $r0.2, $r0.3   ## bblock 25, line 2577,  t1066,  t611,  t613
+;;								## 6
+L242?3:
+	c0    ldw $r0.3 = 0x54[$r0.1]   ## bblock 25, line 2577, t610, t680
+	c0    or $r0.2 = $r0.2, $r0.4   ## bblock 25, line 2577,  t614,  t1066,  t612
+;;								## 7
+	c0    cmpne $r0.2 = $r0.2, $r0.0   ## bblock 25, line 2577,  t615,  t614,  0(I32)
 ;;								## 8
+	c0    or $r0.3 = $r0.3, $r0.2   ## bblock 25, line 2577,  t616,  t610,  t615
+;;								## 9
+	c0    stw 0x54[$r0.1] = $r0.3   ## bblock 25, line 2577, t680, t616
+	c0    goto L241?3 ## goto
+;;								## 10
 .trace 16
-L246?3:
+L245?3:
 	c0    ldw $r0.4 = 0x30[$r0.1]   ## bblock 8, line 2462, t392, t680
 ;;								## 0
 	c0    ldw $r0.5 = 0x1c[$r0.1]   ## bblock 8, line 2462, t393, t680
 ;;								## 1
-.call floatlib_29217.estimateDiv64To32, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32)
-	c0    call $l0.0 = floatlib_29217.estimateDiv64To32   ## bblock 8, line 2462,  raddr(floatlib_29217.estimateDiv64To32)(P32),  t391,  t392,  t393
+.call floatlib_6073.estimateDiv64To32, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32)
+	c0    call $l0.0 = floatlib_6073.estimateDiv64To32   ## bblock 8, line 2462,  raddr(floatlib_6073.estimateDiv64To32)(P32),  t391,  t392,  t393
 ;;								## 2
-	c0    goto L245?3 ## goto
+	c0    goto L244?3 ## goto
 ;;								## 3
 .trace 11
 L232?3:
@@ -6902,17 +6909,17 @@ L234?3:
 	c0    stw 0x74[$r0.1] = $r0.17  ## spill ## t679
 ;;								## 2
 	c0    ldw.d $r0.3 = 0x2c[$r0.1]   ## [spec] bblock 8, line 2462, t391, t680
-	c0    brf $b0.0, L246?3   ## bblock 16, line 0,  t1055(I1)
+	c0    brf $b0.0, L245?3   ## bblock 16, line 0,  t1055(I1)
 ;;								## 3
 	c0    ldw $r0.4 = 0x30[$r0.1]   ## bblock 8, line 2462, t392, t680
 ;;								## 4
 	c0    ldw $r0.5 = 0x1c[$r0.1]   ## bblock 8, line 2462, t393, t680
 ;;								## 5
-.call floatlib_29217.estimateDiv64To32, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32)
+.call floatlib_6073.estimateDiv64To32, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32), ret($r0.3:u32)
 	c0    stw 0x34[$r0.1] = $r0.9   ## bblock 13, line 0, t680, t1008
-	c0    call $l0.0 = floatlib_29217.estimateDiv64To32   ## bblock 8, line 2462,  raddr(floatlib_29217.estimateDiv64To32)(P32),  t391,  t392,  t393
+	c0    call $l0.0 = floatlib_6073.estimateDiv64To32   ## bblock 8, line 2462,  raddr(floatlib_6073.estimateDiv64To32)(P32),  t391,  t392,  t393
 ;;								## 6
-L245?3:
+L244?3:
 	c0    and $r0.12 = $r0.3, 1023   ## bblock 9, line 2463,  t395,  t390,  1023(I32)
 	c0    ldw.d $r0.2 = 0x20[$r0.1]   ## [spec] bblock 23, line 2469, t578, t680
 	c0    add $r0.5 = $r0.1, 0x2c   ## [spec] bblock 23, line 2542,  t609,  t680,  offset(rem1?1.776)=0x2c(P32)
@@ -6927,79 +6934,79 @@ L245?3:
 	c0    mov $r0.11 = $r0.0   ## [spec] bblock 23, line 0,  t935,  0(I32)
 	c0    mov $r0.20 = $r0.3   ## t390
 ;;								## 8
+	c0    mpyllu $r0.14 = $r0.2, $r0.3   ## [spec] bblock 23, line 2480,  t441,  t578,  t390
 	c0    mpylhu $r0.12 = $r0.3, $r0.2   ## [spec] bblock 23, line 2482,  t435,  t390,  t578
 	c0    mpylhu $r0.13 = $r0.2, $r0.3   ## [spec] bblock 23, line 2481,  t428,  t578,  t390
-	c0    ldw.d $r0.14 = 0x30[$r0.1]   ## [spec] bblock 23, line 2532, t541, t680
+	c0    mpyhhu $r0.16 = $r0.2, $r0.3   ## [spec] bblock 23, line 2483,  t431,  t578,  t390
+	c0    ldw.d $r0.19 = 0x30[$r0.1]   ## [spec] bblock 23, line 2532, t541, t680
 ;;								## 9
-	c0    mpyllu $r0.16 = $r0.2, $r0.3   ## [spec] bblock 23, line 2480,  t441,  t578,  t390
-	c0    mpyhhu $r0.19 = $r0.2, $r0.3   ## [spec] bblock 23, line 2483,  t431,  t578,  t390
-	c0    ldw.d $r0.21 = 0x2c[$r0.1]   ## [spec] bblock 23, line 2531, t545, t680
+	c0    mpyllu $r0.23 = $r0.4, $r0.3   ## [spec] bblock 23, line 2502,  t492,  t584,  t390
+	c0    mpylhu $r0.21 = $r0.4, $r0.3   ## [spec] bblock 23, line 2503,  t479,  t584,  t390
+	c0    mpylhu $r0.22 = $r0.3, $r0.4   ## [spec] bblock 23, line 2504,  t486,  t390,  t584
+	c0    mpyhhu $r0.24 = $r0.3, $r0.4   ## [spec] bblock 23, line 2505,  t482,  t390,  t584
+	c0    ldw.d $r0.25 = 0x2c[$r0.1]   ## [spec] bblock 23, line 2531, t545, t680
 ;;								## 10
-	c0    add $r0.13 = $r0.12, $r0.13   ## [spec] bblock 23, line 2484,  t439,  t435,  t428
-	c0    mpylhu $r0.22 = $r0.4, $r0.3   ## [spec] bblock 23, line 2503,  t479,  t584,  t390
-	c0    mpylhu $r0.23 = $r0.3, $r0.4   ## [spec] bblock 23, line 2504,  t486,  t390,  t584
-	c0    ldw $r0.18 = 0x78[$r0.1]  ## restore ## t860
-;;								## 11
 	c0    stw 0x54[$r0.1] = $r0.3   ## bblock 9, line 2462, t680, t390
-	c0    mpyllu $r0.26 = $r0.4, $r0.3   ## [spec] bblock 23, line 2502,  t492,  t584,  t390
-	c0    shru $r0.25 = $r0.13, 16   ## [spec] bblock 23, line 2487,  t433(I16),  t439,  16(SI32)
-	c0    cmpltu $r0.12 = $r0.13, $r0.12   ## [spec] bblock 23, line 2486,  t436,  t439,  t435
-	c0    shl $r0.24 = $r0.13, 16   ## [spec] bblock 23, line 2488,  t446,  t439,  16(SI32)
-	c0    mpyhhu $r0.27 = $r0.3, $r0.4   ## [spec] bblock 23, line 2505,  t482,  t390,  t584
-	c0    brf $b0.0, L244?3   ## bblock 9, line 2463,  t1053(I1)
+	c0    add $r0.13 = $r0.12, $r0.13   ## [spec] bblock 23, line 2484,  t439,  t435,  t428
+	c0    brf $b0.0, L241?3   ## bblock 9, line 2463,  t1053(I1)
+;;								## 11
+	c0    shru $r0.27 = $r0.13, 16   ## bblock 23, line 2487,  t433(I16),  t439,  16(SI32)
+	c0    cmpltu $r0.12 = $r0.13, $r0.12   ## bblock 23, line 2486,  t436,  t439,  t435
+	c0    shl $r0.26 = $r0.13, 16   ## bblock 23, line 2488,  t446,  t439,  16(SI32)
+	c0    add $r0.21 = $r0.21, $r0.22   ## bblock 23, line 2506,  t490,  t479,  t486
+	c0    ldw $r0.18 = 0x78[$r0.1]  ## restore ## t860
+	c0    mov $r0.3 = $r0.2   ## [spec] t578
 ;;								## 12
 	c0    shl $r0.12 = $r0.12, 16   ## bblock 23, line 2486,  t437,  t436,  16(SI32)
-	c0    add $r0.16 = $r0.16, $r0.24   ## bblock 23, line 2489,  t536,  t441,  t446
-	c0    add $r0.25 = $r0.25, $r0.19   ## bblock 23, line 2490,  t1059,  t433(I16),  t431
-	c0    add $r0.22 = $r0.22, $r0.23   ## bblock 23, line 2506,  t490,  t479,  t486
+	c0    add $r0.14 = $r0.14, $r0.26   ## bblock 23, line 2489,  t536,  t441,  t446
+	c0    add $r0.27 = $r0.27, $r0.16   ## bblock 23, line 2490,  t1059,  t433(I16),  t431
+	c0    shru $r0.13 = $r0.21, 16   ## bblock 23, line 2509,  t484(I16),  t490,  16(SI32)
+	c0    cmpltu $r0.22 = $r0.21, $r0.22   ## bblock 23, line 2508,  t487,  t490,  t486
+	c0    shl $r0.2 = $r0.21, 16   ## bblock 23, line 2510,  t497,  t490,  16(SI32)
 	c0    ldw $r0.17 = 0x74[$r0.1]  ## restore ## t679
 ;;								## 13
-	c0    cmpltu $r0.24 = $r0.16, $r0.24   ## bblock 23, line 2490,  t447,  t536,  t446
-	c0    stw 0x58[$r0.1] = $r0.16   ## bblock 23, line 2491, t680, t536
-	c0    sub $r0.29 = $r0.0, $r0.16   ## bblock 23, line 2537,  t561,  0(I32),  t536
-	c0    shru $r0.19 = $r0.22, 16   ## bblock 23, line 2509,  t484(I16),  t490,  16(SI32)
-	c0    cmpltu $r0.23 = $r0.22, $r0.23   ## bblock 23, line 2508,  t487,  t490,  t486
-	c0    shl $r0.13 = $r0.22, 16   ## bblock 23, line 2510,  t497,  t490,  16(SI32)
-	c0    cmpgtu $r0.28 = $r0.16, $r0.0   ## bblock 23, line 2538,  t556,  t536,  0(SI32)
-	c0    mov $r0.3 = $r0.2   ## [spec] t578
+	c0    cmpltu $r0.26 = $r0.14, $r0.26   ## bblock 23, line 2490,  t447,  t536,  t446
+	c0    stw 0x58[$r0.1] = $r0.14   ## bblock 23, line 2491, t680, t536
+	c0    sub $r0.21 = $r0.0, $r0.14   ## bblock 23, line 2537,  t561,  0(I32),  t536
+	c0    shl $r0.22 = $r0.22, 16   ## bblock 23, line 2508,  t488,  t487,  16(SI32)
+	c0    add $r0.23 = $r0.23, $r0.2   ## bblock 23, line 2511,  t515,  t492,  t497
+	c0    add $r0.13 = $r0.13, $r0.24   ## bblock 23, line 2512,  t1061,  t484(I16),  t482
+	c0    cmpgtu $r0.16 = $r0.14, $r0.0   ## bblock 23, line 2538,  t556,  t536,  0(SI32)
 ;;								## 14
-	c0    add $r0.12 = $r0.12, $r0.24   ## bblock 23, line 2490,  t1060,  t437,  t447
-	c0    shl $r0.23 = $r0.23, 16   ## bblock 23, line 2508,  t488,  t487,  16(SI32)
-	c0    add $r0.26 = $r0.26, $r0.13   ## bblock 23, line 2511,  t515,  t492,  t497
-	c0    add $r0.19 = $r0.19, $r0.27   ## bblock 23, line 2512,  t1061,  t484(I16),  t482
-	c0    stw 0x6c[$r0.1] = $r0.29   ## bblock 23, line 2548, t680, t561
+	c0    add $r0.12 = $r0.12, $r0.26   ## bblock 23, line 2490,  t1060,  t437,  t447
+	c0    cmpltu $r0.2 = $r0.23, $r0.2   ## bblock 23, line 2512,  t498,  t515,  t497
+	c0    stw 0x6c[$r0.1] = $r0.21   ## bblock 23, line 2548, t680, t561
 ;;								## 15
-	c0    stw 0x5c[$r0.1] = $r0.16   ## bblock 23, line 2526, t680, t536
-	c0    add $r0.25 = $r0.25, $r0.12   ## bblock 23, line 2490,  t509,  t1059,  t1060
-	c0    cmpltu $r0.13 = $r0.26, $r0.13   ## bblock 23, line 2512,  t498,  t515,  t497
+	c0    stw 0x5c[$r0.1] = $r0.14   ## bblock 23, line 2526, t680, t536
+	c0    add $r0.27 = $r0.27, $r0.12   ## bblock 23, line 2490,  t509,  t1059,  t1060
+	c0    add $r0.22 = $r0.22, $r0.2   ## bblock 23, line 2512,  t1062,  t488,  t498
 ;;								## 16
-	c0    add $r0.25 = $r0.25, $r0.26   ## bblock 23, line 2522,  t542,  t509,  t515
-	c0    add $r0.23 = $r0.23, $r0.13   ## bblock 23, line 2512,  t1062,  t488,  t498
-	c0    stw 0x64[$r0.1] = $r0.26   ## bblock 23, line 2513, t680, t515
+	c0    add $r0.27 = $r0.27, $r0.23   ## bblock 23, line 2522,  t542,  t509,  t515
+	c0    add $r0.13 = $r0.13, $r0.22   ## bblock 23, line 2512,  t518,  t1061,  t1062
+	c0    stw 0x64[$r0.1] = $r0.23   ## bblock 23, line 2513, t680, t515
 ;;								## 17
-	c0    stw 0x60[$r0.1] = $r0.25   ## bblock 23, line 2523, t680, t542
-	c0    cmpltu $r0.26 = $r0.25, $r0.26   ## bblock 23, line 2524,  t516,  t542,  t515
-	c0    add $r0.19 = $r0.19, $r0.23   ## bblock 23, line 2512,  t518,  t1061,  t1062
-	c0    sub $r0.2 = $r0.14, $r0.25   ## bblock 23, line 2539,  t555,  t541,  t542
-	c0    cmpltu $r0.12 = $r0.14, $r0.25   ## bblock 23, line 2540,  t559,  t541,  t542
+	c0    stw 0x60[$r0.1] = $r0.27   ## bblock 23, line 2523, t680, t542
+	c0    cmpltu $r0.23 = $r0.27, $r0.23   ## bblock 23, line 2524,  t516,  t542,  t515
+	c0    sub $r0.2 = $r0.19, $r0.27   ## bblock 23, line 2539,  t555,  t541,  t542
+	c0    cmpltu $r0.12 = $r0.19, $r0.27   ## bblock 23, line 2540,  t559,  t541,  t542
 ;;								## 18
-	c0    stw 0x3c[$r0.1] = $r0.25   ## bblock 23, line 2527, t680, t542
-	c0    add $r0.19 = $r0.19, $r0.26   ## bblock 23, line 2524,  t544,  t518,  t516
-	c0    cmpltu $r0.13 = $r0.2, $r0.28   ## bblock 23, line 2545,  t553,  t555,  t556
-	c0    sub $r0.14 = $r0.2, $r0.28   ## bblock 23, line 2546,  t563,  t555,  t556
-	c0    sub $r0.21 = $r0.21, $r0.12   ## bblock 23, line 2547,  t1063,  t545,  t559
+	c0    stw 0x3c[$r0.1] = $r0.27   ## bblock 23, line 2527, t680, t542
+	c0    add $r0.13 = $r0.13, $r0.23   ## bblock 23, line 2524,  t544,  t518,  t516
+	c0    cmpltu $r0.14 = $r0.2, $r0.16   ## bblock 23, line 2545,  t553,  t555,  t556
+	c0    sub $r0.19 = $r0.2, $r0.16   ## bblock 23, line 2546,  t563,  t555,  t556
+	c0    sub $r0.25 = $r0.25, $r0.12   ## bblock 23, line 2547,  t1063,  t545,  t559
 ;;								## 19
-	c0    stw 0x44[$r0.1] = $r0.19   ## bblock 23, line 2528, t680, t544
-	c0    add $r0.13 = $r0.19, $r0.13   ## bblock 23, line 2547,  t1064,  t544,  t553
+	c0    stw 0x30[$r0.1] = $r0.19   ## bblock 23, line 2549, t680, t563
+	c0    add $r0.14 = $r0.13, $r0.14   ## bblock 23, line 2547,  t1064,  t544,  t553
 ;;								## 20
-	c0    stw 0x68[$r0.1] = $r0.19   ## bblock 23, line 2524, t680, t544
-	c0    sub $r0.21 = $r0.21, $r0.13   ## bblock 23, line 2547,  t565,  t1063,  t1064
-;;								## 21
+	c0    sub $r0.25 = $r0.25, $r0.14   ## bblock 23, line 2547,  t565,  t1063,  t1064
 	c0    ldw $r0.19 = 0x7c[$r0.1]  ## restore ## t859
+;;								## 21
+	c0    stw 0x2c[$r0.1] = $r0.25   ## bblock 23, line 2550, t680, t565
 ;;								## 22
-	c0    stw 0x2c[$r0.1] = $r0.21   ## bblock 23, line 2550, t680, t565
+	c0    stw 0x44[$r0.1] = $r0.13   ## bblock 23, line 2528, t680, t544
 ;;								## 23
-	c0    stw 0x30[$r0.1] = $r0.14   ## bblock 23, line 2549, t680, t563
+	c0    stw 0x68[$r0.1] = $r0.13   ## bblock 23, line 2524, t680, t544
 	c0    goto L235?3 ## goto
 ;;								## 24
 .trace 8
@@ -7025,10 +7032,10 @@ L225?3:
 ;;								## 3
 	c0    cmpeq $b0.0 = $r0.2, $r0.0   ## bblock 34, line 2299,  t1074(I1),  t73,  0(SI32)
 ;;								## 4
-	c0    brf $b0.0, L247?3   ## bblock 34, line 2299,  t1074(I1)
+	c0    brf $b0.0, L246?3   ## bblock 34, line 2299,  t1074(I1)
 ;;								## 5
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 36, line 2300,  raddr(floatlib_29217.packFloat64)(P32),  t860,  0(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 36, line 2300,  raddr(floatlib_6073.packFloat64)(P32),  t860,  0(SI32),  0(I32),  0(I32)
 ;;								## 6
 	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
 ;;								## 7
@@ -7037,7 +7044,7 @@ L225?3:
 	c0    return $r0.1 = $r0.1, (0x80), $l0.0   ## bblock 37, line 2300,  t680,  ?2.37?2auto_size(I32),  t679
 ;;								## 9
 .trace 25
-L247?3:
+L246?3:
 	c0    ldw $r0.3 = 0x14[$r0.1]   ## bblock 35, line 2301, t77, t680
 	c0    add $r0.6 = $r0.1, 0x14   ## bblock 35, line 2301,  t80,  t680,  offset(aSig0?1.776)=0x14(P32)
 	c0    add $r0.7 = $r0.1, 0x10   ## bblock 35, line 2301,  t81,  t680,  offset(aSig1?1.776)=0x10(P32)
@@ -7045,8 +7052,8 @@ L247?3:
 ;;								## 0
 	c0    ldw $r0.4 = 0x10[$r0.1]   ## bblock 35, line 2301, t78, t680
 ;;								## 1
-.call floatlib_29217.normalizeFloat64Subnormal, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret()
-	c0    call $l0.0 = floatlib_29217.normalizeFloat64Subnormal   ## bblock 35, line 2301,  raddr(floatlib_29217.normalizeFloat64Subnormal)(P32),  t77,  t78,  t79,  t80,  t81
+.call floatlib_6073.normalizeFloat64Subnormal, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret()
+	c0    call $l0.0 = floatlib_6073.normalizeFloat64Subnormal   ## bblock 35, line 2301,  raddr(floatlib_6073.normalizeFloat64Subnormal)(P32),  t77,  t78,  t79,  t80,  t81
 ;;								## 2
 	c0    ldw $r0.2 = 0x14[$r0.1]   ## bblock 4, line 2307, t87, t680
 ;;								## 3
@@ -7088,13 +7095,13 @@ L223?3:
 	c0    or $r0.4 = $r0.4, $r0.13   ## [spec] bblock 40, line 2283,  t59,  t1076,  t2
 ;;								## 1
 	c0    cmpeq $b0.0 = $r0.4, $r0.0   ## [spec] bblock 40, line 2283,  t1077(I1),  t59,  0(SI32)
-	c0    brf $b0.0, L248?3   ## bblock 38, line 2282,  t1075(I1)
+	c0    brf $b0.0, L247?3   ## bblock 38, line 2282,  t1075(I1)
 ;;								## 2
-	c0    brf $b0.0, L249?3   ## bblock 40, line 2283,  t1077(I1)
+	c0    brf $b0.0, L248?3   ## bblock 40, line 2283,  t1077(I1)
 ;;								## 3
-L250?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 44, line 2285,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+L249?3:
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 44, line 2285,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 ;;								## 4
 	c0    mov $r0.4 = (~0x0)   ## (~0x0)(I32)
 	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
@@ -7105,9 +7112,9 @@ L250?3:
 	c0    return $r0.1 = $r0.1, (0x80), $l0.0   ## bblock 45, line 2288,  t680,  ?2.37?2auto_size(I32),  t679
 ;;								## 7
 .trace 27
-L249?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 41, line 2290,  raddr(floatlib_29217.float_raise)(P32),  128(SI32)
+L248?3:
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 41, line 2290,  raddr(floatlib_6073.float_raise)(P32),  128(SI32)
 	c0    mov $r0.3 = 128   ## 128(SI32)
 ;;								## 0
 	c0    mov $r0.5 = $r0.0   ## 0(I32)
@@ -7115,8 +7122,8 @@ L249?3:
 	c0    ldw $r0.3 = 0x78[$r0.1]  ## restore ## t860
 	c0    mov $r0.4 = 2047   ## 2047(SI32)
 ;;								## 1
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 42, line 2291,  raddr(floatlib_29217.packFloat64)(P32),  t860,  2047(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 42, line 2291,  raddr(floatlib_6073.packFloat64)(P32),  t860,  2047(SI32),  0(I32),  0(I32)
 ;;								## 2
 	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
 ;;								## 3
@@ -7125,7 +7132,7 @@ L249?3:
 	c0    return $r0.1 = $r0.1, (0x80), $l0.0   ## bblock 43, line 2291,  t680,  ?2.37?2auto_size(I32),  t679
 ;;								## 5
 .trace 24
-L248?3:
+L247?3:
 	c0    ldw $r0.3 = 0x1c[$r0.1]   ## bblock 39, line 2293, t65, t680
 	c0    add $r0.6 = $r0.1, 0x1c   ## bblock 39, line 2293,  t68,  t680,  offset(bSig0?1.776)=0x1c(P32)
 	c0    add $r0.7 = $r0.1, 0x20   ## bblock 39, line 2293,  t69,  t680,  offset(bSig1?1.776)=0x20(P32)
@@ -7133,8 +7140,8 @@ L248?3:
 ;;								## 0
 	c0    ldw $r0.4 = 0x20[$r0.1]   ## bblock 39, line 2293, t66, t680
 ;;								## 1
-.call floatlib_29217.normalizeFloat64Subnormal, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret()
-	c0    call $l0.0 = floatlib_29217.normalizeFloat64Subnormal   ## bblock 39, line 2293,  raddr(floatlib_29217.normalizeFloat64Subnormal)(P32),  t65,  t66,  t67,  t68,  t69
+.call floatlib_6073.normalizeFloat64Subnormal, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32,$r0.7:u32), ret()
+	c0    call $l0.0 = floatlib_6073.normalizeFloat64Subnormal   ## bblock 39, line 2293,  raddr(floatlib_6073.normalizeFloat64Subnormal)(P32),  t65,  t66,  t67,  t68,  t69
 ;;								## 2
 	c0    ldw.d $r0.2 = 0x14[$r0.1]   ## [spec] bblock 4, line 2307, t87, t680
 ;;								## 3
@@ -7177,10 +7184,10 @@ L222?3:
 ;;								## 3
 	c0    cmpne $b0.0 = $r0.2, $r0.0   ## bblock 46, line 2274,  t1079,  t1078,  0(I32)
 ;;								## 4
-	c0    brf $b0.0, L251?3   ## bblock 46, line 2274,  t1079
+	c0    brf $b0.0, L250?3   ## bblock 46, line 2274,  t1079
 ;;								## 5
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 49, line 2275,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t694,  t695,  t696,  t697
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 49, line 2275,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t694,  t695,  t696,  t697
 ;;								## 6
 	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
 ;;								## 7
@@ -7189,14 +7196,14 @@ L222?3:
 	c0    return $r0.1 = $r0.1, (0x80), $l0.0   ## bblock 50, line 2275,  t680,  ?2.37?2auto_size(I32),  t679
 ;;								## 9
 .trace 23
-L251?3:
+L250?3:
 	c0    mov $r0.5 = $r0.0   ## 0(I32)
 	c0    mov $r0.6 = $r0.0   ## 0(I32)
 	c0    mov $r0.4 = $r0.0   ## 0(SI32)
 	c0    ldw $r0.3 = 0x78[$r0.1]  ## restore ## t860
 ;;								## 0
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 47, line 2276,  raddr(floatlib_29217.packFloat64)(P32),  t860,  0(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 47, line 2276,  raddr(floatlib_6073.packFloat64)(P32),  t860,  0(SI32),  0(I32),  0(I32)
 ;;								## 1
 	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
 ;;								## 2
@@ -7215,10 +7222,10 @@ L221?3:
 ;;								## 3
 	c0    cmpne $b0.0 = $r0.2, $r0.0   ## bblock 51, line 2261,  t1081,  t1080,  0(I32)
 ;;								## 4
-	c0    brf $b0.0, L252?3   ## bblock 51, line 2261,  t1081
+	c0    brf $b0.0, L251?3   ## bblock 51, line 2261,  t1081
 ;;								## 5
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 58, line 2262,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t694,  t695,  t696,  t697
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 58, line 2262,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t694,  t695,  t696,  t697
 ;;								## 6
 	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
 ;;								## 7
@@ -7227,7 +7234,7 @@ L221?3:
 	c0    return $r0.1 = $r0.1, (0x80), $l0.0   ## bblock 59, line 2262,  t680,  ?2.37?2auto_size(I32),  t679
 ;;								## 9
 .trace 22
-L252?3:
+L251?3:
 	c0    ldw $r0.2 = 0x24[$r0.1]   ## bblock 52, line 2263, t28, t680
 ;;								## 0
 	c0    ldw.d $r0.7 = 0x20[$r0.1]   ## [spec] bblock 55, line 2264, t29, t680
@@ -7235,16 +7242,16 @@ L252?3:
 	c0    cmpeq $b0.0 = $r0.2, 2047   ## bblock 52, line 2263,  t1082(I1),  t28,  2047(SI32)
 	c0    ldw.d $r0.2 = 0x1c[$r0.1]   ## [spec] bblock 55, line 2264, t30, t680
 ;;								## 2
-	c0    brf $b0.0, L253?3   ## bblock 52, line 2263,  t1082(I1)
+	c0    brf $b0.0, L252?3   ## bblock 52, line 2263,  t1082(I1)
 ;;								## 3
 	c0    or $r0.7 = $r0.7, $r0.2   ## bblock 55, line 2264,  t1083,  t29,  t30
 ;;								## 4
 	c0    cmpne $b0.0 = $r0.7, $r0.0   ## bblock 55, line 2264,  t1084,  t1083,  0(I32)
 ;;								## 5
-	c0    brf $b0.0, L254?3   ## bblock 55, line 2264,  t1084
+	c0    brf $b0.0, L253?3   ## bblock 55, line 2264,  t1084
 ;;								## 6
-.call floatlib_29217.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.propagateFloat64NaN   ## bblock 56, line 2265,  raddr(floatlib_29217.propagateFloat64NaN)(P32),  t694,  t695,  t696,  t697
+.call floatlib_6073.propagateFloat64NaN, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.propagateFloat64NaN   ## bblock 56, line 2265,  raddr(floatlib_6073.propagateFloat64NaN)(P32),  t694,  t695,  t696,  t697
 ;;								## 7
 	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
 ;;								## 8
@@ -7253,19 +7260,19 @@ L252?3:
 	c0    return $r0.1 = $r0.1, (0x80), $l0.0   ## bblock 57, line 2265,  t680,  ?2.37?2auto_size(I32),  t679
 ;;								## 10
 .trace 28
-L254?3:
+L253?3:
 	c0    mov $r0.3 = 16   ## 16(SI32)
-	c0    goto L250?3 ## goto
+	c0    goto L249?3 ## goto
 ;;								## 0
 .trace 26
-L253?3:
+L252?3:
 	c0    mov $r0.5 = $r0.0   ## 0(I32)
 	c0    mov $r0.6 = $r0.0   ## 0(I32)
 	c0    ldw $r0.3 = 0x78[$r0.1]  ## restore ## t860
 	c0    mov $r0.4 = 2047   ## 2047(SI32)
 ;;								## 0
-.call floatlib_29217.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
-	c0    call $l0.0 = floatlib_29217.packFloat64   ## bblock 53, line 2268,  raddr(floatlib_29217.packFloat64)(P32),  t860,  2047(SI32),  0(I32),  0(I32)
+.call floatlib_6073.packFloat64, caller, arg($r0.3:s32,$r0.4:s32,$r0.5:u32,$r0.6:u32), ret($r0.3:u32,$r0.4:u32)
+	c0    call $l0.0 = floatlib_6073.packFloat64   ## bblock 53, line 2268,  raddr(floatlib_6073.packFloat64)(P32),  t860,  2047(SI32),  0(I32),  0(I32)
 ;;								## 1
 	c0    ldw $l0.0 = 0x74[$r0.1]  ## restore ## t679
 ;;								## 2
@@ -7340,14 +7347,14 @@ _d_eq::
 	c0    orl $b0.0 = $r0.2, $r0.8   ## bblock 0, line 2636,  t73(I1),  t8,  t17
 	c0    orl $r0.11 = $r0.11, $r0.10   ## [spec] bblock 1, line 2649,  t50,  t41,  t49
 ;;								## 4
-	c0    br $b0.0, L255?3   ## bblock 0, line 2636,  t73(I1)
+	c0    br $b0.0, L254?3   ## bblock 0, line 2636,  t73(I1)
 ;;								## 5
 .return ret($r0.3:s32)
 	c0    andl $r0.3 = $r0.12, $r0.11   ## bblock 1, line 2649,  t51,  t38,  t50
 	c0    return $r0.1 = $r0.1, (0x20), $l0.0   ## bblock 1, line 2649,  t53,  ?2.38?2auto_size(I32),  t52
 ;;								## 6
 .trace 2
-L255?3:
+L254?3:
 	c0    shru $r0.2 = $r0.3, 19   ## bblock 2, line 2637,  t19(I13),  t67,  19(SI32)
 	c0    and $r0.7 = $r0.3, 524287   ## bblock 2, line 2638,  t24,  t67,  524287(I32)
 	c0    shru $r0.8 = $r0.5, 19   ## bblock 2, line 2639,  t28(I13),  t69,  19(SI32)
@@ -7367,12 +7374,12 @@ L255?3:
 ;;								## 3
 	c0    orl $b0.0 = $r0.2, $r0.8   ## bblock 2, line 2640,  t81(I1),  t26,  t35
 ;;								## 4
-	c0    brf $b0.0, L256?3   ## bblock 2, line 2640,  t81(I1)
+	c0    brf $b0.0, L255?3   ## bblock 2, line 2640,  t81(I1)
 ;;								## 5
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 4, line 2641,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 4, line 2641,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 ;;								## 6
-L256?3:
+L255?3:
 	c0    mov $r0.3 = $r0.0   ## 0(SI32)
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t52
 ;;								## 7
@@ -7422,17 +7429,17 @@ _d_le::
 	c0    or $r0.12 = $r0.4, $r0.12   ## [spec] bblock 3, line 2669,  t87,  t74,  t30
 ;;								## 4
 	c0    or $r0.12 = $r0.12, $r0.6   ## [spec] bblock 3, line 2669,  t31,  t87,  t76
-	c0    br $b0.1, L257?3   ## bblock 0, line 2662,  t81(I1)
+	c0    br $b0.1, L256?3   ## bblock 0, line 2662,  t81(I1)
 ;;								## 5
 	c0    cmpeq $r0.12 = $r0.12, $r0.0   ## [spec] bblock 3, line 2670,  t89,  t31,  0(I32)
-	c0    brf $b0.0, L258?3   ## bblock 1, line 2668,  t82(I1)
+	c0    brf $b0.0, L257?3   ## bblock 1, line 2668,  t82(I1)
 ;;								## 6
 .return ret($r0.3:s32)
 	c0    orl $r0.3 = $r0.10, $r0.12   ## bblock 3, line 2670,  t33,  t78(I1),  t89
 	c0    return $r0.1 = $r0.1, (0x20), $l0.0   ## bblock 3, line 2670,  t59,  ?2.39?2auto_size(I32),  t58
 ;;								## 7
 .trace 2
-L258?3:
+L257?3:
 	c0    cmpltu $r0.8 = $r0.5, $r0.3   ## bblock 2, line 2673,  t37,  t75,  t73
 	c0    cmpeq $r0.2 = $r0.5, $r0.3   ## bblock 2, line 2674,  t40,  t75,  t73
 	c0    cmpltu $r0.3 = $r0.3, $r0.5   ## bblock 2, line 2675,  t48,  t73,  t75
@@ -7452,9 +7459,9 @@ L258?3:
 	c0    return $r0.1 = $r0.1, (0x20), $l0.0   ## bblock 2, line 2676,  t59,  ?2.39?2auto_size(I32),  t58
 ;;								## 3
 .trace 3
-L257?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 4, line 2663,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+L256?3:
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 4, line 2663,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
 	c0    mov $r0.3 = $r0.0   ## 0(SI32)
@@ -7506,16 +7513,16 @@ _d_lt::
 	c0    or $r0.12 = $r0.4, $r0.12   ## [spec] bblock 3, line 2696,  t87,  t74,  t30
 ;;								## 4
 	c0    or $r0.12 = $r0.12, $r0.6   ## [spec] bblock 3, line 2696,  t31,  t87,  t76
-	c0    br $b0.1, L259?3   ## bblock 0, line 2689,  t81(I1)
+	c0    br $b0.1, L258?3   ## bblock 0, line 2689,  t81(I1)
 ;;								## 5
-	c0    brf $b0.0, L260?3   ## bblock 1, line 2695,  t82(I1)
+	c0    brf $b0.0, L259?3   ## bblock 1, line 2695,  t82(I1)
 ;;								## 6
 .return ret($r0.3:s32)
 	c0    andl $r0.3 = $r0.10, $r0.12   ## bblock 3, line 2697,  t33,  t78(I1),  t31
 	c0    return $r0.1 = $r0.1, (0x20), $l0.0   ## bblock 3, line 2697,  t59,  ?2.40?2auto_size(I32),  t58
 ;;								## 7
 .trace 2
-L260?3:
+L259?3:
 	c0    cmpltu $r0.8 = $r0.5, $r0.3   ## bblock 2, line 2700,  t37,  t75,  t73
 	c0    cmpeq $r0.2 = $r0.5, $r0.3   ## bblock 2, line 2701,  t40,  t75,  t73
 	c0    cmpltu $r0.3 = $r0.3, $r0.5   ## bblock 2, line 2702,  t48,  t73,  t75
@@ -7535,9 +7542,9 @@ L260?3:
 	c0    return $r0.1 = $r0.1, (0x20), $l0.0   ## bblock 2, line 2703,  t59,  ?2.40?2auto_size(I32),  t58
 ;;								## 3
 .trace 3
-L259?3:
-.call floatlib_29217.float_raise, caller, arg($r0.3:s32), ret()
-	c0    call $l0.0 = floatlib_29217.float_raise   ## bblock 4, line 2690,  raddr(floatlib_29217.float_raise)(P32),  16(SI32)
+L258?3:
+.call floatlib_6073.float_raise, caller, arg($r0.3:s32), ret()
+	c0    call $l0.0 = floatlib_6073.float_raise   ## bblock 4, line 2690,  raddr(floatlib_6073.float_raise)(P32),  16(SI32)
 	c0    mov $r0.3 = 16   ## 16(SI32)
 ;;								## 0
 	c0    mov $r0.3 = $r0.0   ## 0(SI32)
@@ -7845,8 +7852,8 @@ _r_fix::
 	c0    add $r0.1 = $r0.1, (-0x20)
 	c0    mov $r0.4 = 1   ## 1(SI32)
 ;;								## 0
-.call floatlib_29217.float32_to_int32_round_to_zero, caller, arg($r0.3:u32,$r0.4:s32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.float32_to_int32_round_to_zero   ## bblock 0, line 2763,  raddr(floatlib_29217.float32_to_int32_round_to_zero)(P32),  t1,  1(SI32)
+.call floatlib_6073.float32_to_int32_round_to_zero, caller, arg($r0.3:u32,$r0.4:s32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.float32_to_int32_round_to_zero   ## bblock 0, line 2763,  raddr(floatlib_6073.float32_to_int32_round_to_zero)(P32),  t1,  1(SI32)
 	c0    stw 0x10[$r0.1] = $l0.0  ## spill ## t2
 ;;								## 1
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t2
@@ -7873,8 +7880,8 @@ _r_ufix::
 	c0    add $r0.1 = $r0.1, (-0x20)
 	c0    mov $r0.4 = $r0.0   ## 0(SI32)
 ;;								## 0
-.call floatlib_29217.float32_to_int32_round_to_zero, caller, arg($r0.3:u32,$r0.4:s32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.float32_to_int32_round_to_zero   ## bblock 0, line 2768,  raddr(floatlib_29217.float32_to_int32_round_to_zero)(P32),  t1,  0(SI32)
+.call floatlib_6073.float32_to_int32_round_to_zero, caller, arg($r0.3:u32,$r0.4:s32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.float32_to_int32_round_to_zero   ## bblock 0, line 2768,  raddr(floatlib_6073.float32_to_int32_round_to_zero)(P32),  t1,  0(SI32)
 	c0    stw 0x10[$r0.1] = $l0.0  ## spill ## t2
 ;;								## 1
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t2
@@ -7901,8 +7908,8 @@ _d_fix::
 	c0    add $r0.1 = $r0.1, (-0x20)
 	c0    mov $r0.5 = 1   ## 1(SI32)
 ;;								## 0
-.call floatlib_29217.float64_to_int32_round_to_zero, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.float64_to_int32_round_to_zero   ## bblock 0, line 2773,  raddr(floatlib_29217.float64_to_int32_round_to_zero)(P32),  t1,  t2,  1(SI32)
+.call floatlib_6073.float64_to_int32_round_to_zero, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.float64_to_int32_round_to_zero   ## bblock 0, line 2773,  raddr(floatlib_6073.float64_to_int32_round_to_zero)(P32),  t1,  t2,  1(SI32)
 	c0    stw 0x10[$r0.1] = $l0.0  ## spill ## t3
 ;;								## 1
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t3
@@ -7929,8 +7936,8 @@ _d_ufix::
 	c0    add $r0.1 = $r0.1, (-0x20)
 	c0    mov $r0.5 = $r0.0   ## 0(SI32)
 ;;								## 0
-.call floatlib_29217.float64_to_int32_round_to_zero, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:s32)
-	c0    call $l0.0 = floatlib_29217.float64_to_int32_round_to_zero   ## bblock 0, line 2778,  raddr(floatlib_29217.float64_to_int32_round_to_zero)(P32),  t1,  t2,  0(SI32)
+.call floatlib_6073.float64_to_int32_round_to_zero, caller, arg($r0.3:u32,$r0.4:u32,$r0.5:s32), ret($r0.3:s32)
+	c0    call $l0.0 = floatlib_6073.float64_to_int32_round_to_zero   ## bblock 0, line 2778,  raddr(floatlib_6073.float64_to_int32_round_to_zero)(P32),  t1,  t2,  0(SI32)
 	c0    stw 0x10[$r0.1] = $l0.0  ## spill ## t3
 ;;								## 1
 	c0    ldw $l0.0 = 0x10[$r0.1]  ## restore ## t3
@@ -7955,7 +7962,7 @@ _d_ufix::
 fpgetround::
 .trace 1
 	      ## auto_size == 0
-	c0    ldw $r0.3 = ((floatlib_29217.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 0, line 2781, t0, 0(I32)
+	c0    ldw $r0.3 = ((floatlib_6073.float_rounding_mode + 0) + 0)[$r0.0]   ## bblock 0, line 2781, t0, 0(I32)
 ;;								## 0
 .return ret($r0.3:s32)
 	c0    return $r0.1 = $r0.1, (0x0), $l0.0   ## bblock 0, line 2783,  t2,  ?2.55?2auto_size(I32),  t1
@@ -7974,7 +7981,7 @@ fpgetround::
 fpsetround::
 .trace 1
 	      ## auto_size == 0
-	c0    stw ((floatlib_29217.float_rounding_mode + 0) + 0)[$r0.0] = $r0.3   ## bblock 0, line 2789, 0(I32), t1
+	c0    stw ((floatlib_6073.float_rounding_mode + 0) + 0)[$r0.0] = $r0.3   ## bblock 0, line 2789, 0(I32), t1
 ;;								## 0
 .return ret($r0.3:s32)
 	c0    return $r0.1 = $r0.1, (0x0), $l0.0   ## bblock 0, line 2789,  t3,  ?2.56?2auto_size(I32),  t2
@@ -7993,7 +8000,7 @@ fpsetround::
 fpgetmask::
 .trace 1
 	      ## auto_size == 0
-	c0    ldw $r0.3 = ((floatlib_29217.float_exception_mask + 0) + 0)[$r0.0]   ## bblock 0, line 2792, t0, 0(I32)
+	c0    ldw $r0.3 = ((floatlib_6073.float_exception_mask + 0) + 0)[$r0.0]   ## bblock 0, line 2792, t0, 0(I32)
 ;;								## 0
 .return ret($r0.3:s32)
 	c0    return $r0.1 = $r0.1, (0x0), $l0.0   ## bblock 0, line 2794,  t2,  ?2.57?2auto_size(I32),  t1
@@ -8012,7 +8019,7 @@ fpgetmask::
 fpsetmask::
 .trace 1
 	      ## auto_size == 0
-	c0    stw ((floatlib_29217.float_exception_mask + 0) + 0)[$r0.0] = $r0.3   ## bblock 0, line 2800, 0(I32), t1
+	c0    stw ((floatlib_6073.float_exception_mask + 0) + 0)[$r0.0] = $r0.3   ## bblock 0, line 2800, 0(I32), t1
 ;;								## 0
 .return ret($r0.3:s32)
 	c0    return $r0.1 = $r0.1, (0x0), $l0.0   ## bblock 0, line 2800,  t3,  ?2.58?2auto_size(I32),  t2
@@ -8031,7 +8038,7 @@ fpsetmask::
 fpgetsticky::
 .trace 1
 	      ## auto_size == 0
-	c0    ldw $r0.3 = ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0]   ## bblock 0, line 2803, t0, 0(I32)
+	c0    ldw $r0.3 = ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0]   ## bblock 0, line 2803, t0, 0(I32)
 ;;								## 0
 .return ret($r0.3:s32)
 	c0    return $r0.1 = $r0.1, (0x0), $l0.0   ## bblock 0, line 2805,  t2,  ?2.59?2auto_size(I32),  t1
@@ -8050,7 +8057,7 @@ fpgetsticky::
 fpsetsticky::
 .trace 1
 	      ## auto_size == 0
-	c0    stw ((floatlib_29217.float_exception_flags + 0) + 0)[$r0.0] = $r0.3   ## bblock 0, line 2811, 0(I32), t1
+	c0    stw ((floatlib_6073.float_exception_flags + 0) + 0)[$r0.0] = $r0.3   ## bblock 0, line 2811, 0(I32), t1
 ;;								## 0
 .return ret($r0.3:s32)
 	c0    return $r0.1 = $r0.1, (0x0), $l0.0   ## bblock 0, line 2811,  t3,  ?2.60?2auto_size(I32),  t2
@@ -8064,50 +8071,50 @@ fpsetsticky::
  ## End fpsetsticky
 .section .bss
 .section .data
-floatlib_29217.float_exception_flags::
+floatlib_6073.float_exception_flags::
     .data4 0
-floatlib_29217.float_exception_mask::
+floatlib_6073.float_exception_mask::
     .data4 0
-floatlib_29217.float_detect_tininess::
+floatlib_6073.float_detect_tininess::
     .data4 0
-floatlib_29217.float_rounding_mode::
+floatlib_6073.float_rounding_mode::
     .data4 0
 .section .data
 .section .text
-.import floatlib_29217.subFloat64Sigs
-.type floatlib_29217.subFloat64Sigs,@function
-.import floatlib_29217.addFloat64Sigs
-.type floatlib_29217.addFloat64Sigs,@function
-.import floatlib_29217.subFloat32Sigs
-.type floatlib_29217.subFloat32Sigs,@function
-.import floatlib_29217.addFloat32Sigs
-.type floatlib_29217.addFloat32Sigs,@function
-.import floatlib_29217.normalizeRoundAndPackFloat64
-.type floatlib_29217.normalizeRoundAndPackFloat64,@function
-.import floatlib_29217.roundAndPackFloat64
-.type floatlib_29217.roundAndPackFloat64,@function
-.import floatlib_29217.packFloat64
-.type floatlib_29217.packFloat64,@function
-.import floatlib_29217.normalizeFloat64Subnormal
-.type floatlib_29217.normalizeFloat64Subnormal,@function
-.import floatlib_29217.normalizeRoundAndPackFloat32
-.type floatlib_29217.normalizeRoundAndPackFloat32,@function
-.import floatlib_29217.roundAndPackFloat32
-.type floatlib_29217.roundAndPackFloat32,@function
-.import floatlib_29217.propagateFloat64NaN
-.type floatlib_29217.propagateFloat64NaN,@function
-.import floatlib_29217.commonNaNToFloat64
-.type floatlib_29217.commonNaNToFloat64,@function
-.import floatlib_29217.float64ToCommonNaN
-.type floatlib_29217.float64ToCommonNaN,@function
-.import floatlib_29217.propagateFloat32NaN
-.type floatlib_29217.propagateFloat32NaN,@function
-.import floatlib_29217.float32ToCommonNaN
-.type floatlib_29217.float32ToCommonNaN,@function
-.import floatlib_29217.countLeadingZeros32
-.type floatlib_29217.countLeadingZeros32,@function
-.import floatlib_29217.estimateDiv64To32
-.type floatlib_29217.estimateDiv64To32,@function
+.import floatlib_6073.subFloat64Sigs
+.type floatlib_6073.subFloat64Sigs,@function
+.import floatlib_6073.addFloat64Sigs
+.type floatlib_6073.addFloat64Sigs,@function
+.import floatlib_6073.subFloat32Sigs
+.type floatlib_6073.subFloat32Sigs,@function
+.import floatlib_6073.addFloat32Sigs
+.type floatlib_6073.addFloat32Sigs,@function
+.import floatlib_6073.normalizeRoundAndPackFloat64
+.type floatlib_6073.normalizeRoundAndPackFloat64,@function
+.import floatlib_6073.roundAndPackFloat64
+.type floatlib_6073.roundAndPackFloat64,@function
+.import floatlib_6073.packFloat64
+.type floatlib_6073.packFloat64,@function
+.import floatlib_6073.normalizeFloat64Subnormal
+.type floatlib_6073.normalizeFloat64Subnormal,@function
+.import floatlib_6073.normalizeRoundAndPackFloat32
+.type floatlib_6073.normalizeRoundAndPackFloat32,@function
+.import floatlib_6073.roundAndPackFloat32
+.type floatlib_6073.roundAndPackFloat32,@function
+.import floatlib_6073.propagateFloat64NaN
+.type floatlib_6073.propagateFloat64NaN,@function
+.import floatlib_6073.commonNaNToFloat64
+.type floatlib_6073.commonNaNToFloat64,@function
+.import floatlib_6073.float64ToCommonNaN
+.type floatlib_6073.float64ToCommonNaN,@function
+.import floatlib_6073.propagateFloat32NaN
+.type floatlib_6073.propagateFloat32NaN,@function
+.import floatlib_6073.float32ToCommonNaN
+.type floatlib_6073.float32ToCommonNaN,@function
+.import floatlib_6073.countLeadingZeros32
+.type floatlib_6073.countLeadingZeros32,@function
+.import floatlib_6073.estimateDiv64To32
+.type floatlib_6073.estimateDiv64To32,@function
 .import _d_lt
 .type _d_lt,@function
 .import _d_le
@@ -8116,8 +8123,8 @@ floatlib_29217.float_rounding_mode::
 .type _d_eq,@function
 .import _d_div
 .type _d_div,@function
-.import floatlib_29217.float64_to_int32_round_to_zero
-.type floatlib_29217.float64_to_int32_round_to_zero,@function
+.import floatlib_6073.float64_to_int32_round_to_zero
+.type floatlib_6073.float64_to_int32_round_to_zero,@function
 .import _r_lt
 .type _r_lt,@function
 .import _r_le
@@ -8126,9 +8133,9 @@ floatlib_29217.float_rounding_mode::
 .type _r_eq,@function
 .import _r_div
 .type _r_div,@function
-.import floatlib_29217.float32_to_int32_round_to_zero
-.type floatlib_29217.float32_to_int32_round_to_zero,@function
-.import floatlib_29217.float_raise
-.type floatlib_29217.float_raise,@function
+.import floatlib_6073.float32_to_int32_round_to_zero
+.type floatlib_6073.float32_to_int32_round_to_zero,@function
+.import floatlib_6073.float_raise
+.type floatlib_6073.float_raise,@function
 .import raise
 .type raise,@function

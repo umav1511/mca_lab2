@@ -8,7 +8,7 @@
 	<DefaultLaunch Dir="$PRUNDIR"/>
 	<DefaultPromote Dir="$PROMOTEDIR"/>
 	<Config>
-		<Option Name="Id" Val="5a579577f1b2423d8b219fa10c28db83"/>
+		<Option Name="Id" Val="4b5df9a8b1824f9cb90a7f74ec70645f"/>
 		<Option Name="Part" Val="xc6vlx240tff1156-1"/>
 		<Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
 		<Option Name="TargetLanguage" Val="VHDL"/>

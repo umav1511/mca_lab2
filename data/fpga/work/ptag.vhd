@@ -56,8 +56,8 @@ package platform_version_pkg is
 
 -- The value below is the version tag for the platform, which is automatically
 -- generated based on the MD5 hash of the contents of the other source files.
--- ASCII tag = kuj2mq3
-constant RVEX_PLATFORM_TAG : std_logic_vector(55 downto 0) := X"6B756A326D7133";
+-- ASCII tag = VObd-HQ
+constant RVEX_PLATFORM_TAG : std_logic_vector(55 downto 0) := X"564F62642D4851";
 
 end platform_version_pkg;
 

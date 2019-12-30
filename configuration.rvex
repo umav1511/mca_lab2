@@ -31,7 +31,7 @@
 # Replace a-h with 0 or 1 to select your multiplier configuration. There must
 # be at least one multiplier. As you can see, the multiplier configurations of
 # the lane groups must match.
-CONFIG = 11000000
+CONFIG = 11111111
 
 # Stop bit configuration. This value must be 2, 4, or 8, and must be less than
 # or equal to the issue width. The number of syllables in a bundle must be an
@@ -42,17 +42,17 @@ CONFIG = 11000000
 # they do increase the size of the executable and thus affect instruction cache
 # behavior. Thus, for speed, you want this number as low as possible. The cost
 # is area.
-STOPBIT = 2
+STOPBIT = 8
 
 # Instruction cache size in bytes. This must be a power of two, and must be at
 # least the issue width times 8 bytes (= 2 cache lines). Append a k to specify
 # the value in kiB. The practical upper limit is around 64k.
-ICACHE = 2k
+ICACHE = 4k
 
 # Data cache size in bytes. This must be a power of two, and must be at least
 # 8 bytes (= 2 cache lines). Append a k to specify the value in kiB. The
 # practical upper limit is around 32k.
-DCACHE = 2k
+DCACHE = 4k
 
 ###############################################################################
 [core]
@@ -81,7 +81,7 @@ DCACHE = 2k
 # Replace a-h with 0 or 1 to select your multiplier configuration. There must
 # be at least one multiplier. As you can see, the multiplier configurations of
 # the lane groups must match.
-CONFIG = 1000
+CONFIG = 1100
 
 # Stop bit configuration. This value must be 2, 4, or 8, and must be less than
 # or equal to the issue width. The number of syllables in a bundle must be an
@@ -92,14 +92,14 @@ CONFIG = 1000
 # they do increase the size of the executable and thus affect instruction cache
 # behavior. Thus, for speed, you want this number as low as possible. The cost
 # is area.
-STOPBIT = 2
+STOPBIT = 8
 
 # Instruction cache size in bytes. This must be a power of two, and must be at
 # least the issue width times 8 bytes (= 2 cache lines). Append a k to specify
 # the value in kiB. The practical upper limit is around 64k.
-ICACHE = 2k
+ICACHE = 4k
 
 # Data cache size in bytes. This must be a power of two, and must be at least
 # 8 bytes (= 2 cache lines). Append a k to specify the value in kiB. The
 # practical upper limit is around 32k.
-DCACHE = 2k
+DCACHE = 4k

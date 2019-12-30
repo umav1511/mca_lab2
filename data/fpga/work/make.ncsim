@@ -23,61 +23,6 @@ ncsim:
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/dma2ahb_tp.vhd
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  grlib /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/grlib/amba/amba_tp.vhd
 	mkdir xncsim/secureip
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_001.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_002.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_003.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_004.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_005.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_006.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_007.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_008.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_009.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_010.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_011.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_012.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_013.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_014.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_015.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_016.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_017.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_018.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_019.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_020.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_021.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_022.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_023.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_024.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_025.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_026.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_027.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_028.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_029.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_030.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_031.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_032.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_033.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_034.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_035.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_036.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_037.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_038.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_039.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_040.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_041.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_042.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_043.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_044.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_045.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_046.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/mcb_047.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_2_0_001.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_2_0_002.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtxe1_001.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtxe1_002.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtpa1_dual_001.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/gtpa1_dual_002.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_a1_001.vp
-	ncvlog -nowarn DLCPTH -nocopyright -linedebug  -work secureip /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/secureip/ise/pcie_a1_002.vp
 	mkdir xncsim/unisim
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  unisim /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/unisim/ise/unisim_VPKG.vhd
 	ncvhdl -nowarn DLCPTH -NOVITALCHECK -linedebug -v93 -nocopyright -work  unisim /home/user/workspace/rvex-rewrite/grlib/grlib-gpl-1.3.7-b4144/lib/tech/unisim/ise/unisim_VCOMP.vhd

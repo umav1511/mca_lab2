@@ -6,7 +6,7 @@ RES: MemPft         0
 # ***Clusters***    1
 RES: IssueWidth.0   8
 RES: Alu.0          8
-RES: Mpy.0          2
+RES: Mpy.0          8
 RES: Memory.0       1
 RES: CopySrc.0      1
 RES: CopyDst.0      1

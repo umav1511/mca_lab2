@@ -1,5 +1,5 @@
 main compress_main
-compress_29328.Buf compress_compress_29328.Buf
+compress_6184.Buf compress_compress_6184.Buf
 Compress compress_Compress
 Usage compress_Usage
 rindex compress_rindex
@@ -15,7 +15,7 @@ maxmaxcode compress_maxmaxcode
 compressf compress_compressf
 magic_header compress_magic_header
 decompress compress_decompress
-compress_29328.offset compress_compress_29328.offset
+compress_6184.offset compress_compress_6184.offset
 out_count compress_out_count
 clear_flg compress_clear_flg
 ratio compress_ratio
@@ -29,11 +29,11 @@ exit_stat compress_exit_stat
 cl_hash compress_cl_hash
 lmask compress_lmask
 rmask compress_rmask
-compress_29328.buf compress_compress_29328.buf
+compress_6184.buf compress_compress_6184.buf
 compressgetcode compress_compressgetcode
 writeerr compress_writeerr
 foreground compress_foreground
 onintr compress_onintr
 oops compress_oops
-compress_29328.rcs_ident compress_compress_29328.rcs_ident
+compress_6184.rcs_ident compress_compress_6184.rcs_ident
 force compress_force

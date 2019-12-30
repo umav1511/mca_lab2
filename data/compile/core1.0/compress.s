@@ -31,7 +31,7 @@ main::
 	c0    stw 0x30[$r0.1] = $r0.2  ## spill ## t11
 ;;								## 3
 	c0    mov $r0.3 = 1   ## 1(SI32)
-	c0    mov $r0.5 = (compress_29328.Buf + 0)   ## addr(compress_29328.Buf?1.0)(P32)
+	c0    mov $r0.5 = (compress_6184.Buf + 0)   ## addr(compress_6184.Buf?1.0)(P32)
 	c0    ldw $r0.2 = 0x2c[$r0.1]  ## restore ## t6
 ;;								## 4
 	c0    mov $r0.6 = 800   ## 800(SI32)
@@ -41,7 +41,7 @@ main::
 ;;								## 6
 	c0    stw 0[$r0.4] = $r0.2   ## bblock 0, line 16, t11, t6
 ;;								## 7
-	c0    stw ((bufp + 0) + 0)[$r0.0] = $r0.5   ## bblock 0, line 18, 0(I32), addr(compress_29328.Buf?1.0)(P32)
+	c0    stw ((bufp + 0) + 0)[$r0.0] = $r0.5   ## bblock 0, line 18, 0(I32), addr(compress_6184.Buf?1.0)(P32)
 ;;								## 8
 .call Compress, caller, arg($r0.3:s32,$r0.4:u32), ret($r0.3:s32)
 	c0    stw ((buflen + 0) + 0)[$r0.0] = $r0.6   ## bblock 0, line 19, 0(I32), 800(SI32)
@@ -981,7 +981,7 @@ L37?3:
 	c0    add $r0.5 = $r0.13, 1   ## [spec] bblock 33, line 206,  t32,  t31,  1(SI32)
 	c0    ldw.d $r0.2 = ((hsize + 0) + 0)[$r0.0]   ## [spec] bblock 3, line 208, t126, 0(I32)
 ;;								## 8
-	c0    stw ((compress_29328.offset + 0) + 0)[$r0.0] = $r0.0   ## bblock 1, line 197, 0(I32), 0(SI32)
+	c0    stw ((compress_6184.offset + 0) + 0)[$r0.0] = $r0.0   ## bblock 1, line 197, 0(I32), 0(SI32)
 	c0    cmpge $b0.0 = $r0.12, $r0.0   ## bblock 1, line 206,  t210(I1),  t30,  0(SI32)
 ;;								## 9
 	c0    stw ((bytes_out + 0) + 0)[$r0.0] = $r0.6   ## bblock 1, line 198, 0(I32), 3(SI32)
@@ -1651,7 +1651,7 @@ L36?3:
 output::
 .trace 7
 	      ## auto_size == 0
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 0, line 274, t1, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 0, line 274, t1, 0(I32)
 ;;								## 0
 	c0    ldw $r0.5 = ((n_bits + 0) + 0)[$r0.0]   ## bblock 0, line 274, t2, 0(I32)
 	c0    cmpge $b0.0 = $r0.3, $r0.0   ## bblock 0, line 277,  t335(I1),  t0,  0(SI32)
@@ -1668,12 +1668,12 @@ output::
 	c0    shr $r0.3 = $r0.3, $r0.9   ## bblock 7, line 284,  t334,  t0,  t24
 	c0    add $r0.5 = $r0.5, -8   ## bblock 7, line 283,  t348,  t2,  -8(SI32)
 ;;								## 4
-	c0    ldb $r0.9 = (compress_29328.buf + 0)[$r0.7]   ## bblock 7, line 281, t17(SI8), t8(SI29)
+	c0    ldb $r0.9 = (compress_6184.buf + 0)[$r0.7]   ## bblock 7, line 281, t17(SI8), t8(SI29)
 	c0    and $r0.2 = $r0.2, $r0.8   ## bblock 7, line 281,  t14,  t12(I8),  t13
 	c0    mov $r0.11 = $r0.3   ## bblock 7, line 284,  t111(SI24),  t334
 ;;								## 5
-	c0    add $r0.8 = $r0.7, (compress_29328.buf + 0)   ## bblock 7, line 279,  t21,  t8(SI29),  addr(compress_29328.buf?1.0)(P32)
-	c0    add $r0.12 = $r0.7, ((compress_29328.buf + 0) + 1)   ## bblock 7, line 282,  t3,  t8(SI29),  (addr(compress_29328.buf?1.0)(P32) + 0x1(I32))(P32)
+	c0    add $r0.8 = $r0.7, (compress_6184.buf + 0)   ## bblock 7, line 279,  t21,  t8(SI29),  addr(compress_6184.buf?1.0)(P32)
+	c0    add $r0.12 = $r0.7, ((compress_6184.buf + 0) + 1)   ## bblock 7, line 282,  t3,  t8(SI29),  (addr(compress_6184.buf?1.0)(P32) + 0x1(I32))(P32)
 ;;								## 6
 	c0    and $r0.10 = $r0.10, $r0.9   ## bblock 7, line 281,  t18,  t16(I8),  t17(SI8)
 	c0    add $r0.5 = $r0.5, $r0.6   ## bblock 7, line 283,  t110,  t348,  t112
@@ -1681,7 +1681,7 @@ output::
 	c0    or $r0.2 = $r0.2, $r0.10   ## bblock 7, line 281,  t19,  t14,  t18
 	c0    cmpge $b0.0 = $r0.5, 8   ## bblock 7, line 285,  t349(I1),  t110,  8(SI32)
 ;;								## 8
-	c0    stb (compress_29328.buf + 0)[$r0.7] = $r0.2   ## bblock 7, line 281, t8(SI29), t19
+	c0    stb (compress_6184.buf + 0)[$r0.7] = $r0.2   ## bblock 7, line 281, t8(SI29), t19
 	c0    brf $b0.0, L80?3   ## bblock 7, line 285,  t349(I1)
 ;;								## 9
 	c0    stb 1[$r0.8] = $r0.3   ## bblock 25, line 287, t21, t334
@@ -1691,14 +1691,14 @@ output::
 ;;								## 10
 L80?3:
 	c0    cmpne $b0.0 = $r0.5, $r0.0   ## bblock 8, line 291,  t350(I1),  t110,  0(SI32)
-	c0    mov $r0.3 = (compress_29328.buf + 0)   ## [spec] bblock 21, line 296,  t114,  addr(compress_29328.buf?1.0)(P32)
+	c0    mov $r0.3 = (compress_6184.buf + 0)   ## [spec] bblock 21, line 296,  t114,  addr(compress_6184.buf?1.0)(P32)
 ;;								## 11
 	c0    brf $b0.0, L81?3   ## bblock 8, line 291,  t350(I1)
 ;;								## 12
 	c0    stb 0[$r0.12] = $r0.11   ## bblock 24, line 292, t3, t111(SI24)
 ;;								## 13
 L81?3:
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 9, line 293, t32, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 9, line 293, t32, 0(I32)
 ;;								## 14
 	c0    ldw $r0.5 = ((n_bits + 0) + 0)[$r0.0]   ## bblock 9, line 293, t36, 0(I32)
 ;;								## 15
@@ -1708,7 +1708,7 @@ L81?3:
 	c0    shl $r0.7 = $r0.5, 3   ## bblock 9, line 294,  t37,  t36,  3(SI32)
 	c0    mov $r0.4 = $r0.5   ## [spec] bblock 21, line 293,  t113,  t36
 ;;								## 17
-	c0    stw ((compress_29328.offset + 0) + 0)[$r0.0] = $r0.2   ## bblock 9, line 293, 0(I32), t35
+	c0    stw ((compress_6184.offset + 0) + 0)[$r0.0] = $r0.2   ## bblock 9, line 293, 0(I32), t35
 	c0    cmpeq $b0.0 = $r0.2, $r0.7   ## bblock 9, line 294,  t351(I1),  t35,  t37
 	c0    add $r0.5 = $r0.5, $r0.6   ## [spec] bblock 21, line 298,  t42,  t36,  t41
 ;;								## 18
@@ -1821,7 +1821,7 @@ L83?3:
 ;;								## 39
 .trace 15
 L84?3:
-	c0    stw ((compress_29328.offset + 0) + 0)[$r0.0] = $r0.0   ## bblock 23, line 305, 0(I32), 0(SI32)
+	c0    stw ((compress_6184.offset + 0) + 0)[$r0.0] = $r0.0   ## bblock 23, line 305, 0(I32), 0(SI32)
 ;;								## 0
 .trace 9
 L82?3:
@@ -1838,11 +1838,11 @@ L82?3:
 	c0    mov $r0.7 = 3   ## [spec] bblock 17, line 0,  t222,  3(I32)
 ;;								## 2
 	c0    cmpgt $r0.2 = $r0.2, $r0.12   ## bblock 10, line 307,  t51,  t49,  t50
-	c0    ldw.d $r0.14 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## [spec] bblock 11, line 309, t54, 0(I32)
+	c0    ldw.d $r0.14 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## [spec] bblock 11, line 309, t54, 0(I32)
 	c0    mov $r0.5 = 1   ## [spec] bblock 17, line 0,  t227,  1(I32)
 ;;								## 3
 	c0    cmpgt $r0.13 = $r0.13, $r0.0   ## bblock 10, line 307,  t53,  t52,  0(SI32)
-	c0    mov $r0.4 = (compress_29328.buf + 0)   ## [spec] bblock 17, line 0,  t228,  addr(compress_29328.buf?1.0)(P32)
+	c0    mov $r0.4 = (compress_6184.buf + 0)   ## [spec] bblock 17, line 0,  t228,  addr(compress_6184.buf?1.0)(P32)
 	c0    mov $r0.3 = $r0.0   ## [spec] bblock 17, line 311,  t138,  0(SI32)
 ;;								## 4
 	c0    orl $b0.0 = $r0.2, $r0.13   ## bblock 10, line 307,  t352(I1),  t51,  t53
@@ -1992,7 +1992,7 @@ L86?3:
 	c0    ldw $r0.2 = ((clear_flg + 0) + 0)[$r0.0]   ## bblock 12, line 316, t67, 0(I32)
 	c0    mov $r0.3 = 9   ## 9(SI32)
 ;;								## 0
-	c0    stw ((compress_29328.offset + 0) + 0)[$r0.0] = $r0.0   ## bblock 12, line 315, 0(I32), 0(SI32)
+	c0    stw ((compress_6184.offset + 0) + 0)[$r0.0] = $r0.0   ## bblock 12, line 315, 0(I32), 0(SI32)
 	c0    mov $r0.4 = 511   ## 511(SI32)
 ;;								## 1
 	c0    cmpne $b0.0 = $r0.2, $r0.0   ## bblock 12, line 316,  t354(I1),  t67,  0(SI32)
@@ -2046,11 +2046,11 @@ L85?3:
 ;;								## 0
 .trace 8
 L79?3:
-	c0    ldw.d $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## [spec] bblock 2, line 336, t91, 0(I32)
+	c0    ldw.d $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## [spec] bblock 2, line 336, t91, 0(I32)
 ;;								## 0
 	c0    ldw.d $r0.3 = ((bytes_out + 0) + 0)[$r0.0]   ## [spec] bblock 2, line 336, t90, 0(I32)
 ;;								## 1
-	c0    ldw $r0.4 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 1, line 333, t78, 0(I32)
+	c0    ldw $r0.4 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 1, line 333, t78, 0(I32)
 	c0    add $r0.2 = $r0.2, 7   ## [spec] bblock 2, line 336,  t92,  t91,  7(SI32)
 ;;								## 2
 	c0    cmplt $b0.0 = $r0.2, $r0.0   ## [spec] bblock 2, line 336,  t337,  t92,  0(I32)
@@ -2064,7 +2064,7 @@ L79?3:
 ;;								## 5
 L92?3:
 	c0    add $r0.3 = $r0.3, $r0.5   ## bblock 2, line 336,  t94,  t90,  t93
-	c0    stw ((compress_29328.offset + 0) + 0)[$r0.0] = $r0.0   ## bblock 2, line 337, 0(I32), 0(SI32)
+	c0    stw ((compress_6184.offset + 0) + 0)[$r0.0] = $r0.0   ## bblock 2, line 337, 0(I32), 0(SI32)
 ;;								## 6
 .return ret()
 	c0    stw ((bytes_out + 0) + 0)[$r0.0] = $r0.3   ## bblock 2, line 336, 0(I32), t94
@@ -2078,12 +2078,12 @@ L91?3:
 	c0    mov $r0.9 = 5   ## bblock 4, line 0,  t312,  5(I32)
 ;;								## 0
 	c0    mov $r0.5 = 1   ## bblock 4, line 0,  t313,  1(I32)
-	c0    mov $r0.4 = (compress_29328.buf + 0)   ## bblock 4, line 0,  t314,  addr(compress_29328.buf?1.0)(P32)
+	c0    mov $r0.4 = (compress_6184.buf + 0)   ## bblock 4, line 0,  t314,  addr(compress_6184.buf?1.0)(P32)
 	c0    mov $r0.3 = $r0.0   ## bblock 4, line 334,  t122,  0(SI32)
 ;;								## 1
 .trace 1
 L93?3:
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 5, line 334, t135, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 5, line 334, t135, 0(I32)
 ;;								## 0
 	c0    ldw.d $r0.10 = ((outbuf + 0) + 0)[$r0.0]   ## [spec] bblock 6, line 335, t137, 0(I32)
 ;;								## 1
@@ -2107,7 +2107,7 @@ L93?3:
 ;;								## 8
 	c0    stb 0[$r0.10] = $r0.11   ## bblock 6, line 335, t137, t131(SI8)
 ;;								## 9
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 6, line 334-1, t147, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 6, line 334-1, t147, 0(I32)
 ;;								## 10
 	c0    ldw.d $r0.10 = ((outbuf + 0) + 0)[$r0.0]   ## [spec] bblock 40, line 335-1, t151, 0(I32)
 ;;								## 11
@@ -2131,7 +2131,7 @@ L93?3:
 ;;								## 18
 	c0    stb 0[$r0.10] = $r0.11   ## bblock 40, line 335-1, t151, t150(SI8)
 ;;								## 19
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 40, line 334-2, t125, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 40, line 334-2, t125, 0(I32)
 ;;								## 20
 	c0    ldw.d $r0.10 = ((outbuf + 0) + 0)[$r0.0]   ## [spec] bblock 37, line 335-2, t144, 0(I32)
 ;;								## 21
@@ -2155,7 +2155,7 @@ L93?3:
 ;;								## 28
 	c0    stb 0[$r0.10] = $r0.11   ## bblock 37, line 335-2, t144, t143(SI8)
 ;;								## 29
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 37, line 334-3, t80, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 37, line 334-3, t80, 0(I32)
 ;;								## 30
 	c0    ldw.d $r0.10 = ((outbuf + 0) + 0)[$r0.0]   ## [spec] bblock 34, line 335-3, t88, 0(I32)
 ;;								## 31
@@ -2179,7 +2179,7 @@ L93?3:
 ;;								## 38
 	c0    stb 0[$r0.10] = $r0.11   ## bblock 34, line 335-3, t88, t87(SI8)
 ;;								## 39
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 34, line 334-4, t121, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 34, line 334-4, t121, 0(I32)
 ;;								## 40
 	c0    ldw.d $r0.10 = ((outbuf + 0) + 0)[$r0.0]   ## [spec] bblock 31, line 335-4, t117, 0(I32)
 ;;								## 41
@@ -2203,7 +2203,7 @@ L93?3:
 ;;								## 48
 	c0    stb 0[$r0.10] = $r0.11   ## bblock 31, line 335-4, t117, t118(SI8)
 ;;								## 49
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 31, line 334-5, t132, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 31, line 334-5, t132, 0(I32)
 ;;								## 50
 	c0    ldw.d $r0.10 = ((outbuf + 0) + 0)[$r0.0]   ## [spec] bblock 28, line 335-5, t127, 0(I32)
 ;;								## 51
@@ -2231,7 +2231,7 @@ L93?3:
 ;;								## 59
 .trace 24
 L99?3:
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
 ;;								## 0
 	c0    ldw $r0.3 = ((bytes_out + 0) + 0)[$r0.0]   ## bblock 2, line 336, t90, 0(I32)
 ;;								## 1
@@ -2247,7 +2247,7 @@ L99?3:
 ;;								## 5
 .trace 23
 L98?3:
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
 ;;								## 0
 	c0    ldw $r0.3 = ((bytes_out + 0) + 0)[$r0.0]   ## bblock 2, line 336, t90, 0(I32)
 ;;								## 1
@@ -2263,7 +2263,7 @@ L98?3:
 ;;								## 5
 .trace 22
 L97?3:
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
 ;;								## 0
 	c0    ldw $r0.3 = ((bytes_out + 0) + 0)[$r0.0]   ## bblock 2, line 336, t90, 0(I32)
 ;;								## 1
@@ -2279,7 +2279,7 @@ L97?3:
 ;;								## 5
 .trace 21
 L96?3:
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
 ;;								## 0
 	c0    ldw $r0.3 = ((bytes_out + 0) + 0)[$r0.0]   ## bblock 2, line 336, t90, 0(I32)
 ;;								## 1
@@ -2295,7 +2295,7 @@ L96?3:
 ;;								## 5
 .trace 20
 L95?3:
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
 ;;								## 0
 	c0    ldw $r0.3 = ((bytes_out + 0) + 0)[$r0.0]   ## bblock 2, line 336, t90, 0(I32)
 ;;								## 1
@@ -2311,7 +2311,7 @@ L95?3:
 ;;								## 5
 .trace 19
 L94?3:
-	c0    ldw $r0.2 = ((compress_29328.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
+	c0    ldw $r0.2 = ((compress_6184.offset + 0) + 0)[$r0.0]   ## bblock 2, line 336, t91, 0(I32)
 ;;								## 0
 	c0    ldw $r0.3 = ((bytes_out + 0) + 0)[$r0.0]   ## bblock 2, line 336, t90, 0(I32)
 ;;								## 1
@@ -4027,13 +4027,13 @@ version::
 .equ ?2.16?2auto_size, 0x0
  ## End version
 .section .bss
-compress_29328.offset::
+compress_6184.offset::
     .skip 4
-compress_29328.buf::
+compress_6184.buf::
     .skip 12
 .section .data
 .skip 1
-compress_29328.Buf::
+compress_6184.Buf::
     .data1 47
     .data1 42
     .data1 32
@@ -4898,7 +4898,7 @@ compress_29328.Buf::
     .data1 102
     .data1 0
     .data1 0
-compress_29328.rcs_ident::
+compress_6184.rcs_ident::
     .data1 72
     .data1 101
     .data1 97

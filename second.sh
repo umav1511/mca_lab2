@@ -1,9 +1,9 @@
 #!/bin/sh
-for cf in '11000000' '11111111'
+for cf in '11111111' '11000000' 
 do
-for scf in '1000' '1100'
+for scf in '1100'
 do
-for a in 2 4 8
+for a in 8
 do
 for b in 2 4 8
 do

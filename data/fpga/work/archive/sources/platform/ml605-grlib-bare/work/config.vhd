@@ -29,12 +29,12 @@ package config is
         numLanesLog2          => 3,
         numLaneGroupsLog2     => 0,
         numContextsLog2       => 0,
-        bundleAlignLog2       => 1,
-        multiplierLanes       => 2#00000011#,
+        bundleAlignLog2       => 3,
+        multiplierLanes       => 2#11111111#,
         memLaneRevIndex       => 7,
         numBreakpoints        => 0,
         forwarding            => 1,
-        limmhFromPreviousPair => 0,
+        limmhFromPreviousPair => 1,
         resetVectors          => (
           0 => X"00000000",
           others => X"00000000"
@@ -45,8 +45,8 @@ package config is
       ),
       core_valid => true,
       cache => cache_cfg(
-        instrCacheLinesLog2   => 6,
-        dataCacheLinesLog2    => 9
+        instrCacheLinesLog2   => 7,
+        dataCacheLinesLog2    => 10
       ),
       cache_valid => true
     ),
@@ -57,12 +57,12 @@ package config is
         numLanesLog2          => 2,
         numLaneGroupsLog2     => 0,
         numContextsLog2       => 0,
-        bundleAlignLog2       => 1,
-        multiplierLanes       => 2#0001#,
+        bundleAlignLog2       => 2,
+        multiplierLanes       => 2#0011#,
         memLaneRevIndex       => 3,
         numBreakpoints        => 0,
         forwarding            => 1,
-        limmhFromPreviousPair => 0,
+        limmhFromPreviousPair => 1,
         resetVectors          => (
           0 => X"02000000",
           others => X"00000000"
@@ -73,8 +73,8 @@ package config is
       ),
       core_valid => true,
       cache => cache_cfg(
-        instrCacheLinesLog2   => 7,
-        dataCacheLinesLog2    => 9
+        instrCacheLinesLog2   => 8,
+        dataCacheLinesLog2    => 10
       ),
       cache_valid => true
     )

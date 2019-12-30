@@ -498,21 +498,20 @@ rand::
 ;;								## 0
 ;;								## 1
 	c0    mpylu $r0.4 = $r0.2, 1103515245   ## bblock 0, line 43,  t18,  t0,  1103515245(SI32)
-;;								## 2
 	c0    mpyhs $r0.2 = $r0.2, 1103515245   ## bblock 0, line 43,  t19,  t0,  1103515245(SI32)
+;;								## 2
 ;;								## 3
-;;								## 4
 	c0    add $r0.4 = $r0.4, $r0.2   ## bblock 0, line 43,  t1,  t18,  t19
-;;								## 5
+;;								## 4
 	c0    add $r0.4 = $r0.4, 12345   ## bblock 0, line 43,  t3,  t1,  12345(SI32)
-;;								## 6
+;;								## 5
 	c0    stw ((_?1PACKET.2 + 0) + 0)[$r0.0] = $r0.4   ## bblock 0, line 44, 0(I32), t3
 	c0    shru $r0.2 = $r0.4, 16   ## bblock 0, line 44,  t4(I16),  t3,  16(I32)
-;;								## 7
+;;								## 6
 .return ret($r0.3:s32)
 	c0    and $r0.3 = $r0.2, 32767   ## bblock 0, line 44,  t5,  t4(I16),  32767(I32)
 	c0    return $r0.1 = $r0.1, (0x0), $l0.0   ## bblock 0, line 44,  t7,  ?2.7?2auto_size(I32),  t6
-;;								## 8
+;;								## 7
 .endp
 .section .bss
 .section .data
