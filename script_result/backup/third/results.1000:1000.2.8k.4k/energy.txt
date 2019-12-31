@@ -1,0 +1,5 @@
+Dynamic energy (idle power is subtracted from it):
+Run 1: 9.14 mj
+Run 2: 10.92 mj
+Run 3: 11.90 mj
+Average: 10.65 mJ

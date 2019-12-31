@@ -3,18 +3,29 @@
 # core/context, and using which compiler flags.
 
 #------------------------------------------------------------------------------
-[core0.0] # Configuration for core 0.
+[core0.0] # Configuration for core 0, hardware context 0.
 #------------------------------------------------------------------------------
 
 # Compile the entry point file.
-main-core0                -O3
+main-core0-ctxt0          -O3
 
 # Compile the benchmarks. The -sub parts tell the compiler to add the
 # benchmark name as a prefix to all global functions and variables, in order
 # to make them unique. For instance, the int main(void) function in the
 # compress.c file can be called using compress_main().
-convolution_7x7-sub       -O3
+bcnt-sub                  -O3
 
+# Compile the library sources (floating point functions, debugging, etc.) with
+# -O3 to optimize them.
+OTHERS                    -O3
+
+#------------------------------------------------------------------------------
+[core0.1] # Configuration for core 0, hardware context 1.
+#------------------------------------------------------------------------------
+
+# Compile the entry point file.
+main-core0-ctxt1          -O3
+convolution_7x7-sub       -O3
 
 # Compile the library sources (floating point functions, debugging, etc.) with
 # -O3 to optimize them.
@@ -26,9 +37,9 @@ OTHERS                    -O3
 
 # Compile the entry point file.
 main-core1                -O3
-median-sub                -O3
 compress-sub              -O3
-bcnt-sub                  -O3
+median-sub                -O3
+
 # Compile the library sources (floating point functions, debugging, etc.) with
 # -O3 to optimize them.
 OTHERS                    -O3

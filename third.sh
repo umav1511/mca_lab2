@@ -5,10 +5,15 @@ for a in 2 4 8
 do
 for b in 2 4 8
 do
+b=$b'k'
+file="script_result/results.$cf.$a.$b.$b"
+file_t="script_result/results.$cf.$a.$b"
+
+echo $file
+if [[ ! -d "$file" ]] && [[ ! -d "$file_t" ]];then
   rm configuration.rvex
   sed s/'$config'/$cf/ AnotherCONFIGURATIONBASE > configuration.rvex
   sed -i -e s/'$st'/$a/ configuration.rvex
-  b=$b'k'
   sed -i -e s/'$ic'/$b/ configuration.rvex
   sed -i -e s/'$dc'/$b/ configuration.rvex
   rm -rf src
@@ -22,6 +27,7 @@ do
   yes y | make run
   cp -r results script_result
   mv script_result/results script_result/results.$cf.$a.$b
+fi
 done
 done
 done

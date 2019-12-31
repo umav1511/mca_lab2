@@ -5,7 +5,7 @@ for scf in '1100'
 do
 for a in 8
 do
-for b in 2 4 8
+for b in 4 8
 do
   rm configuration.rvex
   sed s/'$config'/$cf/ CONFIGURATIONBASE > configuration.rvex

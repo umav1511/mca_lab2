@@ -4,7 +4,7 @@ OUTPUT_ARCH(rvex)
 ENTRY(_start)
 MEMORY
 {
-  ram : ORIGIN = 0x02000000, LENGTH = 32M
+  ram : ORIGIN = 0x08000000, LENGTH = 32M
 }
 SECTIONS
 {

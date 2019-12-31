@@ -27,16 +27,17 @@ package config is
     0 => rvex_grlib_cfg(
       core => rvex_cfg(
         numLanesLog2          => 3,
-        numLaneGroupsLog2     => 0,
-        numContextsLog2       => 0,
+        numLaneGroupsLog2     => 1,
+        numContextsLog2       => 1,
         bundleAlignLog2       => 3,
         multiplierLanes       => 2#11111111#,
-        memLaneRevIndex       => 7,
+        memLaneRevIndex       => 3,
         numBreakpoints        => 0,
         forwarding            => 1,
         limmhFromPreviousPair => 1,
         resetVectors          => (
           0 => X"00000000",
+          1 => X"02000000",
           others => X"00000000"
         ),
         traceEnable           => 0,
@@ -64,7 +65,7 @@ package config is
         forwarding            => 1,
         limmhFromPreviousPair => 1,
         resetVectors          => (
-          0 => X"02000000",
+          0 => X"08000000",
           others => X"00000000"
         ),
         traceEnable           => 0,
@@ -73,8 +74,8 @@ package config is
       ),
       core_valid => true,
       cache => cache_cfg(
-        instrCacheLinesLog2   => 8,
-        dataCacheLinesLog2    => 10
+        instrCacheLinesLog2   => 9,
+        dataCacheLinesLog2    => 11
       ),
       cache_valid => true
     )

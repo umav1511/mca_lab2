@@ -15,20 +15,16 @@
 
 // This variable is used by the debug message recorder. It must be initialized
 // to 0x3F000000 + global_context_index * 0x100000.
-volatile char *record_ptr = (volatile char *)0x3F100000;
+volatile char *record_ptr = (volatile char *)0x3F200000;
 
 int main(void) {
-   
-	  // Run the median benchmark and log performance.
-    median_main();
-    log_perfcount("median");
-  
-// Run the compress benchmark and log performance.
+    
+    // Run the compress benchmark and log performance.
     compress_main();
     log_perfcount("compress");
-     
-    // Run the bcnt benchmark and log performance.
-    bcnt_main();
-    log_perfcount("bcnt");
+    
+    // Run the median benchmark and log performance.
+    median_main();
+    log_perfcount("median");
     
 }
