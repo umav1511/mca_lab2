@@ -1,0 +1,72 @@
+
+General Conclusions from below: Compress has most number of calls to dcache and icache contrary to what we would expect. I think our pareto will be with either both 2k or both 4k. Having different values for icache and dcache size doesnt make any sense. 
+
+Look at the gmon-*.txt for details on cache performance for each benchmark. 
+
+
+Cache Performance/Utilization 
+
+BCNT 
+
+Loads: 390
+Stores: 2
+
+40 calls to icache. 19% spent on __vex_main, 12% on __sfvwrite
+
+38 calls to dcache. 33% spent on __vex_main
+
+Conclusion: Low icache and dcache pressure from this benchmark
+
+
+
+Median
+
+Loads: 38716
+Stores: 4303
+
+36 calls to dcache. 99% spent on __vex_main
+36 calls to icache. 99% spent on __vex_main
+
+Conclusion: higher number of load/store operations but calls to icache and dcache are not very large.
+
+
+Compress
+Loads: 29011
+Stores: 20873
+
+971 calls to dcache. 28% spent on compressf, 19% spent on decompress, 18% spent on compressgetcode
+
+971 calls to icache. 30% spent on compressf, 21% on decompress, 20% on compressgetcode
+
+Conclusion: Large number of load/store ops and relatively large number of calls to dcache and icache, so higher pressure on them. 
+
+
+
+Convlusion: 
+Loads: 376770
+Stores: 7462
+
+35 calls to dcache. 93% spent on __vex_main. Same statistic for icache. 
+
+
+Conclusion: Has a large number of loads but not a lot of stores. And weirdly not a lot of calls to either cache. Low pressure on cache looking at these results but im not convinced. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
